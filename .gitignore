@@ -1,0 +1,9 @@
+node_modules
+usage-data-config.json
+package-lock.json
+VERSION.txt
+create-release.sh
+.env
+CHANGELOG.md
+CONTRIBUTING.md
+LICENCE.txt
