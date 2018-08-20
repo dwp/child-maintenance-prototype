@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+
+{% set serviceUrl = "/alpha-prototype-1" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+    {{ 
+        govukPhaseBanner({
+            tag: {
+                text: "PROTOTYPE"
+            },
+            html: ''
+        }) 
+    }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+
+      <p>Child maintenance is financial support towards a child’s everyday living costs when the child doesn’t live with one or both parents. </p>
+
+
+      <p>Both parents are legally responsible for the financial costs of raising any children.</p>
+
+      <p>You can arrange regular payments of child maintenance between yourselves, or you may be able to apply to the Child Maintenance Service, if you can’t work together. </p>
+
+      <p>You can get help with your child maintenance options.</p>
+
+        {{ 
+            govukButton({
+                text: "Start now",
+                href: "info",
+                classes: "govuk-button--start"
+            }) 
+        }}
+
+    <!--
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You can also <a href="#">register by post</a>.</p>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p>
+    -->
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/calculate-your-child-maintenance" target="_new">
+                Calculate your child maintenanc
+              </a>
+            </li>
+            <li>
+              <a href="https://helpwithchildarrangements.service.justice.gov.uk/" target="_new">
+                Get help with child arrangements
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/child-maintenance" target="_new">
+                Child maintenance
+              </a>
+            </li>
+            <!--
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+            -->
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+

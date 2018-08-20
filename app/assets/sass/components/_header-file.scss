@@ -1,0 +1,27 @@
+.govuk-header__container-no-blue {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.govuk-header__no-padding { 
+    border-bottom: 0;
+}
+
+.app-masthead {
+    @include govuk-responsive-padding(6, "top");
+    @include govuk-responsive-padding(6, "bottom");
+    color: govuk-colour("white");
+    background-color: govuk-colour("blue");
+  }
+  
+  .app-masthead__title {
+    color: govuk-colour("white");
+    @include govuk-responsive-margin(6, "bottom");
+  }
+  
+  .app-masthead__description {
+    @include govuk-font(24);
+    color: govuk-colour("white");
+    margin-bottom: 0;
+  }

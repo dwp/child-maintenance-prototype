@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios %}
+
+{% set serviceUrl = "/alpha-prototype-1" %}
+
+{% block pageTitle %}
+  {{ serviceName }} - Are both parents habitually resident in the UK?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ 
+        govukPhaseBanner({
+            tag: {
+                text: "PROTOTYPE"
+            },
+            html: ''
+        }) 
+    }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="are-both-parents-habitually-resident-in-the-uk">
+
+        {{ 
+            govukRadios({
+                idPrefix: "habitually-resident",
+                name: "habitually-resident",
+                fieldset: {
+                    legend: {
+                        text: "Are both parents habitually resident in the UK?",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--xl"
+                    }
+                },
+                items: [
+                    {
+                    value: "yes",
+                    text: "Yes",
+                    checked: true if data['habitually-resident'] == "yes"
+                    },
+                    {
+                    value: "no",
+                    text: "No",
+                    checked: true if data['habitually-resident'] == "no"
+                    }
+                ]
+        }) 
+    }}
+
+        {{ 
+            govukButton({
+                text: "Continue"
+            }) 
+        }}
+        </form>
+    </div>
+  </div>
+{% endblock %}
+
