@@ -18,15 +18,15 @@ router.get('/is-there-a-court-order-for-child-maintenance-in-place', (req, res) 
 })
 
 router.post('/is-there-a-court-order-for-child-maintenance-in-place', (req, res) => {
-    res.redirect('is-child-benefit-paid-for-the-children')
+    res.redirect('is-child-under-20')
 })
 
-// child benefit
-router.get('/is-child-benefit-paid-for-the-children', (req, res) => {
-    res.render('alpha-prototype-1/questions/child-benefit.njk')
+// child age
+router.get('/is-child-under-20', (req, res) => {
+    res.render('alpha-prototype-1/questions/child-age.njk')
 })
 
-router.post('/is-child-benefit-paid-for-the-children', (req, res) => {
+router.post('/is-child-under-20', (req, res) => {
     res.redirect('what-information-do-you-have-about-the-other-parent')
 })
 
@@ -45,7 +45,7 @@ router.get('/domestic-abuse', (req, res) => {
 })
 
 router.post('/domestic-abuse', (req, res) => {
-    res.redirect('review')
+    res.redirect('fba')
 })
 
 module.exports = router

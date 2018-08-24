@@ -5,7 +5,7 @@
 {% set serviceUrl = "/alpha-prototype-1" %}
 
 {% block pageTitle %}
-  {{ serviceName }} - Is Child Benefit paid for the children?
+  {{ serviceName }} - Is the child under 20 years old?
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,15 +22,15 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="post" action="is-child-benefit-paid-for-the-children">
+        <form method="post" action="is-child-under-20">
 
         {{ 
             govukRadios({
-                idPrefix: "child-benefit",
-                name: "child-benefit",
+                idPrefix: "child-age",
+                name: "child-age",
                 fieldset: {
                     legend: {
-                        text: "Is Child Benefit paid for the children?",
+                        text: "Is the child under 20 years old?",
                         isPageHeading: true,
                         classes: "govuk-fieldset__legend--xl"
                     }
@@ -39,17 +39,12 @@
                     {
                     value: "yes",
                     text: "Yes",
-                    checked: true if data['child-benefit'] == "yes"
+                    checked: true if data['child-age'] == "yes"
                     },
                     {
                     value: "no",
                     text: "No",
-                    checked: true if data['child-benefit'] == "no"
-                    },
-                    {
-                    value: "unknown",
-                    text: "Don't know",
-                    checked: true if data['child-benefit'] == "unknown"
+                    checked: true if data['child-age'] == "no"
                     }
                 ]
         }) 
