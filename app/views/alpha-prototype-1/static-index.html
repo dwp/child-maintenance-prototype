@@ -1,0 +1,23 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/alpha-prototype-1" %} 
+
+{% block pageTitle %} {{ serviceName }} 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+           Static pages 
+        </h1>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="static-pages/cannot-agree.html">If you cannot agree</a></li>
+            <li><a href="static-pages/what-cms-can-do.html">What Child maintenence service can do</a></li>
+            <li><a href="static-pages/cms-arrangements.html">Child Maintenence service arrangements</a></li>
+            
+        </ul>
+    </div>
+</div>
+{% endblock %}

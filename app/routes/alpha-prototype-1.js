@@ -47,5 +47,9 @@ router.get('/domestic-abuse', (req, res) => {
 router.post('/domestic-abuse', (req, res) => {
     res.redirect('fba')
 })
+// fba
+router.get('/fba', (req, res) => {
+    res.render('alpha-prototype-1/questions/fba.html')
+})
 
 module.exports = router
