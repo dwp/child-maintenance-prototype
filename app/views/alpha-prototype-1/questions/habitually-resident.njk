@@ -37,14 +37,16 @@
                 },
                 items: [
                     {
+                    name: "yes",    
                     value: "yes",
                     text: "Yes",
                     checked: true if data['habitually-resident'] == "yes"
                     },
                     {
+                    name: "no",    
                     value: "no",
                     text: "No",
-                    checked: true if data['habitually-resident'] == "no"
+                    checked: false if data['habitually-resident'] == "no"
                     }
                 ]
         }) 
