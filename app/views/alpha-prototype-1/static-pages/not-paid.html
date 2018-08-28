@@ -1,0 +1,132 @@
+
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios
+%} {% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} {% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+If child maintenance is not paid
+</h1>
+<p>The Child Maintenance Service will take action if child maintenance is not paid.</p>
+
+<p>When a payment is missed, the service will contact the ‘paying’ parent to:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>find out why they have not paid</li>
+    <li>arrange for them to pay what they owe</li>
+    <li>warn them about action that might be taken if they do not pay</li>
+</ul>
+
+<p>If the paying parent does not respond, the Child Maintenance Service can take action to get the child maintenance owed.
+</p>
+
+<h5 class="govuk-heading-m">Enforcement charges</h5>
+<p>The Child Maintenance Service introduced enforcement charges for non-payment on 30 June 2014.</p>
+
+{% from "table/macro.njk"
+ import govukTable %}
+  {{ govukTable({ caption:
+     "Action taken by Child Maintenence Service", 
+     firstCellIsHeader:
+true,
+ head:[ {
+      text: "Date"
+     },
+      { 
+          text: "Charge"
+         }
+          ],
+           rows: 
+           [ 
+           [
+            { 
+                text: "Liability order" 
+            },
+             {
+                  text: "£300" 
+                } 
+                ],
+                 [
+                  {
+                       text: "Lump sum deduction order"
+                     },
+                      { 
+                          text: "£200"
+                         }
+                          ],
+                           [
+                            {
+                                 text: "Regular deduction order"
+                                 },
+                                  {
+                                       text: "£50"
+                                     }
+                                      ]
+                                       ],
+                                        [
+                                         { 
+                                             text: "Deduction from earnings request or order"
+                                             },
+                                              {
+                                                   text: "£50" 
+                                                } 
+                                                ] 
+                                                ] 
+                                            })
+                                         }}
+
+     <h2 class="govuk-heading-m">What the Child Maintenance Service can do when payments are not made</h2>  
+     <p>The Child Maintenance Service can take action immediately if the paying parent pays through Collect and Pay.
+</p>    
+<p>If the Child Maintenance Service calculated the child maintenance amount, but the paying parent pays directly, through Direct
+Pay, the receiving parent needs to ask the service to act.
+</p>        
+<p>Unpaid child maintenance can be collected in 3 ways.
+</p>     
+<h3 class="govuk-heading-s">Take money from a paying parent’s earnings or benefits
+</h3>
+<p>The Child Maintenance Service can tell the paying parent’s employer how much to take from their wages. The employer must
+then pass this to the service. If they do not, the service can take them to court.
+</p>        
+<p>If the paying parent gets benefits, a State Pension or War Pension, the amount owed can usually be taken from these payments.
+</p>         
+
+<h3 class="govuk-heading-s">Take money from a bank or building society account
+</h3>
+<p>The Child Maintenance Service does not need permission to do this. They can tell the bank or building society to take either:
+</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>regular payments</li>
+        <li>a one-off payment</li>
+        </ul>
+
+        <h4 class="govuk-heading-s">Take court action
+</h4>
+<p>A paying parent can be taken to court over unpaid child maintenance. Things the courts can do include:
+</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>sending bailiffs (Sheriff Officers in Scotland) to a paying parent’s home to take and sell their belongings to get the child
+        maintenance owed</li>
+        <li>sending a paying parent to prison</li>
+        <li>rcollecting money that’s owed to the paying parent by someone else and using this to pay the child maintenance owed</li>
+        <li>forcing the sale of a property and using the money to pay the child maintenance owed</li>
+    </ul>
+
+    <p>If a paying parent tries to avoid paying by selling property or transferring it to someone else, the Child Maintenance Service
+    can ask the courts to stop them. The service can also ask the courts to reverse any sale or transfer that’s already happened.
+</p>
+<p>If action is taken through the courts, the paying parent may have to pay the service’s legal costs as well as their own.
+</p>
+
+<h5 class="govuk-heading-m">Courts</h5>
+<p>You can arrange child maintenance using a consent order (in England and Wales), or a minute of agreement (in Scotland). This
+makes the arrangement legally binding. It can be enforced through the courts if either parent does not do what has been agreed.
+</p>
+<p>You cannot apply to the Child Maintenance Service for a statutory child maintenance arrangement within 12 months of setting
+up a consent order or a minute of agreement. If you have a consent order or minute of agreement made before April 2003, you
+cannot set up a statutory arrangement.
+</p>
+</div>
+</div>
+
+{% endblock %}
