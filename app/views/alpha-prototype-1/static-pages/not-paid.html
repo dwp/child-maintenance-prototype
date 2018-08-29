@@ -10,7 +10,7 @@ If child maintenance is not paid
 </h1>
 <p>The Child Maintenance Service will take action if child maintenance is not paid.</p>
 
-<p>When a payment is missed, the service will contact the ‘paying’ parent to:</p>
+<p>When a payment is missed, the service will contact the &#146;paying&#8217; parent to:</p>
 <ul class="govuk-list govuk-list--bullet">
     <li>find out why they have not paid</li>
     <li>arrange for them to pay what they owe</li>
@@ -23,57 +23,12 @@ If child maintenance is not paid
 <h5 class="govuk-heading-m">Enforcement charges</h5>
 <p>The Child Maintenance Service introduced enforcement charges for non-payment on 30 June 2014.</p>
 
-{% from "table/macro.njk"
- import govukTable %}
-  {{ govukTable({ caption:
-     "Action taken by Child Maintenence Service", 
-     firstCellIsHeader:
-true,
- head:[ {
-      text: "Date"
-     },
-      { 
-          text: "Charge"
-         }
-          ],
-           rows: 
-           [ 
-           [
-            { 
-                text: "Liability order" 
-            },
-             {
-                  text: "£300" 
-                } 
-                ],
-                 [
-                  {
-                       text: "Lump sum deduction order"
-                     },
-                      { 
-                          text: "£200"
-                         }
-                          ],
-                           [
-                            {
-                                 text: "Regular deduction order"
-                                 },
-                                  {
-                                       text: "£50"
-                                     }
-                                      ]
-                                       ],
-                                        [
-                                         { 
-                                             text: "Deduction from earnings request or order"
-                                             },
-                                              {
-                                                   text: "£50" 
-                                                } 
-                                                ] 
-                                                ] 
-                                            })
-                                         }}
+
+
+{% from "table/macro.njk" import govukTable %} {{ govukTable({ caption: "", firstCellIsHeader: true, head:
+[ { text: "Action taken by Child Maintenence Service" }, { text: "Charge" } ], rows: [ [ { text: "Liability order" }, { text: "£300" } ], [ { text:
+"Lump sum deduction order" }, { text: "£200" } ], [ { text: "Regular deduction order" }, { text: "£50" } ], [ { text: "Deduction from earnings request or order" }, { text: "£50" } ] ] }) }}
+
 
      <h2 class="govuk-heading-m">What the Child Maintenance Service can do when payments are not made</h2>  
      <p>The Child Maintenance Service can take action immediately if the paying parent pays through Collect and Pay.
