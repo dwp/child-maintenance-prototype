@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %}
+{% block pageTitle %} {{ serviceName }} - Courts
+{% endblock %} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE" },
+ html: ''})
+ }} 
+ {% endblock %} 
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Courts</h1>
+<p>You can arrange child maintenance using a consent order (in England and Wales), or a minute of agreement (in Scotland). This
+    makes the arrangement legally binding. It can be enforced through the courts if either parent does not do what has been
+    agreed.
+</p>
+<p>You cannot apply to the Child Maintenance Service for a statutory child maintenance arrangement within 12 months of setting
+    up a consent order or a minute of agreement. If you have a consent order or minute of agreement made before April 2003,
+    you cannot set up a statutory arrangement.
+</p>
+</div>
+</div>
+ {% endblock %}
