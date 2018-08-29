@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+{% set serviceUrl = "/alpha-prototype-1" %}
+
+{% block pageTitle %}
+  {{ serviceName }} - What information do you have about the other parent?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ 
+        govukPhaseBanner({
+            tag: {
+                text: "PROTOTYPE"
+            },
+            html: ''
+        }) 
+    }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="what-information-do-you-have-about-the-other-parent">
+
+
+        {{ 
+            govukCheckboxes({
+            idPrefix: "parent-info",
+            name: "parent-info",
+            fieldset: {
+                legend: {
+                text: "What information do you have about the other parent?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+                }
+            },
+            hint: {
+                text: "Select all that apply"
+            },
+            items: [
+                {
+                    value: "name",
+                    text: "Name",
+                    checked: true if data['parent-info'] != undefined and "name" in data['parent-info']
+                },
+                {
+                    value: "address",
+                    text: "Address",
+                    checked: true if data['parent-info'] != undefined and "address" in data['parent-info']
+                },
+                {
+                    value: "nino",
+                    text: "National Insurance number",
+                    checked: true if data['parent-info'] != undefined and "nino" in data['parent-info']
+                },
+                {
+                    value: "dob",
+                    text: "Date of birth",
+                    checked: true if data['parent-info'] != undefined and "dob" in data['parent-info']
+                },
+                {
+                    value: "employer",
+                    text: "Employer",
+                    checked: true if  data['parent-info'] != undefined and "employer" in data['parent-info']
+                }, 
+                {
+                    value: "location",
+                    text: "Location",
+                    checked: true if  data['parent-info'] != undefined and "location" in data['parent-info']
+                }
+            ]
+            }) 
+        }}
+
+        {{ 
+            govukButton({
+                text: "Continue"
+            }) 
+        }}
+        </form>
+    </div>
+  </div>
+{% endblock %}
+

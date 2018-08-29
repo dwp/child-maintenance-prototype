@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios
+%} {% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} {% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            If you cannot agree
+        </h1>
+        <p>The Child Maintenance Service is for when you and the other parent cannot agree a child maintenance arrangement between yourselves,
+        or when a family-based arrangement can no longer work.</p>
+        <p>You can apply if you are in the UK and you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the parent the child lives with</li>
+            <li>the parent the child does not live with</li>
+            <li>a grandparent or other guardian of the child</li>
+            <li>a child over 12 living in Scotland</li>
+        </ul>
+        <p>There is a non-refundable charge of £20 to apply to the Child Maintenance Service.
+
+        </p>
+        <p>You will not have to pay this if you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a victim of domestic violence</li>
+            <li>under 19 years of age</li>
+            <li>resident in Northern Ireland</li>
+        </ul>
+        <a href="../static-index" class="govuk-back-link">Back</a>
+
+        </div>
+</div>
+{% endblock %}

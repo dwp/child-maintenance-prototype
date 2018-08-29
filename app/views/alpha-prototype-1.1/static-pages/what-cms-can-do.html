@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios %}
+
+{% set serviceUrl = "/alpha-prototype-1" %}
+
+{% block pageTitle %}
+    {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %}
+
+ {% block beforeContent %}
+    {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: ''}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+             What the Child Maintenance Service can do?
+        </h1>
+        <p> The Child Maintenance Service can:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>try to find the other parent if you do not know where they live, to sort out child maintenance</li>
+            <li>try to sort out <a href="https://www.gov.uk/child-maintenance/disagreements-about-parentage">disagreements about parentage</a></li>
+            <li><a href="https://www.gov.uk/how-child-maintenance-is-worked-out">work out how much child maintenance should be paid</a></li>
+            <li>arrange for the parent who does not have main day-to-day care of the child to pay child maintenance</li>
+            <li>pass payments on to the parent who has main day- to-day care of the child, if payments cannot be made directly</li>
+            <li>review the payment amounts when <a href="https://www.gov.uk/child-maintenance/changes-you-need-to-report">changes in parent&#8217;s circumstances</a> are reported</li>
+            <li>review the payment amount every year</li>
+            <li><a href="https://www.gov.uk/child-maintenance/nonpayment-what-happens">take action if payments are not made</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Get someone to manage your case for you</h2>
+        <p>You can ask someone else to deal with your Child Maintenance Service case for you.</p>
+                <a href="../static-index" class="govuk-back-link">Back</a>
+
+    </div>
+</div>
+{% endblock %}

@@ -9,9 +9,15 @@ router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
     res.render('alpha-prototype-1/questions/habitually-resident.njk')
 })
 
-router.post('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
-  res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
-    })
+router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, res) {
+
+    let habituallyResident = req.session.data['habitually-resident']
+    if (habituallyResident === "no") {
+        res.redirect('fba')
+    } else {
+        res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
+    }
+})
 
 
 
