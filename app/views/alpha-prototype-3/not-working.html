@@ -1,0 +1,47 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%}
+
+{% set serviceUrl = "/alpha-prototype-3" %} 
+
+{% block pageTitle %} 
+{{ serviceName }} 
+{% endblock %} 
+
+{% block beforeContent%}
+{{ govukPhaseBanner({ tag: { 
+    text: "PROTOTYPE" }, 
+    html: '' }) }} 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="not-working">
+
+
+            {{ govukRadios({ 
+                idPrefix: "not-working", 
+                name: "not-working", 
+                fieldset: { legend: { text: "Why is your agreement no longer working?",
+                isPageHeading: true, 
+                classes:"govuk-fieldset__legend--xl" } }, 
+                items:[ { 
+                    name: "not-paying", 
+                    value: "not-paying",
+                    text: "The money is not being paid"}, 
+                    { name: "wrong-amount", 
+                    value: "wrong-amount", 
+                    text: "The amount is wrong" }, 
+                    { 
+
+                    }
+                    ] 
+                })
+            }} {{ govukButton({ 
+                text: "Continue" })
+             }}
+        </form>
+    </div>
+</div>
+{% endblock %}

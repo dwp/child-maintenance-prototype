@@ -9,4 +9,7 @@ router.use('/alpha-prototype-1', alphaPrototypeV1Routes)
 const alphaPrototypeV2Routes = require('./routes/alpha-prototype-2');
 router.use('/alpha-prototype-2', alphaPrototypeV2Routes)
 
+const alphaPrototypeV3Routes = require('./routes/alpha-prototype-3');
+router.use('/alpha-prototype-3', alphaPrototypeV3Routes)
+
 module.exports = router

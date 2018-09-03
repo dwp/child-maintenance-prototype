@@ -1,0 +1,52 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios %}
+{% set serviceUrl = "/alpha-prototype-3" %}
+
+{% block pageTitle %} 
+    {{ serviceName }} 
+{% endblock %} 
+
+{% block beforeContent %} 
+
+{{ 
+    govukPhaseBanner({ 
+        tag: { 
+            text: "PROTOTYPE"
+        }, 
+        html: ''
+        })
+    }} 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="are-you-able-to-work-together">
+
+  
+     {{ govukRadios({ 
+         idPrefix: "work-with-other-parent", 
+         name: "work-with-other-parent",
+         fieldset: { legend: { text: "Are you able to work together with the other parent to agree support for your child?", 
+         isPageHeading: true, classes: "govuk-fieldset__legend--xl" } }, 
+         items:[ 
+         { value: "yes-most", text: "Yes, we can work together on most things" }, 
+         { value: "yes-some", text: "Yes, we can work together on some things" }, 
+         { value: "occasionally", text: "We can work together occasionally" }, 
+         { value: "help", text: "We need to help to be able to work together" },
+         { value: "no-cant", text: "No, we cant work together at all" },
+         { value: "no-want", text: "No, we dont want to work together" },
+         { value: "no-unknown", text: "No, I dont know where the other parent is" }] 
+        }) 
+    }}
+
+ {{ 
+     govukButton({ 
+         text: "Continue" 
+        })
+ }}
+</form>
+</div>
+</div>
+{% endblock %}
