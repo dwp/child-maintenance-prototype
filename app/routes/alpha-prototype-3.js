@@ -77,7 +77,7 @@ router.post('/not-working', function (req, res) {
         res.redirect('mediation')
     }
     else if (notWorking ==="other"){
-        res.redirect('other')
+        res.redirect("https://helpwithchildarrangements.service.justice.gov.uk/")
 }
     else res.redirect('calculator')
 })
