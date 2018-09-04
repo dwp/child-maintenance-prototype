@@ -1,1 +1,18 @@
-CALCULATOR
+{% extends "layout.html" %} {% set serviceUrl = "/alpha-prototype-3" %} {% block pageTitle %} {{ serviceName }} {% endblock
+%} {% block beforeContent%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} {% endblock %} {% block content
+%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Work out how much child maintenance should be paid</h1>
+
+        <h2 class="govuk-heading-m">Child Maintenance calculator</h2>
+        <p> If you need to work out how much Child maintenance should be paid, you can use the <a href="https://www.gov.uk/calculate-your-child-maintenance/y">Child Maintenance calculator</a> to work it out.</a></p>
+
+        <div class="govuk-inset-text">
+             The calculator gives an estimate. The exact amount the Child Maintenance Service calculates may be different.
+        </div>
+    </div>
+</div>
+{% endblock %}

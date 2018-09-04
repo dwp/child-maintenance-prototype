@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            My child maintenance agreement is not working
+        </h1>
+
+        <p>If you already have an agreement with the Child Maintenence Service and it is no longer working, you need to <a href=".">contact the Child Maintenance Service</a>.</p>
+        <p>You will need your your child maintenance Customer Reference Number, PIN and your National Insurance number.</p>
+             </div>
+             </div>
+ {% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% set serviceUrl = "/alpha-prototype-3" %}
+
+{% block pageTitle %} {{ serviceName }} 
+
+{% endblock %}
+
+{% block beforeContent%} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} 
+{% endblock %}
+
+ {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+<h1 class="govuk-heading-xl">Get help agreeing</h1>
+
+<h2 class="govuk-heading-m">Mediation</h2>
+<p> An independent mediator can help you and your child’s other parent to agree an arrangement for child maintenance
+that works for both of you.</p> 
+
+<p>Mediation is not relationship counselling. It can help you to agree how you will both support
+your children.</p>
+
+<p>There will be a charge for using a mediator. You might be able to get help with fees <a href="https://checklegalaid.service.gov.uk">if you are eligible for
+Legal Aid</a>. You can ask a court to make the arrangement you agree in mediation legally binding with a consent order.</p>
+
+<h3 class="govuk-heading-m">Courts</h3>
+<p>You can arrange child maintenance using a consent order (in England and Wales), or a minute of agreement (in Scotland). This
+    makes the arrangement legally binding. It can be enforced through the courts if either parent does not do what has been
+    agreed.
+</p>
+
+<h4 class="govuk-heading-m">Other ways to make child arrangements</h4>
+<p>You can get information about how to prepare to make child arrangements, and how to reach an agreement, from the
+    <a href="https://helpwithchildarrangements.service.justice.gov.uk/"> get help with child arrangements service</a>.</p>
+
+        <h5 class="govuk-heading-m">
+            If you cannot agree
+        </h5>
+        <p>The Child Maintenance Service is for when you and the other parent cannot agree a child maintenance arrangement between yourselves,
+            or when a family-based arrangement can no longer work.</p>
+        <div class="govuk-inset-text">
+            You can apply to the Child Maintenance Service for a statutory child maintenance arrangement if the consent order or minute
+            of agreement was set up more than 12 months ago.
+        
+        </div>
+        <h6 class="govuk-heading-m">Eligibility</h6>
+        <p>You can apply if you are in the UK and you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the parent the child lives with</li>
+            <li>the parent the child does not live with</li>
+            <li>a grandparent or other guardian of the child</li>
+            <li>a child over 12 living in Scotland</li>
+        </ul>
+        
+        <h7 class="govuk-heading-m">Fees</h7>
+        <p>There is a non-refundable charge of £20 to apply to the Child Maintenance Service.
+        
+        </p>
+        <p>You will not have to pay this if you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a victim of domestic violence</li>
+            <li>under 19 years of age</li>
+            <li>resident in Northern Ireland</li>
+        </ul>
+ <p>Continue to the <a href="k">Child Maintenance Service</a>.</p>
+
+</div>
+</div>
+{% endblock %}

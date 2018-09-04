@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% set serviceUrl = "/alpha-prototype-3" %} {% block pageTitle %} {{ serviceName }} {% endblock%}
+{% block beforeContent%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} {% endblock %} {% block content%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Collect and Pay</h1>
+<p>Collect and Pay is for when the paying parent is unlikely to pay or has failed to pay.</p>
+
+<p>The Child Maintenance Service works out the payment amount, then arranges to collect and pass on payments. They will arrange
+    this around when the paying parent is paid their wages, pension or benefits.</p>
+
+<p>There is a fee of £20 to apply for Collect and Pay.</p>
+
+<p>You must also pay a fee each time you make or receive a payment:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>paying parents will pay a 20% fee on top of their regular child maintenance payment</li>
+    <li>receiving parents will have a 4% fee deducted from their regular child maintenance payment</li>
+</ul>
+
+{% from "inset-text/macro.njk" import govukInsetText %} {{ govukInsetText({ text: "You cannot avoid collection fees by making
+payments in advance." }) }}
+<p>You will not have to pay any fees if you choose a
+    <a href="">family-based arrangement.</a>
+</p>
+<p><a href=".">Apply for Collect and Pay</a> through the Child Maintenance Service</p>
+
+<p>You will not have to pay collection fees if you choose
+    <a href="direct-pay">Direct Pay</a>, where you make your own payment arrangements.</p>
+
+</div>
+</div>
+{% endblock %}

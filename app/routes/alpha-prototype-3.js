@@ -21,13 +21,36 @@ router.post('/agreement-in-place', function (req, res) {
 
     let agreementInPlace = req.session.data['agreement-in-place']
     if (agreementInPlace === "no") {
-        res.redirect('fba')
+        res.redirect('work-together')
     } else if (agreementInPlace === "yes-working") {
-        res.redirect('calculator')
+        res.redirect('working-agreement')
     }
     else 
     res.redirect('agreement-type')
 })
+
+router.get('/work-together', (req, res) => {
+    res.render('alpha-prototype-3/work-together.html')
+})
+
+router.post('/are-you-able-to-work-together', function (req, res) {
+
+    let workTogether = req.session.data['work-with-other-parent']
+    if (workTogether === "flexible") {
+        res.redirect('fba')
+     } else if (workTogether === "what-when") {
+            res.redirect('calculator')
+    } else if (workTogether === "direct-pay") {
+        res.redirect('direct-pay')
+    }
+    
+    else if (workTogether ==="collect") {
+        res.redirect('collect-and-pay')
+}
+    else 
+    res.redirect('no-contact')
+})
+
 
 router.get('/agreement-type', (req, res) => {
     res.render('alpha-prototype-3/agreement-type.html')
@@ -37,7 +60,7 @@ router.post('/agreement-type', function (req, res) {
 
     let agreementType = req.session.data['agreement-type']
     if (agreementType === "cms") {
-        res.redirect('contact-cms')
+        res.redirect('cms-not-working')
     } 
     else
         res.redirect('not-working')
@@ -51,10 +74,12 @@ router.post('/not-working', function (req, res) {
 
     let notWorking= req.session.data['not-working']
     if (notWorking === "not-paying") {
-        res.redirect('courts')
+        res.redirect('mediation')
     }
-    else
-        res.redirect('calculator')
+    else if (notWorking ==="other"){
+        res.redirect('other')
+}
+    else res.redirect('calculator')
 })
 
 

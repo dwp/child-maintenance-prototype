@@ -1,0 +1,47 @@
+{% extends "layout.html" %} 
+{% set serviceUrl = "/alpha-prototype-3" %} 
+
+{% block pageTitle %} 
+{{ serviceName }} 
+{% endblock%} 
+
+{% block beforeContent%} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} 
+{% endblock %}
+
+{% block content%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+<h1 class="govuk-heading-xl">Direct Pay</h1>
+<p>Direct Pay is for when parents cannot agree, or have tried a family-based arrangement and it has stopped working.</p>
+
+<p>The Child Maintenance Service works out the payment amount, then you can make your own payment arrangement if you both agree.
+    Both parents will be told what should be paid and when.</p>
+
+<p>There is a fee of £20 to apply for Direct Pay. You will not have to pay any fees if you make a family-based arrangement.</p>
+
+<p>The easiest way to pay is by standing order from the paying parent&#8217;s account into the receiving parent&#8217;s account.
+    If you don’t want to contact each other, the Child Maintenance Service can securely pass the receiving parent's bank
+    account details to the paying parent. If you do not want the other parent to know where you live, you can set up a 'non-geographic'
+    bank account with a central or national sort code.</p>
+
+<p>The Child Maintenance Service can enforce missed payments. You should keep a record of payments in case there are any problems
+    in the future.</p>
+
+
+{% from "inset-text/macro.njk" import govukInsetText %} {{ govukInsetText({ text: "Either parent can choose Direct Pay, unless
+there is evidence that the paying parent is unlikely to pay." }) }}
+<p>If you want to make a family-based arrangement in the future, the parent who applied to the Child Maintenance Service must
+    ask the Child Maintenance Service to close their existing case.</p> 
+
+    <p>
+        <a href=".">Apply for Direct Pay</a> through the Child Maintenance Service.</p>
+
+        <p> If the Direct Pay service does not work for you, you can ask to change to
+            <a href="collect-and-pay">Collect and Pay</a>.</p>
+
+    </div>
+    </div>
+     {% endblock %}

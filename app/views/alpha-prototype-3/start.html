@@ -4,7 +4,7 @@
 {% set serviceUrl = "/alpha-prototype-1.1" %}
 
 {% block pageTitle %}
-   Find out how to make a Child Maintenance agreement
+  
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,11 +23,16 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-           Find out how to make a Child Maintenance agreement
-
+           Get help with my Child Maintenance options
       </h1>
 
+<p>Child maintenance is money to help pay for your child's everyday living costs when you are separated from the other parent.</p>
+{% from "inset-text/macro.njk" import govukInsetText %} {{ govukInsetText({ text: "Both parents are legally responsible for the financial costs of raising their children.
+" }) }}
+<p>Child maintenance payments are made by the parent who does not have day-to-day care of the child to the parent who has day-to-day
+care of the child.</p>
 
+<h2 class="govuk-heading-m">Find out how to make a child maintenance arrangement</h2>
       <p>To use this service you must: </p>
       <ul class="govuk-list govuk-list--bullet">
   <li>live in the UK</li>
@@ -44,7 +49,7 @@
 }) }}
 
 
-<p>If you are not elegible, you might still be able to <a href="fba"> make an arrangement.</a></p>
+<p>If you are not elegible, you might still be able to <a href="fba"> make a new arrangement.</a></p>
 
 
 </div>
