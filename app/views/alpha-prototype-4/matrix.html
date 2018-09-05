@@ -1,0 +1,99 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%}
+
+{% set serviceUrl = "/alpha-prototype-3" %} 
+
+{% block pageTitle %} 
+{{ serviceName }} 
+{% endblock %} 
+
+{% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: '' }) }} 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <h1 class="govuk-heading-xl">Child Maintenance options</h1>
+       </div>
+       </div>
+
+
+       <div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+<h2 class="govuk-heading-m">Arranging child maintenance yourself</h2>
+<p>You can arrange child maintenance between yourselves, if you can agree. This is called a &#146;family-based arrangement&#8217;.</p>
+<p>You agree how much the financial contributions should be and when they should be made.</p>
+
+<p>You can ask a court to formalise your agreement using a consent order (in England and Wales), or a minute of agreement (in
+    Scotland). These can be enforced through the courts if either parent does not do what has been agreed.</p>
+<p>If you both agree to regular payments, you can
+    <a href="calculator">get an estimate of how much payments should be</a>.</p>
+    <p><a href="">Get started</a> with arranging child maintenance yourself.</p>
+</div>
+<div class="govuk-grid-column-one-third"></div>
+
+<div class="box-example box-example govuk-!-padding-9">
+<h3 class="govuk-heading-s">Pros</h3>
+<ul class="govuk-list govuk-list--bullet">
+    <li>quick and easy</li>
+    <li>flexible</li>
+    <li>maintains communication</li>
+    <li>no fees</li>
+</ul>
+<h4 class="govuk-heading-s">Cons</h4>
+<ul class="govuk-list govuk-list--bullet">
+    <li>not legally binding</li>
+</ul>
+</div>
+       </div>
+    <hr>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-m">Using the Child Maintenance Service</h2>
+<p>If you and your ex-partner can’t agree child maintenance payments between you, you can contact the Child Maintenance Service
+(CMS). </p> 
+
+<p>It will work out how much child maintenance should be paid and it can arrange for the money to be paid, if you want
+it to. There is a £20 fee for using the CMS, unless you are under 19, a victim of domestic abuse or in Northern Ireland.</p>
+
+            <p> There are 2 types of arrangement you can apply to make through the Child Maintenance Service:
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Direct Pay</li>
+                <li>Collect and Pay</li>
+            </ul>
+<p>Direct Pay is for when parents cannot agree, or have tried a family-based arrangement and it has stopped working.</p>
+<p>Collect and Pay is for when the paying parent is unlikely to pay or has failed to pay.</p>
+
+<p>For Collect and Pay you must also pay a fee each time you make or receive a payment:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>paying parents will pay a 20% fee on top of their regular child maintenance payment</li>
+    <li>receiving parents will have a 4% fee deducted from their regular child maintenance payment</li>
+</ul>
+<p>
+    <a href="">Get started</a> with the Child Maintenance Service.</p>
+</div>
+            <div class="govuk-grid-column-one-third"></div>
+        
+            <div class="box-example box-example govuk-!-padding-9">
+                <h3 class="govuk-heading-s">Pros</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>payments worked out for you</li>
+                    <li>no contact between parents required</li>
+                    <li>no responsibility for making sure the paying parent pays child maintenance.</li>
+                </ul>
+                <h4 class="govuk-heading-s">Cons</h4>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>£20 application fee</li>
+                    <li>payment and enforcement fees</li>
+                    <li>might increase any bad feeling from your ex-partner.</li>
+                    <li>You don’t have any say in what type of enforcement action the CMS takes or when it takes it.</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+ {% endblock %}
