@@ -5,8 +5,18 @@
     <div class="govuk-grid-column-two-thirds">
         <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
         <h1 class="govuk-heading-xl">
-            What do you want?
+            What can we help you with?
         </h1>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+                Can you provide more detail?
+            </label>
+            <span id="more-detail-hint" class="govuk-hint">
+                Don’t include personal or financial information, eg your National Insurance number or credit card details.
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
         </div>
         </div>
          {% endblock %}
