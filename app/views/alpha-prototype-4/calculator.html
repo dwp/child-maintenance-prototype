@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% set serviceUrl = "/alpha-prototype-1.1" %}
+{% block pageTitle %} {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE" }, html: ''
+}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+         Child maintenance calculator
+        </h1>
+        <p>You can use this calculator to estimate your child maintenance. It can help you to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>agree an amount with the other parent if you’re arranging it yourselves</li>
+            <li>get an idea of the amount the government would work out for you</li>
+                    
+        </ul>
+<div class='govuk-inset-text'>
+     The calculator gives an estimate. The exact amount the Child Maintenance Service calculates may be different.
+</div>
+
+<a href="#" role="button" class="govuk-button govuk-button--start">
+    Calculate your child maintenance
+</a>
+<br>
+<a href="matrix2">Skip the calculator</a>
+        </div>
+        </div>
+        {% endblock %}
