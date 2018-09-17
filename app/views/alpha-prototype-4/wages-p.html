@@ -3,7 +3,7 @@
 {% from "radios/macro.njk" import govukRadios%} 
 {% set serviceUrl = "/alpha-prototype-1" %} 
 {% block pageTitle %} 
-{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
+{{ serviceName }} - What is your weekly gross income?
 ?
 
 {% endblock %} 
@@ -15,7 +15,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What is the weekly gross income of the parent paying child maintenance?
+        <h1 class="govuk-heading-xl">What is your weekly gross income?
 </h1>
         {% from "input/macro.njk" import govukInput %}
 
@@ -30,7 +30,7 @@
   id: "national-insurance-number",
   name: "national-insurance-number"
 }) }}
-<a href="other-children-r" role="button" class="govuk-button">
+<a href="other-children-p" role="button" class="govuk-button">
   Continue
 </a></div>
 </div>

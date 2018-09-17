@@ -15,8 +15,9 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What is the weekly gross income of the parent paying child maintenance?
-</h1>
+        <h1 class="govuk-heading-xl">How many other children live in your household?</h1>
+
+
         {% from "input/macro.njk" import govukInput %}
 
 {{ govukInput({
@@ -24,14 +25,15 @@
     text: ""
   },
   hint: {
-    text: "This is the weekly income before tax and National Insurance but after pension contributions."
+    text: "Enter 0 if no children live there. Don’t count the children child maintenance has to be paid for."
   },
   classes: "govuk-input--width-10",
-  id: "national-insurance-number",
-  name: "national-insurance-number"
+  id: "child-amount",
+  name: "child-amount"
 }) }}
-<a href="other-children-r" role="button" class="govuk-button">
+<a href="nights-p" role="button" class="govuk-button">
   Continue
-</a></div>
+</a>
+</div>
 </div>
 {% endblock %}

@@ -13,7 +13,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="post" action="paying-recieving">
+        <form method="post" action="paying-receiving">
 
             {{ govukRadios({ 
                 idPrefix: "paying-receiving", 
@@ -22,10 +22,12 @@
             isPageHeading: true, 
             classes: "govuk-fieldset__legend--xl" } }, 
             items: [ { 
+                name:"paying",
                 value: "paying", 
                 text: "Paying", 
                 checked: true if data['paying-receiving'] == "paying" }, 
                 { 
+                name: "receiving",    
                 value: "receiving", 
                 text: "Receiving", 
                 checked: true if data['child-age'] == "receiving" }

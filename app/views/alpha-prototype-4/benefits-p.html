@@ -3,8 +3,7 @@
 {% from "radios/macro.njk" import govukRadios%} 
 {% set serviceUrl = "/alpha-prototype-1" %} 
 {% block pageTitle %} 
-{{ serviceName }} - How many children are you receiving child maintenance for?
-
+{{ serviceName }} - Do you get any of these benefits or state pensions?
 {% endblock %} 
 
 {% block beforeContent %} 
@@ -24,7 +23,7 @@
   name: "waste",
   fieldset: {
     legend: {
-      text: "Does the parent paying child maintenance get any of these benefits or state pensions?",
+      text: "Do you get any of these benefits or state pensions?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
@@ -125,9 +124,9 @@
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-     
+
     </legend>
-   
+
     <div class="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
@@ -138,10 +137,10 @@
     </div>
   </fieldset>
 </div>
-
-<a href="wages-r" role="button" class="govuk-button">
+<a href="wages-p" role="button" class="govuk-button">
   Continue
 </a>
+
 </form>
 </div>
 </div>

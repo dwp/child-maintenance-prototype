@@ -53,4 +53,18 @@ router.post('/is-child-under-20', (req, res) => {
     }
 })
 
+router.get('/paying-receiving', (req, res) => {
+    res.render('alpha-prototype-4/paying-receiving')
+})
+
+router.post('/paying-receiving', (req, res) => {
+    let payingReceiving = req.session.data['paying-receiving']
+    if (payingReceiving === "paying") {
+        res.redirect('paying-children')
+    }
+    else {
+        res.redirect('receiving-children')
+    }
+})
+
 module.exports = router
