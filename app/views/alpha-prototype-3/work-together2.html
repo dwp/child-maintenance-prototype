@@ -1,0 +1,69 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios %}
+{% set serviceUrl = "/alpha-prototype-3" %}
+
+{% block pageTitle %} 
+    {{ serviceName }} 
+{% endblock %} 
+
+{% block beforeContent %} 
+
+{{ 
+    govukPhaseBanner({ 
+        tag: { 
+            text: "PROTOTYPE V1"
+        }, 
+        html: ''
+        })
+    }} 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <form method="post" action="are-you-able-to-work-together">
+
+  
+     {{ govukRadios({ 
+         idPrefix: "work-with-other-parent", 
+         name: "work-with-other-parent",
+         fieldset: { legend: { text: "What type of arrangement do you think would work for you?", 
+         isPageHeading: true, classes: "govuk-fieldset__legend--xl" } }, 
+         items:[ 
+         {  
+              name: "flexible",
+             value: "flexible", 
+             text: "An arrangement that you work out and organise payments yourselves" 
+            }, 
+    
+         { 
+             name: "what-when",
+             value: "what-when", 
+             text: "An arrangement that calculates what should be paid for you but you organise payments yourselves" 
+            }, 
+         { 
+             name: "direct-pay",
+             value: "direct-pay", 
+             text: "An arrangement that calculates what should be paid and enforces any missed payments that you organise yourselves"
+             },
+         { 
+             name: "collect",
+             value: "collect", 
+             text: "An arrangement that  calculates what should be paid and collects and passes on payments for you and is legally enforceable" 
+            }]
+
+        }) 
+    }}
+
+ {{ 
+     govukButton({ 
+         text: "Continue" 
+        })
+ }}
+</form>
+</div>
+</div>
+{% endblock %}
