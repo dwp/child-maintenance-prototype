@@ -1,0 +1,50 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/alpha-prototype-1" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Do you get any of these benefits or state pensions?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="communicate">
+
+
+
+{{ govukRadios({ 
+                idPrefix: "communicate", 
+                name: "communicate", 
+                fieldset: { legend: { text: "Are you able to communicate with the other parent?", 
+                isPageHeading: true, 
+                classes: "govuk-fieldset__legend--xl" } }, 
+                                 hint: { html: "
+                                <p id='communicate-hint' class='govuk-hint'>For example, face to face, by email, SMS, or through a friend or family member
+</p>
+                               " },
+
+                items: [ { 
+                    name: "yes", 
+                    value: "yes", 
+                    text: "Yes", 
+                    checked: true if data['communicate'] == "yes" }, 
+                    { 
+                        name: "no", 
+                        value: "no", 
+                        text: "No", 
+                        checked: false if data['communicate'] == "no" }
+                         ]
+                          })
+                           }}
+                            {{
+                                 govukButton({ 
+                                     text: "Continue"
+            }) }}
+</div>
+</div>
+{% endblock %}

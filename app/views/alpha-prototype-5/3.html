@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Do you get any of these benefits or
+state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+}} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+                <form method="post" action="conversation">
+
+
+
+{{ govukRadios({ 
+                idPrefix: "conversation", 
+                name: "conversation", 
+                fieldset: { legend: { text: "Is there anything that would stop you having a
+                 conversation about child maintenance with the other parent?", 
+                isPageHeading: true, 
+                classes: "govuk-fieldset__legend--xl" } },    
+
+                items: [ { 
+                    name: "yes", 
+                    value: "yes", 
+                    text: "Yes", 
+                    checked: true if data['conversation'] == "yes" }, 
+                    { 
+                        name: "no", 
+                        value: "no", 
+                        text: "No", 
+                        checked: false if data['conversation'] == "no" }
+                         ]
+                          })
+                           }}
+                            {{
+                                 govukButton({ 
+                                     text: "Continue"
+            }) }}
+
+    </div>
+</div>
+{% endblock %}

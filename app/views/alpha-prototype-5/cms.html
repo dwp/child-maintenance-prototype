@@ -1,0 +1,39 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/alpha-prototype-1" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Do you get any of these benefits or state pensions?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Applying to the Child Maintenance Service</h1>
+
+
+<p>To apply you must:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>live in the UK</li>
+    <li>be a parent or guardian of the child, or a child over 12 living in Scotland</li>
+    <li>pay a £20 application fee, unless you or your child have experienced domestic abuse, under 19, or in Northern Ireland</li>
+</ul>
+<p>The Child Maintenance Service will calculate a legally enforceable amount and tell both parents when it should be paid.
+</p>
+<p>Extra charges will apply if you need the Child Maintenance Service to collect and pass on payments between you, or if the
+    service needs to enforce payments.
+</p>
+<p>(Case study to show extra charges over year? Table of additional charges?)
+</p>
+<a href="2" class="govuk-button">
+    Continue
+</a>
+</div>
+</div>
+ {% endblock %}

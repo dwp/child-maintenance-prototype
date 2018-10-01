@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Do you get any of these benefits or
+state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+}} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Get help with child maintenance</h1>
+
+        <p>If you need to use the Child Maintenance Service, you'll need to
+             <a href="https://www2.dwp.gov.uk/contact-cmoptions/en/contact.asp">contact Child Maintenance Options</a> 
+             before you can make an application.</p>
+    </div>
+</div>
+{% endblock %}

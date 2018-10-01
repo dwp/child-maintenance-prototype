@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/alpha-prototype-1" %} 
+{% block pageTitle %} 
+{{ serviceName }} - 
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Making your own arrangement</h1>
+
+<p>If you are able to contact the other parent and can have a conversation about child maintenance, 
+    you can use the <a href=".">discussion guide</a> to arrange it yourselves.</p>
+
+
+
+<p>This discussion guide contains steps to take that may help you to have a conversation with the other parent
+ to make a new arrangement.</p>
+
+<p>If you need someone to help you to reach an agreement, ask a friend or family member,
+ or <a href=".">find a local mediator</a> to support you.</p>
+
+<p>Many separated parents write down what they have agreed, so they have something to refer to. [could be a contract?]</p>
+
+<p>If you want to make your agreement legally binding, you can ask a court to formalise it with a <a href=".">consent order
+ or minute of agreement</a>. This means the agreement can be enforced through the courts if either parent
+  doesn’t do what has been agreed.</p>
+
+  <p>If you have been unsucessful in arranging child maintenance yourself, you can contact 
+      <a href=".">child maintenance</a></p>
+
+      </div>
+      </div>
+      {% endblock %}
