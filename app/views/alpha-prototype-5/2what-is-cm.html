@@ -1,0 +1,85 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/alpha-prototype-1" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Do you get any of these benefits or state pensions?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Making an arrangement</h1>
+
+<p>Using the Child Maintenance Service is not compulsory and you can make an arrangement between yourselves.</p>
+
+<p>There are several tools to help you make an arrangement, depending on your circumstances and what you want
+     your arrangement to be.</p>
+
+     <h2 class="govuk-heading-m">What to pay</h2>
+     <p>One option for making an arrangement is for the paying parent to pay the parent with care a monthly amount 
+         to provide for the child. You could use the <a href=".">child maintenance calculator</a> to find out how much might be a fair amount.</p>
+
+<p>Or the non-resident parent could pay:</p>
+    <ul class="govuk-list govuk-list--bullet">
+
+<li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
+<li>larger lump sums at certain times in the child’s life</li>
+</ul>
+<p>If you choose to make your own financial arrangement, both parents
+will need to agree:</p>
+    <ul class="govuk-list govuk-list--bullet">
+
+<li>how much financial contributions will be when they will be paid how payments will be made </li>
+<li>You could also agree to review or change your arrangement in the future.</li>
+</ul>
+
+
+     <h3 class="govuk-heading-m">How to agree</h3>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Use this <a href=".">discussion guide </a>to help you reach an agreement</li>
+        <li>ask a friend or family member, or <a href=".">find a local mediator</a> to support you.</li>
+        <li>write down what you have agreed, so you have something to refer to.</li>
+    </ul>
+
+
+<h4 class="govuk-heading-m">Next steps</h4>
+<p>If you want to make your agreement legally binding, you can ask a court to formalise it with a <a href=".">consent order or minute of
+agreement</a>. This means the agreement can be enforced through the courts if either parent doesn’t do what has been agreed. </p>
+
+
+<div class="govuk-inset-text">
+    Making an arrangement between yourselves might not be appropriate if you think the other parent poses a threat to you or
+    your child, or if you are a victim of domestic abuse. If you feel making an arrangement could make you vulnerable,
+    <a
+        href=".">speak to one of our agents about your options</a>. (-could link into statutory or telephone intervention)</div>
+
+<h4 class="govuk-heading-m">If you cannot make your own arrangement
+</h4>
+<p>If you cannot make an arrangement between yourselves, either parent can ask the Child Maintenance Service
+     to make a new, formal arrangement.</p> 
+     <p>The Child Maintenance Service will calculate a legally enforceable amount 
+     and tell both parents when it should be paid.</p>
+        <ul class="govuk-list govuk-list--bullet">
+      <li>There is a £20 application fee (unless you are under 19, a victim of 
+     domestic abuse or live in Northern Ireland.)</li>
+     <li>Extra charges will apply if you need the Child Maintenance Service to collect and pass on payments between you, or if the service
+    needs to enforce payments.</li>
+    </ul>
+   <p><a href=".">Get help from the Child Maintenance service</a>
+
+</p>
+
+
+
+
+</div>
+</div>
+
+
+
+{% endblock %}

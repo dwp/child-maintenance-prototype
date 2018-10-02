@@ -18,7 +18,10 @@ state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ t
                  conversation about child maintenance with the other parent?", 
                 isPageHeading: true, 
                 classes: "govuk-fieldset__legend--xl" } },    
-
+                             hint: { html: "
+                            <p id='conversation-hint' class='govuk-hint'> For example if you are at risk of domestic abuse
+                            </p>
+                            " },
                 items: [ { 
                     name: "yes", 
                     value: "yes", 
