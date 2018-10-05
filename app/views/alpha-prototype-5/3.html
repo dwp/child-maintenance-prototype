@@ -9,12 +9,11 @@ state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ t
 
                 <form method="post" action="conversation">
 
-
-
 {{ govukRadios({ 
                 idPrefix: "conversation", 
                 name: "conversation", 
-                fieldset: { legend: { text: "Is there anything that would stop you making your own arrangement with the other parent?", 
+                fieldset: { legend: { text: " Is there anything that would stop you having a conversation about child maintenance with the other parent?
+", 
                 isPageHeading: true, 
                 classes: "govuk-fieldset__legend--xl" } },    
                              hint: { html: "
