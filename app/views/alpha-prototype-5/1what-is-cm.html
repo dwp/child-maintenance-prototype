@@ -1,14 +1,33 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Do you get any of these benefits or
-state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
 }} {% endblock%} {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Making an arrangement</h1>
 
+
 <p>Child maintenance is financial support towards your child’s everyday living costs when you’ve separated from the 
     other parent. You and the other parent can arrange child maintenance yourself if you can agree.</p>
-        <h2 class="govuk-heading-m">What to pay</h2>
+
+<p>Contents</p>
+<ul class="govuk-list">
+    <li>
+        <a href="#what">-- What to pay</a>
+    </li>
+    <li>
+        <a href="#when">-- When to pay</a>
+    </li>
+    <li>
+        <a href="#agree">-- Get help agreeing</a>
+    </li>
+    <li>
+        <a href="#others">-- How others have made an arrangement</a>
+    </li>
+</ul>
+
+
+    <div id="what" name="what">
+    <h2 class="govuk-heading-m">What to pay</h2>
         <p>One option for making an arrangement is for the paying parent to pay the parent with care a monthly amount to provide
             for the child. You could use the
             <a href="https://www.gov.uk/calculate-your-child-maintenance">child maintenance calculator</a> to find out how much might be a fair amount.</p>
@@ -19,16 +38,16 @@ state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ t
             <li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
             <li>larger lump sums at certain times in the child’s life</li>
         </ul>
-        <p>If you choose to make your own financial arrangement, both parents will need to agree:</p>
-        <ul class="govuk-list govuk-list--bullet">
+        </div>
+    <div id="when" name="when">
 
-            <li>how much will be paid and what is being paid for</li>
-            <li>when they will be paid
-                <li>how payments will be made </li>
-            </ul>
-                <p>You could also agree to review or change your arrangement in the future.</p>
-        
+        <h3 class="govuk-heading-m">When to pay</h3>
+        <p>Whatever the financial arrangement is, if you choose to make your own both parents will 
+            need to agree when they will be paid.</p>
+                
+        </div>
 
+    <div id="agree" name="agree">
 
         <h3 class="govuk-heading-m">If you need help agreeing your arrangement</h3>
         <ul class="govuk-list govuk-list--bullet">
@@ -40,32 +59,19 @@ state pensions? {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ t
             <li>write down what you have agreed, so you have something to refer to</li>
         </ul>
 
+</div>
+    <div id="others" name="others">
 
-        <h4 class="govuk-heading-m">Next steps</h4>
-         <p>Using the tools and information provided, you can now make your own child maintenance arrangement. 
-             If you need more information you can <a href="case-studies">view examples</a> of how others have made arrangements themselves.</p>
+        <h4 class="govuk-heading-m">Examples of other people's arrangements</h4>
+          <p>If you need more information you can <a href="case-studies">view examples</a> of how others 
+            have made arrangements themselves.</p>
+</div>
 
         <div class="govuk-inset-text">
             Making an arrangement between yourselves might not be appropriate if you think the other parent poses a threat to you or
             your child, or if you are a victim of domestic abuse. If you feel making an arrangement could make you vulnerable,
             <a href="phone">speak to one of our agents about your options</a>.</div>
 
-        <h4 class="govuk-heading-m">If you have tried your own arrangement and it has failed
-        </h4>
-        <p>If you have tried your own arrangement and it has failed, either parent can ask the Child Maintenance Service to
-            make a new, formal arrangement.</p>
-        <p>The Child Maintenance Service will calculate a legally enforceable amount and tell both parents when it should be
-            paid.
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>There is a £20 application fee (unless you are under 19, a victim of domestic abuse or live in Northern Ireland.)</li>
-            <li>Extra charges will apply if you need the Child Maintenance Service to collect and pass on payments between you,
-                or if the service needs to enforce payments.</li>
-        </ul>
-        <p>
-            <a href="resident">Get help from the Child Maintenance service</a>
-
-        </p>
 
 
 
