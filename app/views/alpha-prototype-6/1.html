@@ -1,0 +1,112 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %}
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} {% endblock%} {% block content
+%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Making an arrangement</h1>
+
+
+        <p>Child maintenance is financial support towards your child’s everyday living costs when you’ve separated from the
+            other parent. You and the other parent can arrange child maintenance yourself if you can agree.</p>
+
+        <p>Contents</p>
+        <ul class="govuk-list">
+            <li>
+                <a href="#cost">-- The cost of raising a child</a>
+            </li>
+            
+            <li>
+                 <a href="#arrangement">-- How to make an arrangement</a>
+            </li>
+
+             <li>
+                 <a href="#payments">-- How to make payments</a>
+             </li>
+
+            <li>
+                <a href="#calculate">-- Calculate a child maintenance amount</a>
+            </li>
+            <li>
+                <a href="#help">-- Helping someone with child maintenance</a>
+            </li>
+            <li>
+                <a href="#conversation">-- Starting the conversation</a>
+            </li>
+            <li>
+                <a href="#da">-- Protecting yourself</a>
+            </li>
+            <li>
+                <a href="#problems">-- What to do if problems arise</a>
+            </li>
+        </ul>
+
+
+        <div id="cost" name="cost">
+            <h2 class="govuk-heading-m">The cost of raising a child</h2>
+            <p>One option for making an arrangement is for the paying parent to pay the parent with care a monthly amount to
+                provide for the child. You could use the
+                <a href="https://www.gov.uk/calculate-your-child-maintenance">child maintenance calculator</a> to find out how much might be a fair amount.</p>
+
+            <p>An arrangement doesn't have to be a fixed payment amount. It could be an agreement that the paying parent could
+                pay:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+                <li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
+                <li>larger lump sums at certain times in the child’s life</li>
+            </ul>
+        </div>
+        <div id="arrangement" name="arrangement">
+
+            <h3 class="govuk-heading-m">How to make an arrangement</h3>
+            <p>Whatever the financial arrangement is, if you choose to make your own both parents will need to agree when they
+                will be paid.</p>
+
+        </div>
+
+        <div id="payments" name="payments">
+
+            <h3 class="govuk-heading-m">How to make payments</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Use this
+                    <a href="https://www.cmoptions.org/en/pdfs/refresh/family-based-arrangement-form-aug-2015.pdf">arrangement tool </a>to help you reach an agreement</li>
+                <li>ask a friend or family member, or
+                    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/">find a local mediator</a>
+                    to support you.</li>
+                <li>write down what you have agreed, so you have something to refer to</li>
+            </ul>
+
+        </div>
+        <div id="calculate" name="calculate">
+
+            <h4 class="govuk-heading-m">Calculate a child maintenance amount</h4>
+            <p>If you need more information you can
+                <a href="case-studies">view examples</a> of how others have made arrangements themselves.</p>
+        </div>
+
+                <div id="help" name="help">
+                                <h5 class="govuk-heading-m">Helping someone with child maintenance</h5>
+
+</div>
+        <div id="conversation" name="conversation">
+                                <h6 class="govuk-heading-m">Starting the conversation</h6>
+
+
+        </div>
+        <div id="da" name="da">
+<h7 class="govuk-heading-m">Protecting yourself</h7>
+</div>
+
+<div id="problems" name="problems">
+<h8 class="govuk-heading-m">What to do if problems arise</h8>
+
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}
