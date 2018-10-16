@@ -1,0 +1,55 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - How to make an arrangement
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">How to make an arrangement</h1>
+<p>There are many ways to arrange child maintenance between yourselves.</p>
+<p>For example, you could agree to share care, split the costs of specific items, or that the non-resident parent
+     will pay:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>a proportion of their income to the parent with care</li>
+        <li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
+        <li>larger lump sums at certain times in the child’s life</li>
+    </ul>
+
+   <p>You can <a href="fba-case-study" target="_blank">view how others have made an arrangement themselves</a></p>
+
+   <p>If you choose to make a financial arrangement, both parents will need to agree:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>how much financial contributions will be</li>
+        <li>when they will be paid</li>
+        <li>how payments will be made</li>
+    </ul>
+<p>You could also agree to review or change your arrangement in the future.</p>
+
+<p>If you need someone to help you to reach an agreement, ask a friend of family member, or 
+    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/">find a local mediator</a> to support you.</p>
+
+    <p>Many separated parents write down what they have agreed to, so they have something to refer to.</p>
+
+    <p>If you want to make your agreement legally binding, you can ask a court to formalise it with a
+         consent order or minute of agreement. This means the agreement can be enforced through the courts
+          if either parent doesn’t do what has been agreed.</p>
+    </div>
+    </div>
+<p class="govuk-body govuk-!-font-size-24 govuk-body govuk-!-font-weight-bold" >Next
+    </p>
+</p><a class="govuk-body govuk-!-font-size-19" href="calculate">Calculate an amount</a>   
+
+
+{% endblock %}

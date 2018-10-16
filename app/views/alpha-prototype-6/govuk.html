@@ -1,13 +1,13 @@
 {% extends "layout.html" %} 
 {% from "button/macro.njk" import govukButton %} 
 {% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/alpha-prototype-1" %} 
+{% set serviceUrl = "/" %} 
 {% block pageTitle %} 
 {{ serviceName }} - What is child maintenance?
 {% endblock %} 
 
 {% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
 {% endblock%} 
 
 {% block content %}
@@ -26,8 +26,8 @@ parent.</p> <p>You can make an arrangement yourselves with no-one else involved.
 
 {% from "button/macro.njk" import govukButton %} 
 {{ govukButton({ 
-  text: "Start now", 
-  href: "1what-is-cm", 
+  text: "Making an arrangement", 
+  href: "1", 
   classes: "govuk-button--start"
 }) }}
 

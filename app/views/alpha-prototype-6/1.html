@@ -1,6 +1,6 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %}
-{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} {% endblock%} {% block content
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %}
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content
 %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -13,39 +13,38 @@
         <h2 class="govuk-heading-m">Guidance and tools for making an arrangement</h2>
         <ul class="govuk-list govuk-list--bullet">
             <li>
-                <a href="#cost">The cost of raising a child</a>
+                <a href="cost">The cost of raising a child</a>
             </li>
             <li>
-              <a href="#da">Protecting yourself</a>
-            </li>
-
-            <li>
-                <a href="#conversation">Starting the conversation</a>
+              <a href="da">Protecting yourself</a>
             </li>
 
             <li>
-                <a href="#arrangement">How to make an arrangement</a>
+                <a href="conversation">Starting the conversation</a>
+            </li>
+
+            <li>
+                <a href="arrangement">How to make an arrangement</a>
             </li>
              <li>
-                <a href="#calculate">Calculate a child maintenance amount</a>
+                <a href="calculate">Calculate a child maintenance amount</a>
             </li>
 
              <li>
-                 <a href="#payments">How to make payments</a>
+                 <a href="payments">How to make payments</a>
              </li>
 
             <li>
-                <a href="#help">Helping someone with child maintenance</a>
+                <a href="help">Helping someone with child maintenance</a>
             </li>
             <li>
-                <a href="#problems">What to do if problems arise</a>
+                <a href="problems">What to do if problems arise</a>
             </li>
         </ul>
 
 <h3 class="govuk-heading-m">If you need more help</h3>
-<p>If you have read all the information and need more help, you can answer some questions about your relationship to
-    <a href="q1">get information tailored to your circumstances</a>.</p>
-
+<p>If you have read the information and guides above and need more help, you can 
+    <a href="q1">answer some questions about your relationship</a> to get information tailored to your circumstances.</p>
 
     </div>
 </div>

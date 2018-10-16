@@ -1,0 +1,43 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - What to do if problems arise
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">What to do if problems arise</h1>
+<p>Private arrangements are not legally enforceable, and you will need to work together to make sure your arrangement keeps
+working. A mediator can help you to get things back on track if your arrangement stops working effectively.
+</p>
+<h2 class="govuk-heading-m">How changes in your circumstances could affect child maintenance
+</h2>
+
+<p>Personal circumstances can change over time and you may want to plan for possible changes when you're arranging child maintenance.
+</p>
+
+<p>Changes that could affect your child maintenance arrangement include:
+</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the income of the paying parent</li>
+        <li>how many children you or the other parent have or support</li>
+        <li>how many nights a week the child spends with each parent</li>
+    </ul>
+<p>With a private arrangement, you can agree to make changes if either parent’s circumstances change, and you both agree to
+the changes.
+</p>
+
+
+
+    </div>
+    </div>
+    {% endblock %}

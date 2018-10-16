@@ -1,0 +1,93 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Describe your current relationship with the other parent?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+<h1 class="govuk-heading-xl">You can make an arrangement yourself</h1>
+
+<p>There are many ways to arrange child maintenance between yourselves.</p>
+<p>For example, you could agree to share care, split the costs of specific items, or that the non-resident parent will pay:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>a proportion of their income to the parent with care</li>
+    <li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
+    <li>larger lump sums at certain times in the child’s life</li>
+</ul>
+
+<p>You can
+    <a href="fba-case-study" target="_blank">view how others have made an arrangement themselves</a>
+</p>
+
+<p>If you choose to make a financial arrangement, both parents will need to agree:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>how much financial contributions will be</li>
+    <li>when they will be paid</li>
+    <li>how payments will be made</li>
+</ul>
+<p>You could also agree to review or change your arrangement in the future.</p>
+
+<h5 class="govuk-heading-m">Would you like someone else to be there?</h5>
+<p>If you don’t feel comfortable speaking to your child’s other parent alone, you could ask a friend or relative that both parents
+    trust to be there during your conversation.</p>
+<p>You could also ask a professional family mediator to help you agree an arrangement.</p>
+
+<h6 class="govuk-heading-m">Calculating an amount </h6>
+<p>You can use the
+    <a href="https://www.gov.uk/calculate-your-child-maintenance" target="_blank">
+        Child Maintenance Calculator</a> If you are:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>unsure of what is a fair amount to pay</li>
+    <li>struggling to agree an amount</li>
+    <li>in need of a starting point to agree an arrangement</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">How to make payments</h2>
+
+<p>There are several ways to pay child maintenance. The most suitable will depend on the arrangement you have and your circumstances.</p>
+
+<h3 class="govuk-heading-m">Pay by standing order</h3>
+<p>If you’ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent directly from
+    one person’s bank or building society account to another person’s account.</p>
+
+<p>A standing order helps both parents to plan and manage their finances, and keep a record of payments made.</p>
+
+<h4 class="govuk-heading-m">Use a money transfer service</h4>
+<p>Another option is to use a money transfer service, like PayPal or MoneyGram. This method means you don’t have to share yourbank
+    details with the other parent.</p>
+<p>
+    <span class="govuk-body govuk-!-font-weight-bold">Important</span> - some of these services may charge a fee. Check with the service provider to make sure you understand
+    if any charges will apply.</p>
+
+<h5 class="govuk-heading-m">Change your payment method if your circumstances change</h5>
+
+<p>If you make your own arrangement, you can agree to change your payment method if your circumstances change.</p>
+
+<p>For example, if the paying parent loses their job, both parents could agree to reduce the child maintenance payments until
+    the paying parent is back in work.</p>
+
+<p>Or, if the receiving parent needs to make urgent repairs to the home they live in with the children, the paying parent couldhelp
+    with the cost by paying a lump sum, instead of the regular payments.</p>
+
+    <h6 class="govuk-heading-m">What to do if problems arise</h6>
+    <p>Private arrangements are not legally enforceable, and you will need to work together to make sure your arrangement keeps
+        working. A mediator can help you to get things back on track if your arrangement stops working effectively.
+    </p>
+
+</div>
+</div>
+{% endblock%}

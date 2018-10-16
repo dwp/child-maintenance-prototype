@@ -1,0 +1,32 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - The cost of raising a child
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+    
+<h1 class="govuk-heading-xl">The cost of raising a child</h1>
+
+<p>These <a href="https://www.cmoptions.org/en/pdfs/refresh/cost-of-raising-your-child.pdf" target="_blank">forms</a> can help you think about the things children need and work out the true cost of bringing up your child.</p>
+
+<p>Use them to split up the money you spend on your child into individual parts, from nappies for babies to entertainment for teenagers,
+and then work out who is best placed to pay for them.</p>
+
+<h2 class="govuk-heading-m">When to use these forms</h2>
+
+<p>These forms are most useful for parents who are working together to arrange child maintenance.</p>
+<p>If you’re thinking of making a family-based arrangement, the forms are a useful way of sorting out who’s
+     going to pay for what and what the maintenance contribution should be.</p>
+    </div>
+    </div>
+    {% endblock %}

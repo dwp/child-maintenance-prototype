@@ -1,0 +1,49 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - How to make payments
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">How to make payments</h1>
+
+<p>There are several ways to pay child maintenance. The most suitable will depend on the arrangement you 
+    have and your circumstances.</p>
+
+    <h2 class="govuk-heading-m">Pay by standing order</h2>
+    <p>If you’ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent
+         directly from one person’s bank or building society account to another person’s account.</p>
+
+         <p>A standing order helps both parents to plan and manage their finances, and keep a record of 
+             payments made.</p>
+
+             <h3 class="govuk-heading-m">Use a money transfer service</h3>
+             <p>Another option is to use a money transfer service, like PayPal or MoneyGram. 
+                 This method means you don’t have to share yourbank details with the other parent.</p>
+                 <p><span class="govuk-body govuk-!-font-weight-bold">Important</span> - some of these services may charge a fee. Check with the service provider to make sure you understand if any charges
+                will apply.</p>
+
+<h4 class="govuk-heading-m">Change your payment method if your circumstances change</h4>
+
+<p>If you make your own arrangement, you can agree to change your payment method if your circumstances change.</p>
+
+<p>For example, if the paying parent loses their job, both parents could agree to reduce the child maintenance 
+    payments until the paying parent is back in work.</p>
+
+    <p>Or, if the receiving parent needs to make urgent repairs to the home they live in with the children, 
+        the paying parent couldhelp with the cost by paying a lump sum, instead of the regular payments.</p>
+
+
+    </div>
+    </div>
+    {% endblock %}

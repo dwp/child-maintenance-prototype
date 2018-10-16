@@ -1,0 +1,25 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Helping someone with child maintenance
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Helping someone with child maintenance</h1>
+
+<p>As the friend or relative of someone who’s separating or separated you might be concerned about saying and doing the right
+thing. </p>
+<p>This <a href="https://www.cmoptions.org/en/pdfs/refresh/helping-someone-you-know-aug-2015.pdf" target="_blank">guide</a> can help you decide when and how to get involved and give support.</p>
+    </div>
+    </div>
+    {% endblock %}

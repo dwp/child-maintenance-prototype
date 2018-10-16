@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Protecting yourself {% endblock %}
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content
+%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+<h1 class="govuk-heading-xl">Calculate a child maintenance amount</h1>
+
+<p>You can use the
+    <a href="https://www.gov.uk/calculate-your-child-maintenance" target="_blank">
+        Child Maintenance Calculator</a> If you are:</p> 
+    <ul class="govuk-list govuk-list--bullet">
+        <li>unsure of what is a fair amount to pay</li>
+        <li>struggling to agree an amount</li>
+        <li>in need of a starting point to agree an arrangement</li>
+    </ul>
+
+
+
+        <p>If you can agree an amount, you need to agree on <a href="payments">how to make payments</a>.</p>
+    </div>
+    </div>
+    {% endblock %}

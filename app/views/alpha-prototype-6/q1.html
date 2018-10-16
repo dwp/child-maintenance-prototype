@@ -1,0 +1,64 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Describe your current relationship with the other parent?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+        <form method="post" action="describe-relationship">
+
+{{ govukRadios({ 
+                idPrefix: "describe-relationship", 
+                name: "describe-relationship", 
+                fieldset: { legend: { text: "Describe your current relationship with the other parent", 
+                isPageHeading: true, 
+                classes: "govuk-fieldset__legend--xl" } },    
+                items: [ { 
+                    name: "friendly", 
+                    value: "friendly", 
+                    text: " Friendly – we talk often and get on well", 
+                    checked: true if data['conversation'] == "yes" }, 
+                    { 
+                        name: "amicable", 
+                        value: "amicable", 
+                        text: " Amicable – we talk when we need to about things that we need to (mainly the children)", 
+                        checked: false if data['conversation'] == "no" },
+                        {
+                          name: "notfriendly", 
+                        value: "notfriendly", 
+                        text: " Not very friendly – we speak because we have to, it’s strained and usually results in cross words", 
+                        checked: false if data['conversation'] == "no" },
+                        {
+                          name: "unfriendly", 
+                        value: "unfriendly", 
+                        text: " Not at all friendly – we don’t speak and we (or one of us) don’t want to", 
+                        checked: false if data['conversation'] == "no" }
+
+                         ]
+                          })
+                           }}
+                            {{
+                                 govukButton({ 
+                                     text: "Continue"
+            }) }}
+
+</form>
+
+
+
+
+    </div>
+    </div>
+    {% endblock %}

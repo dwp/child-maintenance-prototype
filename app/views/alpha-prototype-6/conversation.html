@@ -1,0 +1,63 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Starting the conversation
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Starting the conversation</h1>
+
+<p>Talking about arrangements for children can be difficult. When preparing for your discussion about child maintenance, there
+are four main things to think about:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>what you want to talk about</li>
+    <li>how you will put your ideas forward</li>
+    <li>when and where you will talk</li>
+    <li>if you would like someone else to be there</li>
+</ul>
+<h2 class="govuk-heading-m">What do you want to talk about?</h2>
+<p>Decide which things you feel are most important to sort out and think about what your ideal result would be for each thing.</p>
+<p>Then think about which things you are prepared to compromise on.</p>
+
+
+<h3 class="govuk-heading-m">How will you put your ideas forward?</h3>
+<p>Think about the best way to explain your ideas to the other parent. You could write them down in a letter or email, or talk
+about them face to face, or over the phone.</p>
+
+<p>Start with the things that you think will be easiest to agree on, even if they're not your top priority. This can help you
+to reach common ground, and make later decisions easier.</p>
+
+<h4 class="govuk-heading-m">When and where do you want to talk?</h4>
+<p>Some people prefer to talk somewhere private, like their home. If you feel uncomfortable going to the other parent's home
+or having them in your home, you could ask a friend or relative to let you use their home instead.</p>
+
+<p>You could also meet the other parent somewhere more public and "neutral", like a cafe or a park.</p>
+
+<p>Try to find a convenient time when you are both able to concentrate on the conversation, without other distractions or time
+pressure.</p>
+
+<h5 class="govuk-heading-m">Would you like someone else to be there?</h5>
+<p>If you don’t feel comfortable speaking to your child’s other parent alone, you could ask a friend or relative that both parents
+trust to be there during your conversation.</p>
+<p>You could also ask a professional family mediator to help you agree an arrangement.</p>
+
+
+
+
+
+
+
+    </div>
+    </div>
+    {% endblock %}
