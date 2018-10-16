@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Andrew and Helen's finiancial arrangement</h1>
+
+        <p>Andrew and Helen separated 2 years ago. They have 2 daughters, Hollie and Jess.
+</p>
+
+<p>When they separated, Andrew and Helen managed to make an arrangement between themselves. They agreed that Andrew would pay
+a fixed amount each week, when he got paid.
+</p>
+
+<p>Their arrangement stopped working when Andrew’s new partner had a baby and he stopped making payments as they had things
+to pay for in their own household.
+</p>
+
+<p>Helen was surprised when payment suddenly stopped, and angry that the arrival of Andrew’s new baby appeared to have ended
+his support for Hollie and Jess.
+</p>
+
+<p>Helen tried calling and emailing Andrew to talk about what had happened and to see if they could get their arrangement back
+on track, but Andrew refused to speak to her. Helen was angry, so she stopped Hollie and Jess going to see Andrew after school.
+</p>
+
+<p>Andrew’s mum, Lilian, found out what was going on and went online looking for some advice. She found out that, as a father,
+Andrew was legally responsible for the costs of raising his daughters, even though he didn’t live with them.
+</p>
+
+<p>She also found the child maintenance calculator, which makes adjustments for any other children the paying parent is responsible
+for.
+</p>
+
+<p>Lilian emailed the information and the calculator to both Andrew and Helen. She asked them to put the girls first and try
+to resolve their differences, either by email, or they could both come to her house to talk.
+</p>
+
+<p>Helen was surprised that Lilian was involved but appreciated her offer to help them have a conversation in her home. Andrew
+realised he had a legal obligation to his daughters and was keen to get an arrangement working again.
+</p>
+
+<p>Helen and Andrew met at Lilian’s house and used the child maintenance calculator together to agree a new amount to be paid.
+A few weeks later, Helen also agreed to let the girls start going to Andrew’s after school again.
+</p>
+
+</div>
+</div>
+{% endblock %}

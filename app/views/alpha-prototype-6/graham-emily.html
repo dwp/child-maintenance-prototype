@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Graham and emily's payment agreement</h1>
+
+        <p>Graham and Emily separated after 4 years of marriage. They have one child, Thomas, who lives with Emily most of the time.
+</p>
+
+<p>Graham works different hours every week, so they found it difficult to agree a fixed amount for child maintenance. Instead,
+Emily and Graham went supermarket shopping for Thomas, buying all the basics and essentials for that week. They split this
+total in half, and Graham agreed to load that amount onto a pre-paid credit card every week, for Emily to do the shopping
+with.
+</p>
+
+<p>Graham also offered to chip in if Thomas needs any specific things, like a new pair of shoes. He also sometimes gives Emily
+an extra contribution if he has worked a lot of hours in the week.
+</p>
+
+<p>Emily understands that Graham’s hours are varied so she lets him have Thomas whenever he wants to. It’s important to her
+that Graham and Thomas continue to be a part of each other’s lives.</p>
+
+</div>
+</div>
+
+{% endblock%}

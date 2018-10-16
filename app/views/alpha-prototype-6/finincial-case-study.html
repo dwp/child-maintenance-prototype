@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %}
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content
+%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Clare and Mark's finiancial arrangement</h1>
+
+<p>Claire and Mark recently separated after 10 years of marriage. They have 2 children, Oliver and Becky.
+</p>
+
+<p>Claire works full time, while Mark works part-time while the children are at school. Ian and Becky both stay with Claire
+on Saturday nights, although Claire hopes she will be able to have them stay with her Friday evening to Sunday afternoon
+when she finds a new home.
+</p>
+
+<p>The end of the relationship was quite civil, but conversations about finances have always been difficult and caused arguments.
+They both want to keep things friendly. Mark is keen to make an arrangement with Claire for her to pay maintenance to support
+their children as he has them most of the time.
+</p>
+
+<p>Mark knows how much he spends on the children each week, on food, clothes, childcare on 2 days when he is at work, and music
+lessons for Ian. He suggested splitting these costs 50/50 with Claire. Claire felt that this was a lot of money, and didn’t
+think she should have to pay so much when she hardly got to see the children.
+</p>
+
+<p>Claire used the child maintenance calculator to work out how much the Child Maintenance Service would calculate for her to
+pay when she had the children Friday to Sunday. This amount was less than what Mark was asking for, but would mean that Oliver
+could not continue his music lessons, which he really enjoyed.
+</p>
+
+<p>Claire and Mark agreed that Claire would pay the amount from the Child Maintenance Calculator, plus half of Oliver’s music
+lessons and grade certificates. They also agreed that if Becky started music or sports lessons, they would split the cost
+of those as well.
+</p>
+
+<p>Claire set up a standing order to pay the agreed amount to Mark every month, when she got paid her salary, so they both knew
+when the payment was due and could plan their finances around it.</p>
+
+</div>
+</div>
+{% endblock%}
