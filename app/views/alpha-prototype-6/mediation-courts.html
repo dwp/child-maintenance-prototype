@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Describe your current relationship with the other parent?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Get help through mediation</h1>
+
+<p>If you need someone to help you to reach an agreement, ask a friend of family member, or
+    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/">find a local mediator</a> to support you.</p>
+
+    <p>You can view this <a href="mediation-cs">example</a> of how Steve and Jen used mediation to make their own arrangement work.</p>
+</div>
+</div>
+{% endblock %}

@@ -35,10 +35,10 @@ router.post('/how-often-are-you-in-contact', (req, res) => {
     let contact = req.session.data['contact']
     if (contact === "regularly") {
 
-        res.redirect('govuk')
+        res.redirect('mediation-family')
     }
     else if (contact === "occasionally") {
-        res.redirect("da")
+        res.redirect("mediation-courts")
     }
     else  [
         res.redirect("phone")
