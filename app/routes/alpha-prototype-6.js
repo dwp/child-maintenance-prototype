@@ -44,17 +44,7 @@ router.post('/how-often-are-you-in-contact', (req, res) => {
         res.redirect("phone")
     ]
 })
- router.get('/did-this-help', (req, res) => {
-     res.render('alpha-prototype-6/did-this-help1')
- })
 
- router.post('/did-this-help', (req, res) =>{
-     let help = req.session.data['help']
-     if (help ==="yes") {
-         res.redirect('govuk')
-     }
-     else [
-         res.redirect('q1')
-     ]
- })
+
+
 module.exports = router
