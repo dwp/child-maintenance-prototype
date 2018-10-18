@@ -18,7 +18,7 @@ router.post('/describe-relationship', (req, res) => {
         res.redirect("amicable")
     }
     else if (describeRelationship=== "notfriendly"){
-        res.redirect("q2")
+        res.redirect("not-very-friendly2")
     }
     else [
         res.redirect("q2")
@@ -42,6 +42,23 @@ router.post('/how-often-are-you-in-contact', (req, res) => {
     }
     else  [
         res.redirect("phone")
+    ]
+})
+
+router.get('/how-often-are-you-in-contactnv', (req, res) => {
+    res.render('alpha-prototype-6/not-very-friendly2.html')
+})
+
+
+router.post('/how-often-are-you-in-contactnv', (req, res) => {
+    let contact = req.session.data['contact']
+    if (contact === "regularly") {
+
+        res.redirect('mediation-family')
+    }
+    else [
+        res.redirect("mediation-courts")
+    
     ]
 })
 

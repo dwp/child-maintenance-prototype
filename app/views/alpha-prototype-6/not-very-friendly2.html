@@ -1,0 +1,49 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - q1
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+        <form method="post" action="how-often-are-you-in-contactnv">
+
+{{ govukRadios({ 
+                idPrefix: "nvcontact", 
+                name: "nvcontact", 
+                fieldset: { legend: { text: "How often are you in contact with the other parent?", 
+                isPageHeading: true, 
+                classes: "govuk-fieldset__legend--xl" } },    
+                items: [ { 
+                    name: "regularly", 
+                    value: "regularly", 
+                    text: " Regularly", 
+                    checked: true if data['conversation'] == "yes" }, 
+                    { 
+                        name: "occasionally", 
+                        value: "occasionally", 
+                        text: " Occasionally", 
+                        checked: false if data['conversation'] == "no" }
+                        
+                       
+    
+                         ]
+                          })
+                           }}
+                            {{
+                                 govukButton({ 
+                                     text: "Continue"
+            }) }}
+</form>
+
+    </div>
+    </div>
+    {% endblock %}
