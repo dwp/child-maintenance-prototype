@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">James and Amy's shared care arrangement</h1>
+
+            <p>James and Amy have 3 children. They separated 2 months ago but are still friends and can talk to each other about most things.
+            </p>
+            
+            <p>James and Amy share care of the kids and have agreed to go halves on large expenses like uniforms and after school activities.
+                They keep in touch by SMS during the week so they know what homework needs doing, or if any of the kids have parties
+                or competitions coming up.
+            </p>
+            
+            
+            <p>Both of them give the kids the same amount of pocket money, and they’ve agreed to spend the same amounts on birthday and
+                Christmas presents, to minimise arguments and stop the kids playing them against each other.
+            </p>
+            
+            <p>This arrangement works well for them because they are able to communicate in a friendly way and they work hard to put the
+                kids first at all times.</p>
+
+    </div>
+</div>
+
+{% endblock%}
