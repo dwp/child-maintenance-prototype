@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %} {% block beforeContent%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V1" }, html: '' }) }} {% endblock %}{%
+block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            You are eligible to apply for the Child Maintenance service
+        </h1>
+<h2 class="govuk-heading-m">Applying to the Child Maintenance service</h2>
+
+<p>You are eligible to apply to the Child Maintenance service.</p>
+<p>There is a £20 application fee when you apply, unless you are under 19, a victim of domestic abuse or in Northern Ireland. 
+    There will be further fees if you need the Child maintenance service 
+    to collect or enforce payments. </p>
+
+<a href="#" role="button" draggable="false" class="govuk-button">
+    Apply to the Child Maintenance service
+</a>
+        <p>You can still arrange child maintenance between yourselves, if you can agree. This is called a &#146;family-based arrangement&#8217;.</p>
+        <p>There are no charges for making a family-based arrangement. Parents arrange everything themselves and no-one else has to
+            be involved. It is flexible, and can be changed if either of your circumstances change.</p>
+        <p>You agree how much the financial contributions should be and when they should be made.</p>
+        <p>If you both agree to regular payments, you can
+            <a href="calculator">get an estimate of how much payments should be</a>.</p>
+<p>Find out <a href="">how to make an arrangement yourselves</a>.</p>
+
+
+    </div>
+</div>
+{% endblock %}

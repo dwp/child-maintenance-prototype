@@ -84,7 +84,7 @@ router.post('/is-child-under-20', (req, res) => {
         res.redirect('not-cms-eligible')
     }
     else {
-        res.redirect('phone')
+        res.redirect('eligible')
     }
 })
 
