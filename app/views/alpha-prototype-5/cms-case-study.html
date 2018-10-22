@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Making an arrangement {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">JLeanna and Liams child maintenance service arrangement</h1>
+
+        <p>Joan took care of her grandchildren, Sam and Billy, when her daughter Leanne split up with their father, Liam.
+
+        </p>
+
+        <p>She asked both Leanne and Liam to give her some money every month to help with the costs of raising their children.
+
+        </p>
+
+
+        <p>Leanne agreed to give Joan some cash every Sunday when she saw Joan and the kids for lunch. Liam ignored Joan’s request and
+        wouldn’t answer her phone calls.
+ </p>
+
+        <p>When she realised that Liam wasn’t going to help her with the costs of the children voluntarily, Joan paid £20 to ask the
+        Child Maintenance Service to get involved.
+</p>
+
+<p>The Child Maintenance Service tried to contact Liam, several times, but he ignored their communications. Because Liam wouldn’t
+speak to them, they used income information from HM Revenue and Customs to calculate how much he had to pay, which came out
+at £48 each week.
+</p>
+
+<p>Liam received another letter from the Child Maintenance Service which told him he should be paying £48 direct to Joan every
+week. He didn’t want to pay so he ignored the letter. He also received a phone call from the Child Maintenance Service, and
+told them he wasn’t going to pay the amount that had been calculated.
+</p>
+
+<p>Because Liam had told the Child Maintenance Service that he was not going to pay, Joan’s case was moved to the Collect and
+Pay scheme. He received another letter from the Child Maintenance Service which said they would now collect his payments
+from his wages through a deduction from earnings order (DEO). The money for child maintenance would then be passed on to
+Joan.
+</p>
+
+<p>The letter told him that he would be charged for this service. He would now have to pay an extra 20%, so his new payments
+would be £57.80 each week, instead of £48, adding up to nearly £500 extra each year. It also stated that if the Child Maintenance
+Service needed to take other enforcement action he would have to pay for that as well, or they could take him to court.
+</p>
+
+<p>The Child Maintenance Service also contacted Joan, to tell her the money would now be collected and passed on to her. However,
+she would have to pay a collection fee for this service, which would be 4% of Liam’s weekly payments, which added up to nearly
+£100 a year.
+</p>
+
+<p>Joan was frustrated that this would mean less money for the children, but knew that it was the only way Liam would pay regularly.
+She needed the financial support so she could keep looking after the children.
+</p>
+        <div class="govuk-inset-text">
+
+<p>All case studies are fictional examples for illustrative purposes only. Any resemblance to actual persons, living or dead,
+is purely coincidental.
+</p>
+</div>
+    </div>
+</div>
+
+{% endblock%}
