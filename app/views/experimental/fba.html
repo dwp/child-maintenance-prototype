@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - Arranging child maintenence yourself
+{% endblock %} {% block beforeContent%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V1" }, html: '' }) }} {% endblock %}{%
+block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Making your own arrangement
+        </h1>
+        <p>You can arrange child maintenance between yourselves, if you can agree. This is called a &#146;family-based arrangement&#8217;.</p>
+        <p>There are no charges for making a family-based arrangement. Parents arrange everything themselves and no-one else
+            has to be involved. It is flexible, and can be changed if either of your circumstances change.</p>
+        <p>You agree how much the financial contributions should be and when they should be made.</p>
+        <p>For example, you could both agree that the parent who does not have main day-to-day care of the child will pay:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a proportion of their income directly to the other parent</li>
+            <li>for things like school clothes, trips or clubs</li>
+            <li>a regular set amount directly to the other parent</li>
+            <li>a larger lump sum at different stages in the child&#8217;s life</li>
+        </ul>
+        <h2 class="govuk-heading-m">If you agree and want a formal arrangement</h2>
+        <p>There is no official paperwork for a family-based arrangement, and they are not legally binding, but you can write
+            down your agreement in case of future disagreement.</p>
+        <p>You can ask a court to formalise your agreement using a consent order (in England and Wales), or a minute of agreement
+            (in Scotland). These can be enforced through the courts if either parent does not do what has been agreed.</p>
+        <h2 class="govuk-heading-m">Working out payments</h2>
+        <p>If you both agree to regular payments, you can
+            <a href="https://www.gov.uk/calculate-your-child-maintenance"
+            >get an estimate of how much payments should be</a>.</p>
+
+
+    </div>
+</div>
+{% endblock %}
