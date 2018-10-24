@@ -1,5 +1,6 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} 
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "Experimental" }, html: '' })
 }} {% endblock%} {% block content %}
 
 

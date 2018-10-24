@@ -1,13 +1,13 @@
 {% extends "layout.html" %} 
 {% from "button/macro.njk" import govukButton %} 
 {% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/alpha-prototype-4" %} 
+{% set serviceUrl = "/" %} 
 {% block pageTitle %}
  {{ serviceName }}
   - Are both parents habitually resident in the UK? 
   {% endblock %} 
   {% block beforeContent %} 
-  {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' }) }} 
+  {{ govukPhaseBanner({ tag: { text: "Experimental" }, html: '' }) }} 
   {% endblock%} 
   {% block content %}
 <div class="govuk-grid-row">
