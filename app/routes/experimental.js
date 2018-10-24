@@ -2,16 +2,19 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
-    res.render('experimental/resident.njk')
+    res.render('experimental/resident.html')
 })
 
 router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, res) {
 
-    let habituallyResident = req.session.data['resident']
-    if (habituallyResident === "yes") {
-        res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
-    } else {
+    let habituallyResident = req.session.data['habitually-resident']
+    if (habituallyResident === "no") {
+
         res.redirect('not-cms-eligible')
+    } 
+    
+    else {
+        res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
     }
 })
 
