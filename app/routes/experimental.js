@@ -8,10 +8,10 @@ router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
 router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, res) {
 
     let habituallyResident = req.session.data['resident']
-    if (habituallyResident === "no") {
-        res.redirect('not-cms-eligible')
-    } else {
+    if (habituallyResident === "yes") {
         res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
+    } else {
+        res.redirect('not-cms-eligible')
     }
 })
 
@@ -33,6 +33,11 @@ router.post('/is-there-a-court-order-for-child-maintenance-in-place', (req, res)
         res.redirect("not-cms-eligible")
     }
 })
+
+
+
+
+
 
 // child age
 router.get('/is-child-under-20', (req, res) => {
