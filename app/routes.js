@@ -23,4 +23,7 @@ router.use('/alpha-prototype-5', alphaPrototypeV5Routes)
 const alphaPrototypeV6Routes = require('./routes/alpha-prototype-6');
 router.use('/alpha-prototype-6', alphaPrototypeV6Routes)
 
+const experimentalRoutes = require('./routes/experimental');
+router.use('/experimental', experimentalRoutes)
+
 module.exports = router

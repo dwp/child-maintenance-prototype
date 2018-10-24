@@ -18,30 +18,35 @@
 
 
     <h4 class="govuk-heading-m">Previous Iterations</h4>
+         {{ govukButton({
+     text: "Comparison full journey",
+        href: "/alpha-prototype-4/start"
+    }) }}
 
-    {{ govukButton({
-        text: "Linear knockout question journey",
-        href: "/alpha-prototype-1/index"
-    }) }}
-<br>
- {{ govukButton({
-     text: "Dynamic question journey v1",
-        href: "/alpha-prototype-3/start"
-    }) }}
-    <br>
-    {{ govukButton({
-     text: "Comparison no features",
-        href: "/alpha-prototype-4/checkboxes"
-    }) }}
+
     <br>
        {{ govukButton({
      text: "Comparison with features",
         href: "/alpha-prototype-4/matrix2"
     }) }}
-    <br>
-         {{ govukButton({
-     text: "Comparison full journey",
-        href: "/alpha-prototype-4/start"
+        <br>
+    {{ govukButton({
+     text: "Comparison no features",
+        href: "/alpha-prototype-4/checkboxes"
     }) }}
+    <br>
+
+
+
+ {{ govukButton({
+     text: "Dynamic question journey v1",
+        href: "/alpha-prototype-3/start"
+    }) }}
+    <br>
+        {{ govukButton({
+        text: "Linear knockout question journey",
+        href: "/alpha-prototype-1/index"
+    }) }}
+<br>
 
 </div>

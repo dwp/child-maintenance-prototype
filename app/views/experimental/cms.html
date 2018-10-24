@@ -1,0 +1,71 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} -  {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+}} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+<h1 class="govuk-heading-xl">Apply to the Child Maintenance service</h1>
+<p>Either parent can ask the Child Maintenance Service to make and enforce a new child maintenance arrangement.
+</p>
+
+<h2 class="govuk-heading-m">What the Child Maintenance Service can do</h2>
+<p>The Child Maintenance Service can:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>try to find the other parent if you do not know where they live, to sort out child maintenance</li>
+    <li>sort out
+        <a href="https://www.gov.uk/child-maintenance/disagreements-about-parentage" target="_blank">
+            disagreements about parentage (opens in new window or tab) </a>
+    </li>
+    <li>
+        <a href="https://www.gov.uk/how-child-maintenance-is-worked-out" target="_blank">work out how much child maintenance should be paid (opens in new window or tab)</a>
+    </li>
+    <li>look at the payment amount again when
+        <a href="https://www.gov.uk/child-maintenance/changes-you-need-to-report" target="_blank">
+            changes in parents’ circumstances are reported</a>
+    </li>
+    <li>review the payment amount every year</li>
+    <li>
+        <a href="https://www.gov.uk/child-maintenance/nonpayment-what-happens" target="_blank">
+            take action if payments are not made (opens in new window or tab)</a>
+    </li>
+</ul>
+
+
+<p>To apply you must:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>live in the UK</li>
+    <li>be a parent or guardian of the child, or a child over 12 living in Scotland</li>
+    <li>pay a £20 application fee you are under 19, live in Northern Ireland, or you or your child have experienced domestic
+        abuse
+    </li>
+</ul>
+<p>Your child must be under 20 and in full time education up to A Level or equivalent.</p>
+
+<p>The Child Maintenance Service will calculate a legally enforceable amount and tell both parents when it should be paid. Parents
+    are responsible for making sure that payments are made.</p>
+
+<div class="govuk-inset-text">
+
+Extra charges will apply if you need the Child Maintenance Service to collect and pass on payments between you, this is called
+    'collect and pay' or if the service needs to enforce payments.</div> 
+    <p>View an <a href="charges">example of charges</a> that can you would pay through using the child maintenance service.</p>
+</p>
+<p>You can
+    <a href="cms-case-study" target="_blank">read how Leanne and Liam used collect and pay through the child maintenance service (opens in new window or tab) </a>.</p>
+
+
+
+<p>The Child Maintenance Service can only help in
+    <a href="https://www.gov.uk/child-maintenance-if-one-parent-lives-abroad" target="_blank">
+        certain circumstances (opens in new window or tab) </a>if one of the parents lives abroad.
+</p>
+<p>
+    <a href="resident">Check if you're eligible for the Child Maintenance service</a>
+</p>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-1" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V2" }, html: '' })
+}} {% endblock%} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Making an arrangement</h1>
+
+        <h4 class="govuk-heading-s">Contents</h4>
+
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="#whattopay">What to include in an arrangement</a>
+ </li>
+
+ <li>
+     <a class="govuk-link" href="#financial">Make a financial arrangement</a>
+</li>
+    <li>
+         <a class="govuk-link" href="#howtopay">How to pay</a>
+
+    </li>
+    <li>
+        <a class="govuk-link" href="#needhelp">If you need help to make an arrangement</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="#protect">Protecting yourself</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="#stopsworking">If your arrangement stops working
+</li>
+
+<li>
+    <a class="govuk-link" href="#cannot">If you cannot make your own arrangement</a>
+</li>
+</ul>
+
+<p>
+    You and your child&#146;s other parent can arrange child maintenance between yourselves, if you can agree.
+    
+
+<p>
+
+<h2 class="govuk-heading-m" id="whattopay">What to include in an arrangement</h2>
+<p>Your arrangement can include whatever works for both parents.</p>
+<p>You could agree to share care of your child, or school pick-up and drop-off responsibilities.</p>
+<p>
+    <a href="james-amy" target="_blank">How James and Amy made an arrangement around shared care (opens in new window or tab) </a>.</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"id="financial">
+<h3 class="govuk-heading-m" >Make a financial arrangement</h3>
+
+
+<p>Many parents choose to make a financial arrangement. For example, the parent who does not live with the child might pay:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>a fixed amount to the parent with care each month</li>
+    <li>for specific items for the child, like uniforms, school trips, or after school activities</li>
+    <li>for housing costs, like rent, mortgage payments, or household bills</li>
+    <li>larger lump sums at certain times in the child&#146;s life</li>
+</ul>
+
+<p>If you both agree to a financial arrangement, you will also need to agree how and when payments will be made, and if you
+    will review your arrangement in the future.</p>
+<p> You can use the
+    <a href="https://www.gov.uk/calculate-your-child-maintenance" target="_blank">child maintenance calculator
+    </a>(opens in new window or tab) to get an estimate of how much the Child Maintenance Service would calculate as a fair
+    amount to pay.</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" id ="howtopay">
+<h4 class="govuk-heading-m" >How to pay child maintenance</h4>
+
+<p>There are several ways to pay child maintenance. The most suitable will depend on the arrangement you have and your circumstances.</p>
+
+<h5 class="govuk-heading-s">Pay by standing order</h5>
+<p>If you&#146;ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent directly
+    from one person&#146;s bank or building society account to another person&#146;s account.</p>
+
+<p>A standing order helps both parents to plan and manage their finances, and keep a record of payments made.</p>
+
+<h6 class="govuk-heading-s">Use a money transfer service</h6>
+<p>Another option is to use a money transfer service, like PayPal or MoneyGram. This method means you don’t have to share your
+    bank details with the other parent.</p>
+<div class="govuk-inset-text">
+    <p>Some of these services may charge a fee. Check with the service provider to make sure you understand if any charges will
+        apply.</p>
+</div>
+
+
+<h7 class="govuk-heading-s">Other ways to pay</h7>
+
+<p>If you make your own arrangement, you can agree to change your payment method if your circumstances change.</p>
+<p>For example, if the paying parent loses their job, both parents could agree to reduce the child maintenance payments until
+    the paying parent is back in work.</p>
+
+<p>Or, if the receiving parent needs to make urgent repairs to the home they live in with the children, the paying parent could
+    help with the cost by paying a lump sum, instead of the regular payments.</p>
+
+<p>Read
+    <a href="graham-emily" target="_blank">how Graham and Emily arranged payments (opens in new window or tab) </a>.</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"id="needhelp">
+<h8 class="govuk-heading-m" >If you need help to make an arrangement</h8>
+<p>There are many tools, guides and organisations that can help separated parents to reach an agreement for child maintenance.</p>
+<p>This
+    <a href="https://www.cmoptions.org/en/pdfs/refresh/cost-of-raising-your-child.pdf" target="_blank">
+        'cost of raising your child' guide (opens in new window or tab)</a> can help both parents think about the things
+    children need. Use it to work out the true cost of bringing up your child, and how you can share that cost.</p>
+<p>This
+    <a href="https://www.cmoptions.org/en/pdfs/refresh/family-based-arrangement-form-aug-2015.pdf" target="_blank">arrangement tool (opens in new window or tab)</a> has helped some parents to reach an agreement for child maintenance.</p>
+
+<p>This
+    <a href="https://www.cmoptions.org/en/pdfs/refresh/discussion-guide.pdf" target="_blank">discussion guide (opens in new window or tab)</a> might help you to prepare for what can be a difficult conversation
+    about arrangements for children.</p>
+
+<p>Having a friend or family member there when you speak to each other can help separated parents to focus on the thing they’re
+    trying to agree. They will need to stay calm and neutral, so choose someone you both trust.</p>
+
+
+
+<p>If you don’t have a friend or family member who can stay neutral,
+    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/" target="_blank">find a local mediator (opens in new window or tab)</a> to help you to have constructive conversations with the other
+    parent.</p>
+<p>Some parents find it useful to write down what they have agreed, so they have something to refer to in future.</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"id="protect">
+<h8 class="govuk-heading-m">Protecting yourself</h8>
+<div class="govuk-inset-text">
+    Making an arrangement between yourselves might not be appropriate if you think the other parent poses a threat to you or
+    your child, or if you are a victim of domestic abuse.</div>
+
+<p>If making an arrangement could make you vulnerable,
+    <a href="phone">speak to one of our agents</a>
+    about your options.</p>
+
+<p>
+    <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" target="_blank">Find out how to get help (opens in new window or tab)</a> if you or someone you know is a victim of domestic abuse.</p>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" id="stopsworking">
+
+<h9 class="govuk-heading-m">If your arrangement stops working
+</h9>
+<p>If you have an arrangement and it is no longer working, you could ask a friend, family member, or
+    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/"
+        target="_blank">
+        professional family mediator (opens in new window or tab)</a> to help you get back on track. </p>
+
+<p>A mediator can help you to: </p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>work together to decide what is best for your child</li>
+    <li>reduce conflict between you</li>
+    <li>build trust in each other</li>
+    <li>improve communications</li>
+    <li>make a flexible, lasting agreement for child maintenance</li>
+</ul>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" id="cannot">
+<h10 class="govuk-heading-m">If you cannot make your own arrangement</h10>
+
+<p>If both parents cannot agree, or something else is stopping you making an arrangement, the Child Maintenance service may
+    be able to make and enforce an arrangement for you.</p>
+
+<p>There is a £20 fee to apply.</p>
+
+<p>The Child Maintenance Service is for when you and the other parent cannot agree your own arrangement.
+</p>
+
+<p>If you cannot make an arrangement yourselves, you can <a href="cms">apply to the Child Maintenance service</a>.</p>
+        
+</div>
+</div>
+
+{% endblock %}
