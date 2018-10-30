@@ -25,11 +25,9 @@ router.post('/describe-relationship', (req, res) => {
     ]
 })
 
-
 router.get('/how-often-are-you-in-contact', (req, res) => {
     res.render('alpha-prototype-6/2.html')
 })
-
 
 router.post('/how-often-are-you-in-contact', (req, res) => {
     let contact = req.session.data['contact']
