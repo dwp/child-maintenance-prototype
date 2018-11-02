@@ -1,0 +1,28 @@
+{% extends "layout.html" %} 
+{% set serviceUrl = "/" %} 
+
+{% block pageTitle %} 
+{{ serviceName }} - Courts
+{% endblock %} 
+
+{% block beforeContent%} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: ''}) }} 
+{% endblock %}
+
+{%block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">The Child Maintenance service</h1>
+<h2 class="govuk-heading-m">Speak to the Child Maintenance helpline</h2>
+<p>To find out more information about applying to the Child maintenance service, you need to speak to us.</p>
+<div class="govuk-inset-text">
+    <p> Telephone: 0800 312 5690</p>
+    <p> Welsh language 0800 222 1768</p>
+    <p>Textphone: 0800 876 1454</p>
+    <p>Monday to Friday, 8am to 6pm</p>
+    <p><a href=".">Find out about call charges</a></p>
+</div>        
+</div>
+        </div>
+        {% endblock %}

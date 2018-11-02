@@ -1,0 +1,37 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - What is your weekly gross income?
+?
+
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What is your weekly gross income?
+</h1>
+        {% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: ""
+  },
+  hint: {
+    text: "This is the weekly income before tax and National Insurance but after pension contributions."
+  },
+  classes: "govuk-input--width-10",
+  id: "national-insurance-number",
+  name: "national-insurance-number"
+}) }}
+<a href="other-children-p" role="button" class="govuk-button">
+  Continue
+</a></div>
+</div>
+{% endblock %}

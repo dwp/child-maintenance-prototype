@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Protecting yourself {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">Get help arranging payments yourself</h1>
+<p>You can use the tools on this page to get an amount and share the 
+    results with the child's other parent. </p>
+        <h2 class="govuk-heading-m">Get a calculation</h2>
+        <p>You can use the
+            <a href="calculator">
+                child maintenance calculator</a> if you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>unsure of what is a fair amount to pay</li>
+            <li>struggling to agree an amount</li>
+            <li>in need of a starting point to agree an arrangement</li>
+        </ul>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">Share the costs</h3>
+
+<p>You can use <a href="\">this tool</a> to get the costs of raising a child in writing,
+     and share these costs with the other parent.</p>
+
+
+
+       
+
+    </div>
+</div>
+{% endblock %}
