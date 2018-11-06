@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} 
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "V5" }, html: '' })
+}} {% endblock%} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+<h1 class="govuk-heading-xl" >How to pay child maintenance</h1>
+
+<p>There are several ways to pay child maintenance. The most suitable will depend on the arrangement you have and your circumstances.</p>
+
+<h2 class="govuk-heading-s">Pay by standing order</h2>
+<p>If you&#146;ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent directly
+    from one person&#146;s bank or building society account to another person&#146;s account.</p>
+
+<p>A standing order helps both parents to plan and manage their finances, and keep a record of payments made.</p>
+
+<h3 class="govuk-heading-s">Use a money transfer service</h3>
+<p>Another option is to use a money transfer service, like PayPal or MoneyGram. This method means you don’t have to share your
+    bank details with the other parent.</p>
+<div class="govuk-inset-text">
+    <p>Some of these services may charge a fee. Check with the service provider to make sure you understand if any charges will
+        apply.</p>
+</div>
+
+
+<h4 class="govuk-heading-s">Other ways to pay</h4>
+
+<p>If you make your own arrangement, you can agree to change your payment method if your circumstances change.</p>
+<p>For example, if the paying parent loses their job, both parents could agree to reduce the child maintenance payments until
+    the paying parent is back in work.</p>
+
+<p>Or, if the receiving parent needs to make urgent repairs to the home they live in with the children, the paying parent could
+    help with the cost by paying a lump sum, instead of the regular payments.</p>
+
+<p>Read
+    <a href="graham-emily" target="_blank">how Graham and Emily arranged payments (opens in new window or tab) </a>.</p>
+
+
+<p>Find out what you can do <a href="stops-working">if your arrangement stops working</a>.</p>
+
+  
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">If your arrangement stops working
+</h1>
+<p>If you have an arrangement and it is no longer working, you could ask a friend, family member, or
+    <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/" target="_blank">
+        professional family mediator (opens in new window or tab)</a> to help you get back on track. </p>
+
+<p>A mediator can help you to: </p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>work together to decide what is best for your child</li>
+    <li>reduce conflict between you</li>
+    <li>build trust in each other</li>
+    <li>improve communications</li>
+    <li>make a flexible, lasting agreement for child maintenance</li>
+</ul>
+<h2 class="govuk-heading-m">If you cannot make your own arrangement</h2>
+
+<p>If both parents cannot agree, or something else is stopping you making your own arrangement,
+    <a href="phone">the Child Maintenance service</a> may be able to make and enforce an arrangement for you.</p>
+
+<p>There is a £20 fee to apply.</p>
+
+</div>
+</div>
+
+{% endblock %}

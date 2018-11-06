@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+tag: { text: "PROTOTYPE V5" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">How much do you spend on other neccessities for your child each month?</h1>
+
+         <form method="post" action="other">
+{% from "input/macro.njk" import govukInput %}
+
+
+{{ govukInput({
+  label: {
+    text: ""
+  },
+ hint: { text: "For example £30" },
+
+  classes: "govuk-input--width-10",
+  id: "other",
+  name: "other"
+}) }}
+
+
+
+                      {{           govukButton({ 
+                          href: "monthly-cost",
+                                     text: "Continue"
+            }) }}
+
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

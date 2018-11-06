@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
+
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <div class="govuk-panel__body">
+                        Your child maintenance payment estimate based on the information you provided is
+
+                        <br>
+                        <strong>£77 a week</strong>
+                    </div>
+                </div>
+                <div class="govuk-inset-text">
+                    This is an estimate. The exact amount the Child Maintenance Service calculates may be different.</div>
+
+<h2 class="govuk-heading-m">Questions and answers</h2>
+<table class="govuk-table">
+    <caption class="govuk-table__caption"></caption>
+    <br>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <br>
+            <th class="govuk-table__header" scope="col">Questions</th>
+            <th class="govuk-table__header" scope="col">Answers</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
+            <td class="govuk-table__cell">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Does the paying parent receive any benefits or state pensions?</th>
+            <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">What is the weekly gross income of the parent paying child maintenance?</th>
+            <td class="govuk-table__cell">£433.89</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">How many other children live in the household of the parent paying child maintenance?</th>
+            <td class="govuk-table__cell">£1</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">On average, how many nights a week do the children stay over with the parent paying child maintenance?
+</th>
+            <td class="govuk-table__cell">1 to 2 nights a week</td>
+        </tr>
+    </tbody>
+</table>
+<p>If the information provided here is not correct, you can <a href="calculator">get a calculation yourself</a> from the child maintenance calculator.</p>
+    </div>
+</div>
+
+{% endblock %}
