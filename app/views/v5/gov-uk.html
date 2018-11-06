@@ -1,0 +1,35 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - What is child maintenance?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "V4" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Child maintenance</h1>
+
+<p>Child maintenance is financial support to help pay for your child's everyday living costs when you are separated from the
+  other parent.</p>
+<p>Both parents are legally responsible for the financial costs of raising their children, even if they don’t see them.</p>
+<p>Studies show that children get the best outcomes when their separated parents are able to work together
+   – this includes working together to arrange child maintenance.</p>
+<p>How you arrange child maintenance will depend on your circumstances.</p>
+<p>You can make an arrangement between yourselves, or you may be able to ask the Child Maintenance Service to make an 
+  arrangement for you.</p>
+<h1 class="govuk-heading-m">About this service</h1>
+<p>This service gives information about your options for arranging child maintenance, and tools to help you make an 
+  arrangement.</p>
+ 
+  <a href="1" role="button" draggable="false" class="govuk-button">
+   Continue
+  </a>
+</div>
+</div>
+{% endblock %}
