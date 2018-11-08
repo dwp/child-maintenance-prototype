@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Create your agreement</h1>
+<p>If you have agreed to a regular payment amount, you can fill out this form as a
+     sign of your commitment to the agreement.</p>
+
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        Name of the child
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        Name of the receiving parent
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        Name of the paying parent
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        Amount to be paid
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        How often the payments are made
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label govuk-!-width-one-half" for="one-half">
+        How payments will be made
+    </label>
+    <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+</div>
+
+
+<a href="agreement-confirmation" role="button" draggable="false" class="govuk-button">
+    Continue
+</a>
+</div>
+</div>
+
+{% endblock %}
