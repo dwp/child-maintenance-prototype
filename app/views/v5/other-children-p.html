@@ -1,21 +1,21 @@
-{% extends "layout.html" %} 
-{% from "button/macro.njk" import govukButton %} 
-{% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/" %} 
-{% block pageTitle %} 
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
 {{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
 ?
 
-{% endblock %} 
+{% endblock %}
 
-{% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }} 
-{% endblock%} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }}
+{% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">How many other children live in your household?</h1>
+        <h1 class="govuk-heading-xl">How many other children live with you?</h1>
 
 
         {% from "input/macro.njk" import govukInput %}
@@ -25,7 +25,7 @@
     text: ""
   },
   hint: {
-    text: "Enter 0 if no children live there. Don’t count the children child maintenance has to be paid for."
+    text: "Do not include the children maintenance has to be paid for."
   },
   classes: "govuk-input--width-10",
   id: "child-amount",
