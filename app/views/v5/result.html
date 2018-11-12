@@ -1,14 +1,14 @@
-{% extends "layout.html" %} 
-{% set serviceUrl = "/" %} 
-{% block pageTitle %} 
+{% extends "layout.html" %}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
 {{ serviceName }} - Calculation result
 
 
-{% endblock %} 
+{% endblock %}
 
-{% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }} 
-{% endblock%} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }}
+{% endblock%}
 
 {% block content %}
 
@@ -31,7 +31,7 @@
                 <p>Your estimate:</p>
                 <ul class="govuk-list govuk-list--bullet">
                     <li>
-                        is not a guarantee of the exact amount the Child Maintenance Service works out
+                        is not a guarantee 
                     </li>
                     <li>
                         is based on the information you have given
@@ -53,11 +53,11 @@
                 </a>
 
     <div class="govuk-inset-text">
-    
+
         <p>Continue to
             <a href="next-steps">find out how and when to pay child maintenance</a>.</p>
     </div>
-           
+
             </div>
         </div>
     </main>
