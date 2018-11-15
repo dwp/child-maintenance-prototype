@@ -8,3 +8,14 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+
+$(document).ready(function () {
+  $(".text").hide();
+  $("#r1").click(function () {
+    $(".text").show();
+  });
+  $("#r2").click(function () {
+    $(".text").hide();
+  });
+});

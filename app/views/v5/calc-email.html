@@ -31,33 +31,11 @@ tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
     </thead>
     <tbody class="govuk-table__body">
 
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">What is the receiving parent's first name?</th>
-                    <td class="govuk-table__cell">Sarah</td>
-                    <td class="govuk-table__cell">
-                        <a href="">change</a>
-                    </td>
-                
-                </tr>
 
         <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
             <td class="govuk-table__cell">1</td>
             <td class="govuk-table__cell"><a href="">change</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">What is the child's first name?</th>
-            <td class="govuk-table__cell">Sam</td>
-                        <td class="govuk-table__cell"><a href="">change</a></td>
- </tr>
-
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">What is the paying parent's first name?</th>
-            <td class="govuk-table__cell">John</td>
-            <td class="govuk-table__cell">
-                <a href="">change</a>
-            </td>
-        
         </tr>
 
          <tr class="govuk-table__row">
@@ -87,18 +65,50 @@ tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
                         <td class="govuk-table__cell"><a href="">change</a></td>
 
         </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Enter the email address you would like to receive the agreement form</th>
-            <td class="govuk-table__cell">email@email.com</td>
-                        <td class="govuk-table__cell"><a href="">change</a></td>
-
-        </tr>
     </tbody>
 </table>
+<br>
+<br>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+                Would you like to receive an email confirmation of this calculation?
+            </h1>
+        </legend>
+      <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input"  name="radio1" id="r1" type="radio">
+                <label class="govuk-label govuk-radios__label">
+                    Yes
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input"  name="radio1" id="r2" type="radio">
+                <label class="govuk-label govuk-radios__label">
+                    No
+                </label>
+            </div>
+    </div>
+    </fieldset>
+    </div>
+        
 
+<div class="text" >
+    <p>Email address</p>
+        <input class="govuk-input govuk-input--width-10" type="text" name="text1" id="text1" maxlength="30">
+    
+</div>
+<br>
                 <a href="confirmation-page" role="button" draggable="false" class="govuk-button">
-                    Send agreement
+                    Continue
                 </a>
+
+
+                
+               
+                
+
 
     </div>
 </div>
