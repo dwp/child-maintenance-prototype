@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+tag: { text: "V5" }, html: '' }) }} {% endblock%} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <div class="govuk-panel__body">
+ The monthly cost of raising your child based on the information provided is
+                        <br>
+                        <strong>£--- a week</strong>
+                    </div>
+                </div>
+
+
+<h1 class="govuk-heading-m">Breakdown of costs for the child</h1>
+
+
+<table class="govuk-table">
+    <caption class="govuk-table__caption"></caption>
+    <thead class="govuk-table__head">
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Food</th>
+            <td class="govuk-table__cell">£80 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Childcare</th>
+            <td class="govuk-table__cell">£40 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Clothing</th>
+            <td class="govuk-table__cell">£20 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Toiletries</th>
+            <td class="govuk-table__cell">£20 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Toys, books and other play items</th>
+            <td class="govuk-table__cell">£20 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Travel</th>
+            <td class="govuk-table__cell">£20 per month</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Other</th>
+            <td class="govuk-table__cell">£30 per month</td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - {% endblock %} 
+{% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "V5" }, html: '' })
+}} {% endblock%} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="form group">
+<h1 class="govuk-heading-xl" >How and when to pay child maintenance</h1>
+
+<p>There are several ways to pay child maintenance. The most suitable will depend on the arrangement you have and your circumstances.</p>
+
+<h2 class="govuk-heading-s">Pay by standing order</h2>
+<p>If you&#146;ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent directly
+    from one person&#146;s bank or building society account to another person&#146;s account.</p>
+
+<p>A standing order helps both parents to plan and manage their finances, and keep a record of payments made.</p>
+
+<h3 class="govuk-heading-s">Use a money transfer service</h3>
+<p>Another option is to use a money transfer service, like PayPal or MoneyGram. This method means you don’t have to share your
+    bank details with the other parent.</p>
+
+    <p>Some of these services may charge a fee. Check with the service provider to make sure you understand if any charges will
+        apply.</p>
+
+
+<p>Read
+    <a href="graham-emily" target="_blank">how Graham and Emily arranged payments (opens in new window or tab) </a>.</p>
+
+<h3 class="govuk-heading-m">When to pay child maintenance</h3>
+<p>When you pay child maintenance is up to you to agree.</p>
+<p>For example you could agree: </p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>to pay weekly</li>
+    <li>to pay monthly</li>
+    <li>to pay larger sums throughout the child's life</li>
+    </ul>
+</div>
+</div>
+
+{% endblock %}
