@@ -1,14 +1,14 @@
-{% extends "layout.html" %}
-{% set serviceUrl = "/" %}
-{% block pageTitle %}
+{% extends "layout.html" %} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
 {{ serviceName }} - Confirmation
 
 
-{% endblock %}
+{% endblock %} 
 
-{% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }}
-{% endblock%}
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V5" }, html: '' }) }} 
+{% endblock%} 
 
 {% block content %}
 
@@ -36,16 +36,16 @@
             <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
             <td class="govuk-table__cell">1</td>
             <td class="govuk-table__cell">
-                <a href="">Change</a>
+                <a href="">change</a>
             </td>
         </tr>
 
         <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">On average, how many nights a week do the children stay over with the paying parent?
+            <th class="govuk-table__header" scope="row">On average, how many nights a week do the children stay over with the parent paying child maintenance?
             </th>
             <td class="govuk-table__cell">1 to 2 nights a week</td>
             <td class="govuk-table__cell">
-                <a href="">Change</a>
+                <a href="">change</a>
             </td>
 
         </tr>
@@ -54,31 +54,23 @@
             <th class="govuk-table__header" scope="row">Does the paying parent receive any benefits or state pensions?</th>
             <td class="govuk-table__cell">No</td>
             <td class="govuk-table__cell">
-                <a href="">Change</a>
+                <a href="">change</a>
             </td>
 
         </tr>
         <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">What is the full income of the paying parent?</th>
+            <th class="govuk-table__header" scope="row">What is the weekly gross income of the parent paying child maintenance?</th>
             <td class="govuk-table__cell">£433.89</td>
             <td class="govuk-table__cell">
-                <a href="">Change</a>
+                <a href="">change</a>
             </td>
-
-          </tr>
-          <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="row">Is this amount weekly, monthly or yearly?</th>
-              <td class="govuk-table__cell">Weekly</td>
-              <td class="govuk-table__cell">
-                  <a href="">Change</a>
-              </td>
 
         </tr>
         <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">How many other children live with the paying parent?</th>
+            <th class="govuk-table__header" scope="row">How many other children live in the household of the parent paying child maintenance?</th>
             <td class="govuk-table__cell">1</td>
             <td class="govuk-table__cell">
-                <a href="">Change</a>
+                <a href="">change</a>
             </td>
 
         </tr>

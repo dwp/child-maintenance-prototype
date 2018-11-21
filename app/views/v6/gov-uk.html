@@ -1,14 +1,14 @@
-{% extends "layout.html" %}
-{% from "button/macro.njk" import govukButton %}
-{% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/" %}
-{% block pageTitle %}
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
 {{ serviceName }} - What is child maintenance?
-{% endblock %}
+{% endblock %} 
 
-{% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "prototype V5" }, html: '' }) }}
-{% endblock%}
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "prototype V5" }, html: '' }) }} 
+{% endblock%} 
 
 {% block content %}
 <div class="govuk-grid-row">
@@ -26,9 +26,9 @@
 
 
 <h2 class="govuk-heading-m">About this service</h2>
-<p>This service gives information about your options for arranging child maintenance, and tools to help you make an
+<p>This service gives information about your options for arranging child maintenance, and tools to help you make an 
   arrangement.</p>
-
+ 
   <a href="1" role="button" draggable="false" class="govuk-button">
    Continue
   </a>
