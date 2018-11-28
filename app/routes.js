@@ -32,5 +32,8 @@ router.use('/v5', v5Routes)
 const v6Routes = require('./routes/v6');
 router.use('/v6', v6Routes)
 
+const calc2Routes = require('./routes/calc2');
+router.use('/calc2', calc2Routes)
+
 
 module.exports = router

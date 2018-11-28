@@ -9,10 +9,10 @@ router.get('/paying-receiving', (req, res) => {
 router.post('/paying-receiving', (req, res) => {
     let payingReceiving = req.session.data['paying-receiving']
     if (payingReceiving === "paying") {
-        res.redirect('paying-children')
+        res.redirect('receiving-parents-name')
     }
     else {
-        res.redirect('receiving-children')
+        res.redirect('paying-parents-name')
     }
 })
 
@@ -46,14 +46,11 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
     }
 })
 
-router.get('paying-parents-name', (req, res) => {
-    res.render('calc2/paying-parents-name')
-})
 
-router.post('paying-parents-name', (req, res) => {
-    res.redirect('receiving-children')
-}
-)
+
+
+
+
 
 
 

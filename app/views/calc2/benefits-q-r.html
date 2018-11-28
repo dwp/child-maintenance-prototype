@@ -13,14 +13,13 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Does the paying parent receive any government benefits or State Pension?</h1>
         <form method="post" action="do-you-receive-benefits-r">
 
             {{ govukRadios({
                 idPrefix: "do-you-receive-benefits-r",
                 name: "do-you-receive-benefits-r",
-                fieldset: { legend: { text: "Does the paying parent receive any government benefits or State Pension?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl" } },
+                isPageHeading: true,
             items: [ {
                 name:"yes",
                 value: "yes",
