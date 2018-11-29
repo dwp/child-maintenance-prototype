@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% set serviceUrl = "/" %}
+
+{% block pageTitle %}
+{{ serviceName }} - Courts
+{% endblock %}
+
+{% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: ''}) }}
+{% endblock %}
+
+{%block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Get help making or receiving child maintenance payments</h1>
+
+        <p>If you cannot agree payments yourselves, you can contact the Child Maintenance Service for help.
+            </p>
+
+        <p>There is a £20 fee for using the Child Maintenance Service, unless you are:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>under 19</li>
+                <li>a victim of domestic abuse</li>
+                <li>living in Northern Ireland</li>
+                </ul>
+
+                     <p> The fee does not guarantee child maintenance payments will be made.</p>
+
+        <h2 class="govuk-heading-m">If child maintenance payments are not being made</h2>
+
+        <p>The Child Maintenance Service may be able to collect the amount from the paying parent and pass it to the receiving parent – this is known as a 'Collect and Pay' arrangement. If this happens, you'll need to pay:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a 20% fee on top of your regular child maintenance payments, if you're the paying parent</li>
+          <li>a 4% fee taken off your regular child maintenance payments, if you're the recieving parent.</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Before applying to the Child Maintenance Service</h2>
+
+        <p>You'll need to contact Child Maintenance Options, who will
+            help you to find the right arrangement.
+            </p>
+
+            <div class="govuk-inset-text">
+            <p><strong>Child Maintenance Options</strong></p>
+            <p>Telephone: 0800 312 5690</p>
+            <p>Welsh language: 0800 222 1768</p>
+            <p>Textphone: 0800 876 1454</p>
+           <p>Monday to Friday, 8am to 6pm</p>
+            <p><a href=".">Find out about call charges</a></p>
+        </div>
+</div>
+        </div>
+        {% endblock %}

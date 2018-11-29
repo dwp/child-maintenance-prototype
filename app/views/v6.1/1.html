@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Arrange child maintenance payments</h1>
+
+
+<p>Child maintenance is financial support to help pay for your child's everyday living costs when you are separated from the other parent.</p>
+
+<p>Studies show that children get the best outcomes when their separated parents are able to work together – this includes working together to arrange child maintenance.</p>
+
+<p>
+    Both parents are legally responsible for the financial costs of raising their children, even if they don’t see them.
+</p>
+
+
+        <h2 class="govuk-heading-m">Arranging payments yourselves</h2>
+        <p>You can arrange payments yourselves, if you can agree.</p>
+        <p>You both decide how much the financial contributions should be and when they should be made.</p>
+
+        <p>No one else is involved, and it can be flexible to your circumstances.</p>
+
+        <div class="govuk-inset-text">
+            <a href="fba.html">Work out child maintenance</a>.</p>
+        </div>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Using the Child Maintenance Service </h2>
+        <p>If you cannot agree payments yourselves, you can contact the Child Maintenance Service for help.
+            </p>
+
+        <p>The Child Maintenance Service can work out how much child maintenance should be paid and tell both parents.</p>
+
+        <p>There is a £20 fee for using the Child Maintenance Service, unless you are:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>under 19</li>
+                <li>a victim of domestic abuse</li>
+                <li>living in Northern Ireland</li>
+                </ul>
+
+                     <p> The fee does not guarantee child maintenance payments will be made.
+                     </p>
+            <div class="govuk-inset-text">
+                <a href="phone.html">Get help making or receiving child maintenance payments</a>.</p>
+        </div>
+    </div>
+
+    {% endblock %}
