@@ -3,34 +3,34 @@
 {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/" %}
 {% block pageTitle %}
-{{ serviceName }}
+{{ serviceName }} - Is the child under 20 years old?
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
 {% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="post" action="do-you-receive-benefits-r">
+        <form method="post" action="do-you-receive-benefits-p">
 
             {{ govukRadios({
-                idPrefix: "do-you-receive-benefits-r",
-                name: "do-you-receive-benefits-r",
-                fieldset: { legend: { text: "Does the paying parent receive any government benefits or State Pension?",
+                idPrefix: "do-you-receive-benefits-p",
+                name: "do-you-receive-benefits-p",
+                fieldset: { legend: { text: "Do you receive any government benefits or State Pension?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
             items: [ {
                 name:"yes",
-                value: "yes",
+                value: "yes", 
                 text: "Yes",
-                checked: true if data['do-you-receive-benefits-r'] == "yes" },
+                checked: true if data['do-you-receive-benefits-p'] == "yes" },
                 {
                 name: "no",
                 value: "no",
                 text: "No",
-                checked: true if data['do-you-receive-benefits-r'] == "no" }
+                checked: true if data['do-you-receive-benefits-p'] == "no" }
             ] }) }}
             {{
                 govukButton({ text: "Continue" }) }}

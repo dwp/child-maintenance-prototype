@@ -1,38 +1,38 @@
-{% extends "layout.html" %} 
-{% from "button/macro.njk" import govukButton %} 
-{% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/" %} 
-{% block pageTitle %} 
-{{ serviceName }} - On average, how many nights a week do the children stay over with you?
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
 ?
 
-{% endblock %} 
+{% endblock %}
 
-{% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} 
-{% endblock%} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
+{% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">On average, how many nights a week do the children stay over with you?</h1>
+        <h1 class="govuk-heading-xl">On average, how many nights a week do the children stay over with the paying parent?</h1>
 <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-           
+
         </legend>
         <div class="govuk-radios">
+            <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                        None
+                    </label>
+                </div>
             <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                   None
-                </label>
-            </div>
-        <div class="govuk-radios">
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                     Less than once a week (less than 52 nights a year)
+                     Less than 1 a week (less than 52 nights a year)
                 </label>
             </div>
             <div class="govuk-radios__item">
@@ -62,9 +62,8 @@
         </div>
     </fieldset>
 </div>
-<a href="other-children-p" role="button" class="govuk-button">
+<a href="other-children-r" role="button" class="govuk-button">
     Continue
 </a>
-
         </div>
 {% endblock %}

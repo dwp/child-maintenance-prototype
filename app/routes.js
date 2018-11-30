@@ -33,8 +33,8 @@ const v6Routes = require('./routes/v6');
 router.use('/v6', v6Routes)
 
 
-const v61Routes = require('./routes/v6.1');
-router.use('/v6.1', v61Routes)
+const v7Routes = require('./routes/v7');
+router.use('/v7', v7Routes)
 
 const calc2Routes = require('./routes/calc2');
 router.use('/calc2', calc2Routes)
