@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Protecting yourself {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">Calculate child maintenance</h1>
+<p>Use this calculator to work out child maintenance for your circumstances.
+</p>
+
+<div class="govuk-inset-text">The receiving parent has main day-to-day care of the child. The paying parent does not have main day-to-day care.
+</div>
+
+
+<p>The calculator uses the same rules as the Child Maintenance Service.
+</p>
+<p>You'll need to know:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>whether the paying parent gets any government benefits or State Pension</li>
+          <li>the paying parent's total income, before tax is taken off</li>
+            <li>if any other children live with the paying parent</li>
+        </ul>
+
+
+        <p>If the paying parent has child arrangements with more than one receiving parent a calculation should be done for the total
+        number of children, and divided equally between them.</p>
+<a href="paying-receiving" role="button" class="govuk-button govuk-button--start">
+    Start
+</a>
+
+
+
+
+
+</div>
+
+
+</div>
+
+</div>{% endblock %}

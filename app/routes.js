@@ -39,5 +39,7 @@ router.use('/v7', v7Routes)
 const calc2Routes = require('./routes/calc2');
 router.use('/calc2', calc2Routes)
 
+const v8Routes = require('./routes/v8');
+router.use('/v8', v8Routes)
 
 module.exports = router
