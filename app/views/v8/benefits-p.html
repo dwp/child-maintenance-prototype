@@ -1,20 +1,20 @@
-{% extends "layout.html" %} 
-{% from "button/macro.njk" import govukButton %} 
-{% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/" %} 
-{% block pageTitle %} 
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
 {{ serviceName }} - Do you get any of these benefits or state pensions?
-{% endblock %} 
+{% endblock %}
 
-{% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }} 
-{% endblock%} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
+{% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form method="post" action="recieving">
-          
+
 
             {% from "checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -34,15 +34,15 @@
   items: [
     {
       value: "carcasses",
-      text: "income support"
+      text: "Income support"
     },
     {
       value: "mines",
-      text: "income-based Jobseeker’s Allowance"
+      text: "Income-based Jobseeker’s Allowance"
     },
     {
       value: "farm",
-      text: "income-related Employment and Support Allowance"
+      text: "Income-related Employment and Support Allowance"
     },
       {
       value: "mines",
@@ -50,7 +50,7 @@
     },
       {
       value: "mines",
-      text: "contribution-based Jobseeker’s Allowance"
+      text: "Contribution-based Jobseeker’s Allowance"
     },
       {
       value: "mines",
@@ -98,7 +98,7 @@
     },
       {
       value: "mines",
-      text: "Widow’s pension"
+      text: "Widow’s Pension"
     },
       {
       value: "mines",
@@ -112,10 +112,10 @@
       value: "mines",
       text: "War Widow’s, Widower’s or Surviving Civil Partner’s Pension"
     },
-    
+
       {
       value: "mines",
-      text: "income-based Jobseeker’s Allowance"
+      text: "Income-based Jobseeker’s Allowance"
     }
   ]
 }) }}
