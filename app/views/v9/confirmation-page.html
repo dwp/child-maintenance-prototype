@@ -1,0 +1,49 @@
+{% extends "layout.html" %} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Confirmation
+
+
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Next steps</h1>
+
+        <p>You now have a calculated child maintenance amount.</p>
+
+        <p>Some parents decide to review the amount every year, or when children reach milestones like birthdays
+        or a change in schools.</p>
+        
+        <p>You might also want to review your amount if your circumstances change – for example if your
+        or the other parent changes their job.</p>
+
+        <h2 class="govuk-heading-m">How and when to make payments</h2>
+        
+        <p>There are several ways to pay child maintenance. The most suitable will depend on  
+            your circumstances.</p>
+        
+        <p>If you’ve agreed on fixed regular payments, you could set up a standing order. This is where money is sent directly from
+            one person’s bank or building society account to another person’s account.</p>
+        
+        <p>A standing order helps both parents to plan and manage their finances, and keep a record of payments made.</p>
+
+        <p>How often you make payments is up to you to agree. For example it could be weekly, fortnightly or monthly.</p>
+
+  <p>What to do  <a href="stops-working">if your arrangement stops working</a>.</p>
+
+        
+        </div>
+        </div>
+
+{% endblock %}
+
+        

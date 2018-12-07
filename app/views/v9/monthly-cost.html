@@ -1,0 +1,62 @@
+{% extends "layout.html" %} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Calculation result
+
+
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        Calculation complete
+                    </h1>
+                    <div class="govuk-panel__body">
+                         The monthly cost of raising your child is
+
+                        <br>
+                        <strong>£--- a week</strong>
+                    </div>
+                </div>
+<p> This is based on the amounts you provided.</p>
+
+                <h3 class="govuk-heading-m">What happens next</h3>
+
+                <p>You can receive an email of this calculation and share it with the child's other parent.</p>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="width-20">
+                        Email address
+                    </label>
+                    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+                </div>
+                
+                <a href="cost-email" role="button" draggable="false" class="govuk-button">
+                    Send email
+                </a>
+
+
+                <p class="govuk-body">
+                    You can use this as a starting point to agree how much maintenance should be paid.</p>
+                  
+                <div class="govuk-inset-text">
+
+                    <p>Continue to <a href="next-steps">find out how and when to pay child maintenance</a>.</p>
+</div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

@@ -42,4 +42,8 @@ router.use('/calc2', calc2Routes)
 const v8Routes = require('./routes/v8');
 router.use('/v8', v8Routes)
 
+const v9Routes = require('./routes/v9');
+router.use('/v9', v9Routes)
+
+
 module.exports = router
