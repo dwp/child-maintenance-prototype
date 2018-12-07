@@ -1,25 +1,25 @@
-{% extends "layout.html" %} 
-{% from "button/macro.njk" import govukButton %} 
-{% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/" %} 
-{% block pageTitle %} 
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
 {{ serviceName }} - On average, how many nights a week do the children stay over with you?
 ?
 
-{% endblock %} 
+{% endblock %}
 
-{% block beforeContent %} 
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }} 
-{% endblock%} 
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
+{% endblock%}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">On average, how many nights a week do the children stay over with you?</h1>
+        <h1 class="govuk-heading-xl">How often do the children stay overnight with you?</h1>
 <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-           
+
         </legend>
         <div class="govuk-radios">
             <div class="govuk-radios__item">
