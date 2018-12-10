@@ -1,14 +1,14 @@
-{% extends "layout.html" %} 
-{% from "button/macro.njk" import govukButton %} 
-{% from "radios/macro.njk" import govukRadios%} 
-{% set serviceUrl = "/alpha-prototype-4" %} 
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %}
 {% block pageTitle %}
  {{ serviceName }}
-  - Are both parents habitually resident in the UK? 
-  {% endblock %} 
-  {% block beforeContent %} 
-  {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V1" }, html: '' }) }} 
-  {% endblock%} 
+  - Are both parents habitually resident in the UK?
+  {% endblock %}
+  {% block beforeContent %}
+  {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V1" }, html: '' }) }}
+  {% endblock%}
   {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -16,27 +16,27 @@
 
         <form method="post" action="are-both-parents-habitually-resident-in-the-uk">
 
-            {{ govukRadios({ 
-                idPrefix: "habitually-resident", 
-                name: "habitually-resident", 
-                fieldset: { legend: { text: "Are both parents habitually resident in the UK?", 
-                isPageHeading: true, 
+            {{ govukRadios({
+                idPrefix: "habitually-resident",
+                name: "habitually-resident",
+                fieldset: { legend: { text: "Are both parents habitually resident in the UK?",
+                isPageHeading: true,
                 classes: "govuk-fieldset__legend--xl" } }, 
-                items: [ { 
-                    name: "yes", 
-                    value: "yes", 
-                    text: "Yes", 
-                    checked: true if data['habitually-resident'] == "yes" }, 
-                    { 
-                        name: "no", 
-                        value: "no", 
-                        text: "No", 
+                items: [ {
+                    name: "yes",
+                    value: "yes",
+                    text: "Yes",
+                    checked: true if data['habitually-resident'] == "yes" },
+                    {
+                        name: "no",
+                        value: "no",
+                        text: "No",
                         checked: false if data['habitually-resident'] == "no" }
                          ]
                           })
                            }}
                             {{
-                                 govukButton({ 
+                                 govukButton({
                                      text: "Continue"
             }) }}
         </form>

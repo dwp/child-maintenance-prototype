@@ -10,13 +10,13 @@
 {% endblock %}
 
 {% block beforeContent %}
-    {{ 
+    {{
         govukPhaseBanner({
             tag: {
                 text: "PROTOTYPE"
             },
             html: ''
-        }) 
+        })
     }}
 {% endblock %}
 
@@ -26,7 +26,7 @@
         <form method="post" action="is-there-a-court-order-for-child-maintenance-in-place">
 
         {% set courtOrderDateHTML %}
-            {{ 
+            {{
                 govukDateInput({
                 id: "court-order-date",
                 name: "court-order-date",
@@ -49,11 +49,11 @@
                         value: data['court-order-date-year']
                     }
                 ]
-                }) 
+                })
             }}
         {% endset -%}
 
-        {{ 
+        {{
             govukRadios({
                 idPrefix: "court-order",
                 name: "court-order",
@@ -65,12 +65,12 @@
                     }
                     },
                      hint: {
-    text: "This is known as a ‘minute of agreement’ in Scotland"
+    text: "This is known as a ‘minute of agreement’ in Scotland."
   },
-                
+
                 items: [
                     {
-                    name: "yes",    
+                    name: "yes",
                     value: "yes",
                     text: "Yes",
                     checked: true if data['court-order'] == "yes",
@@ -79,22 +79,21 @@
                         }
                     },
                     {
-                    name: "yes",    
+                    name: "yes",
                     value: "no",
                     text: "No",
                     checked: true if data['court-order'] == "no"
                     }
                 ]
-            }) 
+            })
         }}
 
-        {{ 
+        {{
             govukButton({
                 text: "Continue"
-            }) 
+            })
         }}
         </form>
     </div>
   </div>
 {% endblock %}
-
