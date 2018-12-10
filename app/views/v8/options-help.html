@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Courts {% endblock %} {%
+block beforeContent%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: ''}) }} {% endblock %} {%block content
+%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Get help from Child Maintenance options</h1>
+
+
+        <p>
+        </p>
+
+        <div class="govuk-inset-text">
+            <p>
+            </p>
+            <p>Telephone: 0800 0835 130</p>
+            <p>Monday to Friday, 8am to 8pm</p>
+            <p>Saturdays, 9am to 4pm</p>
+            <p>Welsh language: 0800 408 0308</p>
+            <p>Monday to Friday, 9am to 5pm</p>
+            <p>
+                <a href=".">Find out about call charges</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

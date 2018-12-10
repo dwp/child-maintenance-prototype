@@ -55,7 +55,7 @@ router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, re
 
     let habituallyResident = req.session.data['habitually-resident']
     if (habituallyResident === "no") {
-        res.redirect('fba')
+        res.redirect('https://www.gov.uk/child-maintenance-if-one-parent-lives-abroad/ex-partner-lives-abroad')
     } else {
         res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
     }
