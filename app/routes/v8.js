@@ -88,7 +88,7 @@ router.get('/is-child-under-20', (req, res) => {
 router.post('/is-child-under-20', (req, res) => {
     let childAge = req.session.data['child-age']
     if (childAge === "no") {
-        res.redirect('fba')
+        res.redirect('over-20')
     }
     else {
         res.redirect('apply-cms')
