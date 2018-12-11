@@ -1,99 +1,159 @@
-{% extends "layout.html" %}
-{% set serviceUrl = "/" %}
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-{{ serviceName }} - Courts
-{% endblock %}
-
-{% block beforeContent%}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: ''}) }}
-{% endblock %}
-
-{%block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
         <h1 class="govuk-heading-xl">How the Child Maintenance Service can help</h1>
 
-<p>The Child Maintenance Service is for when you and the other parent cannot agree to a child maintenance arrangement.</p>
+        <p>The Child Maintenance Service may be able to help if you and the other parent cannot agree to a child maintenance
+            arrangement.
+        </p>
 
-<p>Arrangements made through the Child Maintenance Service are not flexible, and cannot be adjusted to cover other costs or
-include payments in kind. <a href="calculator">Use the online calculator</a> to find out how much the Child Maintenance Service is likely to calculate
-for you.
-</p>
-<p>You will have to pay a one off application fee of £20, unless you are:
-</p>
+        <p>Arrangements made through the Child Maintenance Service are not flexible, and cannot be adjusted to cover other costs
+            or include payments in kind.</p>
 
-<ul class="govuk-list govuk-list--bullet">
-    <li>under 19</li>
-    <li>a victim of domestic abuse</li>
-    <li>living in Northern Ireland</li>
-    </ul>
-    <p>Payment of the fee does not guarantee child maintenance payments will be made.</p>
+        <p>
+            <a href="calculator">Use the online calculator</a> to find out how much the Child Maintenance Service is likely to calculate for you.
+        </p>
+        <p>You will have to pay a one-off application fee of £20, unless you are:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>under 19</li>
+            <li>a victim of domestic abuse</li>
+            <li>living in Northern Ireland</li>
+        </ul>
+        <p>Payment of the fee does not guarantee child maintenance payments will be made.</p>
 
 
-    <h2 class="govuk-heading-s">Direct Pay
-</h2>
+        <h2 class="govuk-heading-s">Direct Pay
+        </h2>
 
-<p>The Child Maintenance Service can work out how much child maintenance should be paid and help you to set up a payment arrangement
-between yourselves. This is called a ‘Direct Pay’ arrangement. The Child Maintenance Service may recalculate the payment
-amount if your circumstances change.
-</p>
+        <p>The Child Maintenance Service can work out how much child maintenance should be paid. You can then set up a payment
+            arrangement between yourselves. This is called a ‘Direct Pay’ arrangement. The Child Maintenance Service may
+            recalculate the payment amount if your circumstances change.
+        </p>
 
-<h3 class="govuk-heading-s">Collect and Pay
-</h3>
-<p>If a Direct Pay arrangement does not work, the Child Maintenance Service may be able to collect the amount
-     from the paying parent and pass it to the receiving parent – this is known as a 'Collect and Pay' arrangement.
-      If this happens, you'll need to pay:
-</p>
+        <h3 class="govuk-heading-s">Collect and Pay
+        </h3>
+        <p>If a Direct Pay arrangement does not work, the Child Maintenance Service may be able to collect the amount from the
+            paying parent and pass it to the receiving parent – this is known as a 'Collect and Pay' arrangement. If this
+            happens, you'll need to pay:
+        </p>
 
-<ul class="govuk-list govuk-list--bullet">
-<li>a 20% fee on top of your regular child maintenance payment if you're the paying parent</li>
-<li>a 4% fee taken off your regular child maintenance payment if you're the receiving parent.</li>
-</ul>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a 20% fee on top of your regular child maintenance payment if you're the paying parent</li>
+            <li>a 4% fee taken off your regular child maintenance payment if you're the receiving parent.</li>
+        </ul>
 
-<h4 class="govuk-heading-m">Before you apply to the Child Maintenance Service
-</h4>
 
-<p>Before you can apply to the Child Maintenance Service you need to speak to Child Maintenance Options. They’ll talk with you
-about arrangement options. If you decide to use the Child Maintenance Service, they’ll give you a reference number and explain
-how to apply.
-</p>
+        <h5 class="govuk-heading-m">Applying to the Child Maintenance Service</h5>
+        <p>You can apply if you’re:</p>
 
-            <div class="govuk-inset-text">
-                <p>
-                    <strong>Child Maintenance Options</strong>
-                </p>
-                <p>Telephone: 0800 0835 130</p>
-                <p>Monday to Friday, 8am to 8pm</p>
-                <p>Saturdays, 9am to 4pm</p>
-                <p>Welsh language: 0800 408 0308</p>
-                <p>Monday to Friday, 9am to 5pm</p>
-                <p>
-                    <a href=".">Find out about call charges</a>
-                </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the parent the child lives with</li>
+            <li>the parent the child does not live with</li>
+            <li>a grandparent or other guardian of the child</li>
+            <li>a child over 12 living in Scotland</li>
+
+        </ul>
+
+        <p> You will need to give information about you and your family, for example:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>details about the child you are applying for – including the full names of both their parents</li>
+            <li>your National Insurance number</li>
+            <li>your bank account details, if the Child Maintenance Service needs to collect and pass on payments</li>
+        </ul>
+        <p>
+            <a href="habitually-resident">Check if you're eligible to apply to the Child Maintenance Service</a>
+        </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="gem-c-contextual-sidebar">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="gem-c-related-navigation">
+                <h2 id="related-nav-related_items-ed61ce7e" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
+                    Related content
+                </h2>
+
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ed61ce7e"
+                    data-module="gem-toggle">
+
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Calculate child maintenance</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">The cost of raising a child</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance discussion guide</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance arrangement tool</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-ed61ce7e" data-module="gem-toggle">
+
+                    <h3 id="related-nav-topics-ed61ce7e" data-track-count="sidebarRelatedItemSection" class="gem-c-related-navigation__sub-heading">
+                        Explore the topic
+                    </h3>
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.1 Explore the topic"
+                                data-track-label="/browse/childcare-parenting/financial-help-children" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Financial help if you have children&quot;}"
+                                href="/browse/childcare-parenting/financial-help-children">Marriage, civil partnership and divorce</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.2 Explore the topic"
+                                data-track-label="/browse/benefits/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/benefits/child">Divorce, separation and legal issues</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.3 Explore the topic"
+                                data-track-label="/browse/births-deaths-marriages/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/births-deaths-marriages/child">Having a child, parenting and adoption</a>
+                        </li>
+
+                    </ul>
+                </nav>
             </div>
-<h5 class="govuk-heading-m">If you apply to the Child Maintenance Service</h5>
-<p>You can apply if you’re:</p>
 
-<ul class="govuk-list govuk-list--bullet">
-<li>the parent the child lives with</li>
-<li>the parent the child does not live with</li>
-<li>a grandparent or other guardian of the child</li>
-<li>a child over 12 living in Scotland</li>
-
-</ul>
-
-<p> You will need to give information about you and your family, for example:
-</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>details about the child you are applying for - including the full names of both their parents</li>
-<li>your National Insurance number</li>
-<li>your bank account details, if the Child Maintenance Service needs to collect and pass on payments</li>
-
-
-
-</div>
         </div>
-        {% endblock %}
+    </div>
+    {% endblock %}

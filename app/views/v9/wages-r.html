@@ -1,36 +1,7 @@
-{% extends "layout.html" %}
-{% from "button/macro.njk" import govukButton %}
-{% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/" %}
-{% block pageTitle %}
-{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
-?
-
-{% endblock %}
-
-{% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
-{% endblock%}
-
-{% block content %}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What is the paying parent's total taxable income?
-</h1>
-        {% from "input/macro.njk" import govukInput %}
-
-{{ govukInput({
-  label: {
-    text: ""
-  },
-  hint: {
-    text: "This is their total income from employment or self-employment, before tax and National Insurance, but after pension contributions."
-  },
-  classes: "govuk-input--width-10",
-  id: "national-insurance-number",
-  name: "national-insurance-number"
-}) }}
-
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -63,6 +34,7 @@
 
 <a href="nights-r" role="button" class="govuk-button">
   Continue
-</a></div>
+</a>
+</div>
 </div>
 {% endblock %}

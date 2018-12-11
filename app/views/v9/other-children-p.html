@@ -1,18 +1,7 @@
-{% extends "layout.html" %}
-{% from "button/macro.njk" import govukButton %}
-{% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/" %}
-{% block pageTitle %}
-{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
-?
-
-{% endblock %}
-
-{% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
-{% endblock%}
-
-{% block content %}
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">How many other children live with you?</h1>
@@ -25,7 +14,7 @@
     text: ""
   },
   hint: {
-    text: "Do not include the children maintenance has to be paid for."
+    text: "For example, a new partner's children. Do not include any children you pay child maintenance for."
   },
   classes: "govuk-input--width-10",
   id: "child-amount",

@@ -3,7 +3,7 @@ const router = express.Router()
 
 
 router.get('/paying-receiving', (req, res) => {
-    res.render('v6/paying-receiving')
+    res.render('v9/paying-receiving')
 })
 
 router.post('/paying-receiving', (req, res) => {
@@ -18,7 +18,7 @@ router.post('/paying-receiving', (req, res) => {
 
 
 router.get('/do-you-receive-benefits-r', (req, res) => {
-    res.render('v6/benefits-q-r')
+    res.render('v9/benefits-q-r')
 })
 
 router.post('/do-you-receive-benefits-r', (req, res) => {
@@ -33,7 +33,7 @@ router.post('/do-you-receive-benefits-r', (req, res) => {
 
 
 router.get('/do-you-receive-benefits-p', (req, res) => {
-    res.render('v6/benefits-q-p')
+    res.render('v9/benefits-q-p')
 })
 
 router.post('/do-you-receive-benefits-p', (req, res) => {
@@ -43,6 +43,55 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
     }
     else {
         res.redirect('wages-p')
+    }
+})
+
+
+router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
+    res.render('v9/habitually-resident.njk')
+})
+
+router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, res) {
+
+    let habituallyResident = req.session.data['habitually-resident']
+    if (habituallyResident === "no") {
+        res.redirect("remo")
+    } else {
+        res.redirect('is-there-a-court-order-for-child-maintenance-in-place')
+    }
+})
+
+
+
+
+// court order
+router.get('/is-there-a-court-order-for-child-maintenance-in-place', (req, res) => {
+    res.render('v9/court-order.njk')
+})
+
+router.post('/is-there-a-court-order-for-child-maintenance-in-place', (req, res) => {
+    let courtOrder = req.session.data['court-order']
+    if (courtOrder === "no") {
+
+        res.redirect('is-child-under-20')
+    }
+    else {
+        res.redirect("ineligible-courts")
+    }
+})
+
+// child age
+router.get('/is-child-under-20', (req, res) => {
+    res.render('v9/child-age.njk')
+})
+
+router.post('/is-child-under-20', (req, res) => {
+    let childAge = req.session.data['child-age']
+    if (childAge === "no") {
+        res.redirect('over-20')
+    }
+    else {
+        res.redirect('apply-cms')
     }
 })
 

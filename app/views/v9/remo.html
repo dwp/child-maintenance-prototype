@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">You are not eligible to apply for the Child Maintenance Service</h1>
+
+
+
+<p>The Child Maintenance Service can only help in certain circumstances if one parent lives abroad, 
+for example if the paying parent lives abroad and:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>is a civil servant</li>
+<li>works in Her Majesty’s Diplomatic Service</li>
+<li>is a member of the Armed Forces</li>
+<li>works for a company that is based and registered in the UK</li>
+<li>is working on secondment for a ‘prescribed body’, like a regional health authority or local authority</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Reciprocal Enforcement of Maintenance Orders</h2>
+
+<p>The UK has international agreements with more than 100 countries for child maintenance. 
+    These arrangements are called Reciprocal Enforcement of Maintenance Orders (REMO).</p>
+<p>If a REMO is in place, it means that:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+
+<li>if a receiving parent and child live abroad, they can apply for a foreign child maintenance order which will be 
+enforceable against the paying parent who lives in the UK</li>
+
+<li>if the receiving parent and child live in the UK, they can seek an order to register and enforce the recovery of 
+    a child maintenance order from the paying parent who lives abroad</li>
+
+    </ul>
+
+
+<p>Find out more about <a href="">arranging child maintenance if one parent lives abroad</a>.</p>
+
+</div>
+</div>
+{% endblock %}

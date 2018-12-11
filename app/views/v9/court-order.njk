@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <form method="post" action="is-there-a-court-order-for-child-maintenance-in-place">
+
+            {% set courtOrderDateHTML %} 
+            {{ govukDateInput({ id: "court-order-date", 
+            name: "court-order-date", 
+            fieldset: { legend: {
+            text: "When was the court order created?" } }, 
+            items: [ { 
+                name: "day", 
+                value: data['court-order-date-day']
+                 },
+            { 
+                name: "month", 
+                value: data['court-order-date-month'] }, { 
+                    name: "year", 
+                    value: data['court-order-date-year']
+            } ] }) }} 
+            {% endset -%}
+             {{ govukRadios({ 
+                 idPrefix: "court-order", 
+                 name: "court-order", 
+                 fieldset: { legend: { text: "Is there a court order for child maintenance in place?", 
+                 isPageHeading: true, 
+                 classes: "govuk-fieldset__legend--xl"
+            } }, 
+            hint: { text: "This is known as a ‘minute of agreement’ in Scotland" }, 
+            items: [ { 
+                name: "yes", 
+                value: "yes",
+                text: "Yes", 
+                checked: true if data['court-order'] == "yes", conditional: 
+                { html: courtOrderDateHTML } }, 
+                {
+                     name: "yes", 
+                     value: "no", 
+                     text: "No", 
+                     checked: true if data['court-order'] == "no" 
+                     } ] }) }} 
+                     {{ govukButton({ 
+                         text: "Continue"
+                          }) 
+                         }}
+        </form>
+    </div>
+</div>
+{% endblock %}

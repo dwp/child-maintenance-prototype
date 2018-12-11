@@ -1,17 +1,8 @@
-{% extends "layout.html" %}
-{% from "button/macro.njk" import govukButton %}
-{% from "radios/macro.njk" import govukRadios%}
-{% set serviceUrl = "/" %}
-{% block pageTitle %}
-{{ serviceName }} - How many children are you receiving child maintenance for?
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
-{% endblock %}
-
-{% block beforeContent %}
-{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6.1" }, html: '' }) }}
-{% endblock%}
-
-{% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form method="post" action="recieving">
@@ -33,21 +24,17 @@
     text: "Select all that apply."
   },
   items: [
-    {
-      value: "carcasses",
-      text: "Income support"
-    },
-    {
-      value: "mines",
-      text: "Income-based Jobseeker’s Allowance"
-    },
-    {
-      value: "farm",
-      text: "Income-related Employment and Support Allowance"
-    },
       {
       value: "mines",
-      text: "Pension Credit"
+      text: "Armed Forces Compensation Scheme payments"
+    },
+      {
+        value: "mines",
+        text: "Bereavement Allowance"
+    },
+      {
+        value: "mines",
+        text: "Carer’s Allowance"
     },
       {
       value: "mines",
@@ -55,39 +42,19 @@
     },
       {
       value: "mines",
-      text: "State Pension"
-    },
-      {
-      value: "mines",
       text: "Incapacity Benefit"
     },
       {
-      value: "mines",
-      text: "Training Allowance"
+      value: "carcasses",
+      text: "Income Support"
     },
       {
       value: "mines",
-      text: "Armed Forces Compensation Scheme payments"
+      text: "Income-based Jobseeker’s Allowance"
     },
       {
-      value: "mines",
-      text: "War Disablement Pension"
-    },
-      {
-      value: "mines",
-      text: "Bereavement Allowance"
-    },
-      {
-      value: "mines",
-      text: "Carer’s Allowance"
-    },
-      {
-      value: "mines",
-      text: "Maternity Allowance"
-    },
-      {
-      value: "mines",
-      text: "Severe Disablement Allowance"
+      value: "farm",
+      text: "Income-related Employment and Support Allowance"
     },
       {
       value: "mines",
@@ -95,11 +62,27 @@
     },
       {
       value: "mines",
-      text: "Widowed Parent’s Allowance"
+      text: "Maternity Allowance"
     },
       {
       value: "mines",
-      text: "Widow’s Pension"
+      text: "Pension Credit"
+    },
+      {
+        value: "mines",
+        text: "Severe Disablement Allowance"
+    },
+      {
+        value: "mines",
+        text: "Skillseekers training"
+    },
+      {
+      value: "mines",
+      text: "State Pension"
+    },
+      {
+      value: "mines",
+      text: "Training Allowance"
     },
       {
       value: "mines",
@@ -107,16 +90,19 @@
     },
       {
       value: "mines",
-      text: "Skillseekers training"
+      text: "War Disablement Pension"
+    },
+      {
+        value: "mines",
+        text: "War Widow’s, Widower’s or Surviving Civil Partner’s Pension"
+    },
+      {
+        value: "mines",
+        text: "Widow’s Pension"
     },
       {
       value: "mines",
-      text: "War Widow’s, Widower’s or Surviving Civil Partner’s Pension"
-    },
-
-      {
-      value: "mines",
-      text: "Income-based Jobseeker’s Allowance"
+      text: "Widowed Parent’s Allowance"
     }
   ]
 }) }}
