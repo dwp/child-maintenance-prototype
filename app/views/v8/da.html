@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - Protecting yourself
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V3" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Protecting yourself if the other parent is a threat</h1>
+
+<p>If making an arrangement could make you vulnerable, <a href="phone">speak to one of our agents</a> about your options.</p>
+
+<p><a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" target="_blank">Find out how to get help </a> if you or someone you know is a victim of domestic abuse.</p>
+
+    </div>
+    </div>
+    {% endblock %}
