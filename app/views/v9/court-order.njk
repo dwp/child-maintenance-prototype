@@ -9,45 +9,45 @@
 
         <form method="post" action="is-there-a-court-order-for-child-maintenance-in-place">
 
-            {% set courtOrderDateHTML %} 
-            {{ govukDateInput({ id: "court-order-date", 
-            name: "court-order-date", 
+            {% set courtOrderDateHTML %}
+            {{ govukDateInput({ id: "court-order-date",
+            name: "court-order-date",
             fieldset: { legend: {
-            text: "When was the court order created?" } }, 
-            items: [ { 
-                name: "day", 
+            text: "When was the court order created?" } },
+            items: [ {
+                name: "day",
                 value: data['court-order-date-day']
                  },
-            { 
-                name: "month", 
-                value: data['court-order-date-month'] }, { 
-                    name: "year", 
+            {
+                name: "month",
+                value: data['court-order-date-month'] }, {
+                    name: "year",
                     value: data['court-order-date-year']
-            } ] }) }} 
+            } ] }) }}
             {% endset -%}
-             {{ govukRadios({ 
-                 idPrefix: "court-order", 
-                 name: "court-order", 
-                 fieldset: { legend: { text: "Is there a court order for child maintenance in place?", 
-                 isPageHeading: true, 
+             {{ govukRadios({
+                 idPrefix: "court-order",
+                 name: "court-order",
+                 fieldset: { legend: { text: "Is there a court order for child maintenance in place?",
+                 isPageHeading: true,
                  classes: "govuk-fieldset__legend--xl"
-            } }, 
-            hint: { text: "This is known as a ‘minute of agreement’ in Scotland" }, 
-            items: [ { 
-                name: "yes", 
+            } },
+            hint: { text: "This is known as a ‘minute of agreement’ in Scotland." }, 
+            items: [ {
+                name: "yes",
                 value: "yes",
-                text: "Yes", 
-                checked: true if data['court-order'] == "yes", conditional: 
-                { html: courtOrderDateHTML } }, 
+                text: "Yes",
+                checked: true if data['court-order'] == "yes", conditional:
+                { html: courtOrderDateHTML } },
                 {
-                     name: "yes", 
-                     value: "no", 
-                     text: "No", 
-                     checked: true if data['court-order'] == "no" 
-                     } ] }) }} 
-                     {{ govukButton({ 
+                     name: "yes",
+                     value: "no",
+                     text: "No",
+                     checked: true if data['court-order'] == "no"
+                     } ] }) }}
+                     {{ govukButton({
                          text: "Continue"
-                          }) 
+                          })
                          }}
         </form>
     </div>
