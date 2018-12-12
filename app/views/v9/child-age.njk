@@ -10,7 +10,7 @@
         <form method="post" action="is-child-under-20">
 
             {{ govukRadios({ idPrefix: "child-age", name: "child-age", fieldset: { legend: { text: "Is the child under 20 years old?",
-            isPageHeading: true, classes: "govuk-fieldset__legend--xl" } },hint: { text: "The Child Maintenance Service can only help make arrangements for children under 16, or under 20 and in full-time education or training up to A level or equivalent." },  items: [ { value: "yes", text: "Yes", checked:
+            isPageHeading: true, classes: "govuk-fieldset__legend--xl" } },hint: { text: "The Child Maintenance Service can only help make arrangements for children under 16, or under 20 and in full-time training or education up to A level or equivalent." },  items: [ { value: "yes", text: "Yes", checked:
             true if data['child-age'] == "yes" }, { value: "no", text: "No", checked: true if data['child-age'] == "no" }
             ] }) }} {{ govukButton({ text: "Continue" }) }}
         </form>
