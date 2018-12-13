@@ -95,6 +95,20 @@ router.post('/is-child-under-20', (req, res) => {
     }
 })
 
+router.get('/do-you-want-to-personalise', (req, res) => {
+    res.render('v9/personalised')
+})
+
+router.post('/do-you-want-to-personalise', (req, res) => {
+    let personalise = req.session.data['personalise']
+    if (personalise === "no") {
+        res.redirect('saved-copy')
+    }
+    else {
+        res.redirect('personal-q')
+    }
+})
+
 
 
 module.exports = router
