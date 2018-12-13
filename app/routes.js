@@ -45,5 +45,7 @@ router.use('/v8', v8Routes)
 const v9Routes = require('./routes/v9');
 router.use('/v9', v9Routes)
 
+const v10Routes = require('./routes/v10');
+router.use('/v10', v10Routes)
 
 module.exports = router

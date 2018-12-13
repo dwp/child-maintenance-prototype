@@ -1,0 +1,119 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">Calculate child maintenance</h1>
+        <p>Use this calculator to work out child maintenance for your circumstances.
+        </p>
+                <p>The calculator uses the same rules as the Child Maintenance Service.
+                </p>
+
+
+        <div class="govuk-inset-text">The receiving parent has main day-to-day care of the child. The paying parent does not have main day-to-day care.
+        </div>
+
+
+        <p>You’ll need to know:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>whether the paying parent gets any government benefits or State Pension</li>
+            <li>the paying parent’s total income before tax and National Insurance, but after pension contributions</li>
+            <li>if any other children live with the paying parent</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">If you need more than one child maintenance arrangement</h2>
+        <p>The Child Maintenance Service uses rules to make sure payments are split fairly between children. Where a paying parent needs multiple arrangements the amount calculated should be divided by the total number of children.</p>
+        <a href="paying-receiving" role="button" class="govuk-button govuk-button--start">
+            Start
+        </a>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="gem-c-contextual-sidebar">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="gem-c-related-navigation">
+                <h2 id="related-nav-related_items-ed61ce7e" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
+                    Related content
+                </h2>
+
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ed61ce7e"
+                    data-module="gem-toggle">
+
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">The cost of raising a child</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance discussion guide</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance arrangement tool</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-ed61ce7e" data-module="gem-toggle">
+
+                    <h3 id="related-nav-topics-ed61ce7e" data-track-count="sidebarRelatedItemSection" class="gem-c-related-navigation__sub-heading">
+                        Explore the topic
+                    </h3>
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.1 Explore the topic"
+                                data-track-label="/browse/childcare-parenting/financial-help-children" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Financial help if you have children&quot;}"
+                                href="/browse/childcare-parenting/financial-help-children">Marriage, civil partnership and divorce</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.2 Explore the topic"
+                                data-track-label="/browse/benefits/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/benefits/child">Divorce, separation and legal issues</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.3 Explore the topic"
+                                data-track-label="/browse/births-deaths-marriages/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/births-deaths-marriages/child">Having a child, parenting and adoption</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}

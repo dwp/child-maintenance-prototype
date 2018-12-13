@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">If you cannot make an arrangement
+        </h1>
+        <p>You could ask a friend, family member, or
+            <a href="https://www.familymediationcouncil.org.uk/find-local-mediator/" target="_blank">
+                professional family mediator (opens in new window or tab)</a> to help you make an arrangement. </p>
+
+        <p>A mediator can help you to: </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>work together to decide what is best for your child</li>
+            <li>reduce conflict between you</li>
+            <li>build trust in each other</li>
+            <li>improve communications</li>
+            <li>make a flexible, lasting agreement for child maintenance</li>
+        </ul>
+        <h2 class="govuk-heading-m">If both parents cannot agree</h2>
+
+        <p>
+            <a href="phone">The Child Maintenance Service</a> may be able to help you.</p>
+    </div>
+</div>
+
+{% endblock %}
