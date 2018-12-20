@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+What do you think you will do next?
+                    </h1>
+                </legend>
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="where-do-you-live-1" name="where-do-you-live" type="checkbox" value="england">
+                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-1">
+More research
+
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="where-do-you-live-2" name="where-do-you-live" type="checkbox" value="scotland">
+                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-2">
+Take some time to think about what you have read
+
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="where-do-you-live-3" name="where-do-you-live" type="checkbox" value="wales">
+                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-3">
+Apply to the government's Child Maintenance Service
+
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="where-do-you-live-4" name="where-do-you-live" type="checkbox" value="northern-ireland">
+                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-4">
+Make a private arrangement with the other parent
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="where-do-you-live-4" name="where-do-you-live" type="checkbox" value="northern-ireland">
+                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-4">
+I will not make a child maintenance arrangement
+                        </label>
+                    </div>
+                    
+
+            </fieldset>
+            </div>
+            <a href="q6" role="button" draggable="false" class="govuk-button">
+                Continue
+            </a>
+
+        </div>
+    </div>
+    {% endblock %}
