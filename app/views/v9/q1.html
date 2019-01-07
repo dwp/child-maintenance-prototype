@@ -11,74 +11,59 @@
             <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                        Why did you visit this website?
+                        What is your relationship to the child or children?
                     </h1>
                 </legend>
                 <div class="govuk-radios">
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="why-did-you-visit-1" name="why-did-you-visit" type="radio" value="england">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-1">
-                             To find out about child maintenance
+                            Parent, and the children live with me most of the time
+
 
                         </label>
                     </div>
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="why-did-you-visit-2" name="why-did-you-visit" type="radio" value="scotland">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-2">
-                             To get help to make a private arrangement with the other parent
+                            Parent, and the children do not live with me most of the time
 
                         </label>
                     </div>
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="why-did-you-visit-3" name="why-did-you-visit" type="radio" value="wales">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-3">
-                             To use the child maintenance calculator
+                            Grandparent
 
                         </label>
                     </div>
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="why-did-you-visit-4" name="why-did-you-visit" type="radio" value="northern-ireland">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-4">
-I received a letter from the Child Maintenance Service
+                            Third party
+
                         </label>
                     </div>
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="why-did-you-visit-5" name="why-did-you-visit" type="radio" value="northern-ireland">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-5">
-To find out about different types of arrangement
+                            Other
                         </label>
                     </div>
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-6" name="why-did-you-visit" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-6">
-To get help with an arrangement that has stopped working
-                        </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-7" name="why-did-you-visit" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-7">
-To apply to the government’s Child Maintenance Service
-                        </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-8" name="why-did-you-visit" type="radio" value="Other">
-                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-8">
-Other                      
-  </label>
-  </div>
-            <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                    Can you provide more detail?
-                </label>
-                <span id="more-detail-hint" class="govuk-hint">
-                    Do not include personal or financial information, like your National Insurance number or credit card details.
-                </span>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
-            </div>
-<a href="q2" role="button" draggable="false" class="govuk-button">
-    Continue
-</a>
-        </div>
-        </div>
-         {% endblock %}
 
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="more-detail">
+                            Can you provide more detail?
+                        </label>
+                        <span id="more-detail-hint" class="govuk-hint">
+                            Do not include personal or financial information, like your National Insurance number or credit card details.
+                        </span>
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <a href="q2" role="button" draggable="false" class="govuk-button">
+                        Continue
+                    </a>
+                </div>
+        </div>
+        {% endblock %}

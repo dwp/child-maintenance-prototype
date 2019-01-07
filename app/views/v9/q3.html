@@ -6,61 +6,32 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                    <h1 class="govuk-fieldset__heading">
-Which statement best describes you?
-                    </h1>
-                </legend>
-                <div class="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-1" name="where-do-you-live" type="checkbox" value="england">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-1">
-I live with the child most of the time
-
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-2" name="where-do-you-live" type="checkbox" value="scotland">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-2">
-I live with the child some of the time
-
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-3" name="where-do-you-live" type="checkbox" value="wales">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-3">
-I will be making payments to the other parent
-
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-4" name="where-do-you-live" type="checkbox" value="northern-ireland">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-4">
-I will be receiving payments from the other parent
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-4" name="where-do-you-live" type="checkbox" value="northern-ireland">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-4">
-I am getting information for someone else
-                        </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="where-do-you-live-4" name="where-do-you-live" type="checkbox" value="northern-ireland">
-                        <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live-4">
-None of the above
-                        </label>
-                    </div>
-                   
-            </fieldset>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+Did the website give you the information that you needed?            </h1>
+        </legend>
+    
+        <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Yes
+                </label>
             </div>
-            <a href="q4" role="button" draggable="false" class="govuk-button">
-                Continue
-                </a>
-
-                </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                </label>
+            </div>
         </div>
-        {% endblock %}
+    </fieldset>
+</div>
+<a href="q4" role="button" draggable="false" class="govuk-button">
+    Continue
+</a>
+</div>
+</div>
+{% endblock %}

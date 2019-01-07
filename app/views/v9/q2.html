@@ -6,32 +6,86 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <h1 class="govuk-fieldset__heading">
-Did the website give you the information that you needed?            </h1>
-        </legend>
-    
-        <div class="govuk-radios govuk-radios--inline">
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                    Yes
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        Why did you visit this website?
+                    </h1>
+                </legend>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-1" name="why-did-you-visit" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-1">
+                             To find out about child maintenance
+
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-2" name="why-did-you-visit" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-2">
+                             To get help to make a private child maintenance arrangement with the other parent
+
+
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-3" name="why-did-you-visit" type="radio" value="wales">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-3">
+                             To use the child maintenance calculator
+
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-4" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-4">
+To find out how much the Child Maintenance Service would expect me to pay or receive
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-5" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-5">
+ I received a letter from the Child Maintenance Service
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-6" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-6">
+To find out about different types of child maintenance arrangement
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-7" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-7">
+ To get help with a child maintenance arrangement that has stopped working
+                        </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="why-did-you-visit-7" name="why-did-you-visit" type="radio" value="northern-ireland">
+                            <label class="govuk-label govuk-radios__label" for="why-did-you-visit-7">
+To apply to the government’s Child Maintenance Service
+                            </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="why-did-you-visit-8" name="why-did-you-visit" type="radio" value="Other">
+                        <label class="govuk-label govuk-radios__label" for="why-did-you-visit-8">
+Other                      
+  </label>
+  </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                    Can you provide more detail?
                 </label>
+                <span id="more-detail-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card details.
+                </span>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
             </div>
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                    No
-                </label>
-            </div>
-        </div>
-    </fieldset>
-</div>
 <a href="q3" role="button" draggable="false" class="govuk-button">
     Continue
 </a>
-</div>
-</div>
-{% endblock %}
+        </div>
+        </div>
+         {% endblock %}
+
