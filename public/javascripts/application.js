@@ -19,15 +19,3 @@ $(document).ready(function () {
     $(".text").hide();
   });
 });
-
-
-$(function () {
-  $('input[name="Other"]').on('click', function () {
-    if ($(this).val() == 'Other') {
-      $('#textboxes').show();
-    }
-    else {
-      $('#textboxes').hide();
-    }
-  });
-});
