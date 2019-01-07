@@ -61,15 +61,15 @@ To apply to the government’s Child Maintenance Service
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                        <input class="govuk-radios__input" id="Other" name="Other" type="radio" value="Other">
                         <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
 Other                      
   </label>
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="width-20">
+                <div class="govuk-form-group" id="textboxes">
+                    <label class="govuk-label" for="Other">
                         
                     </label>
-                    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+                    <input class="govuk-input govuk-input--width-20" id="Other" name="Other" type="text"  hidden="true">
                 </div>
             </fieldset>
         </div>
@@ -79,3 +79,4 @@ Other
         </div>
         </div>
          {% endblock %}
+
