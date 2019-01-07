@@ -45,14 +45,14 @@
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-5" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <input class="govuk-radios__input" id="why-did-you-visit-5" name="why-did-you-visit" type="radio" value="northern-ireland" onclick="myFunction()">
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-5">
                             Other
                         </label>
                     </div>
 
 
-                    <div class="govuk-form-group">
+                    <div class="govuk-form-group"style="display:none" id="myDIV">
                         <label class="govuk-label" for="more-detail">
                             Can you provide more detail?
                         </label>
@@ -66,4 +66,15 @@
                     </a>
                 </div>
         </div>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
         {% endblock %}

@@ -39,20 +39,20 @@ Not make a child maintenance arrangement
  </label>
             </div>
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                    Other </label>
+                <input class="govuk-radios__input" id="why-did-you-visit-8" name="why-did-you-visit" type="radio" value="Other" onclick="myFunction()">
+                <label class="govuk-label govuk-radios__label" for="why-did-you-visit-8">
+                    Other
+                </label>
             </div>
-            <div class="govuk-form-group">
+            <div class="govuk-form-group" style="display:none" id="myDIV">
                 <label class="govuk-label" for="more-detail">
                     Can you provide more detail?
                 </label>
                 <span id="more-detail-hint" class="govuk-hint">
                     Do not include personal or financial information, like your National Insurance number or credit card details.
                 </span>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
             </div>
-
 
             <a href="q8" role="button" draggable="false" class="govuk-button">
                 Continue
@@ -60,4 +60,14 @@ Not make a child maintenance arrangement
 
         </div>
     </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
     {% endblock %}
