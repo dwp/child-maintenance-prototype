@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
@@ -18,15 +18,20 @@
 
                     </div>
                 </div>
+                <div>
                 <p>
                     This is what the Child Maintenance Service would calculate if you had a statutory arrangement.</p>
 
                 <p>It is based on the information you provided.</p>
 
-                <p><a href="saved-copy" target="_blank"> Download this calculation (downloads in a new window)
-</a>
+                <p>
+                    
+                    <a href="saved-copy" target="_blank"> Download this calculation (downloads in a new window)
+                </a>
+                </p>
 
-                </a></p>
+</div>
+                
 
                 <h2 class="govuk-heading-m">Next steps</h2>
 
@@ -85,7 +90,8 @@
                 <p>If both parents still cannot agree, or something else is stopping you making your own arrangement,
                     <a href="cms">the Child Maintenance Service
                     </a> may be able to help you.</p>
-            </div>
+                
+                </div>
             <div class="govuk-grid-column-one-third">
                 <div class="gem-c-contextual-sidebar">
 
@@ -146,15 +152,19 @@
 
                             </ul>
                         </nav>
-                    </div>
+                   </div>
+                
+                   
                 </div>
-            </div>
+                
+           </div>
+
+        </div>
+
+    </div>
 
 
+</div>
+         
 
-
-
-
-
-
-            {% endblock %}
+{% endblock %}

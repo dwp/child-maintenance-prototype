@@ -1,37 +1,107 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
 <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
 Did the website give you the information that you needed?            </h1>
         </legend>
     
         <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                <input class="govuk-radios__input" id="info-1" name="info" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="info-1">
                     Yes
                 </label>
             </div>
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                <input class="govuk-radios__input" id="info-2" name="info" type="radio" value="no" onclick="myFunction()">
+                <label class="govuk-label govuk-radios__label" for="info-2">
                     No
                 </label>
             </div>
         </div>
     </fieldset>
+    <div class="govuk-form-group" style="display:none" id="myDIV">
+        <label class="govuk-label" for="more-detail">
+            Can you provide more detail?
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
 </div>
+</div>
+</div>
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    Was the website easy to use? </h1>
+            </legend>
+    
+            <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                        Yes
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no"onclick="myFunction2()">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                        No
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="govuk-form-group" style="display:none" id="myDIV2">
+        <label class="govuk-label" for="more-detail">
+            Can you provide more detail?
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+
 <a href="q4" role="button" draggable="false" class="govuk-button">
     Continue
 </a>
 </div>
 </div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+        function myFunction2() {
+                var x = document.getElementById("myDIV2");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+
+      
+</script>
 {% endblock %}

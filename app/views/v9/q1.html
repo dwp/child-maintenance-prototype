@@ -1,10 +1,11 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
 
         <div class="govuk-form-group">
@@ -24,21 +25,21 @@
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-2" name="why-did-you-visit" type="radio" value="scotland">
+                        <input class="govuk-radios__input" id="why-did-you-visit-2" name="why-did-you-visit" type="radio" value="scotland" >
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-2">
                             Parent, and the children do not live with me most of the time
 
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-3" name="why-did-you-visit" type="radio" value="wales">
+                        <input class="govuk-radios__input" id="why-did-you-visit-3" name="why-did-you-visit" type="radio" value="wales" >
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-3">
                             Grandparent
 
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="why-did-you-visit-4" name="why-did-you-visit" type="radio" value="northern-ireland">
+                        <input class="govuk-radios__input" id="why-did-you-visit-4" name="why-did-you-visit" type="radio" value="northern-ireland" >
                         <label class="govuk-label govuk-radios__label" for="why-did-you-visit-4">
                             Third party
 
@@ -76,5 +77,5 @@
                     x.style.display = "none";
                 }
             }
-        </script>
+                 </script>
         {% endblock %}

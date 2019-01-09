@@ -1,73 +1,77 @@
  {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
 
 
-        <h1 class="govuk-heading-xl">What do you think you will do next?
-</h1>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+Take part in research
+            </h1>
+            <br>
+            <h2 class="govuk-heading-l">Can a researcher contact you about your experiences with this website and child maintenance?
+</h2>
+        </legend>
+         
+            <p class="govuk-hint">Researchers can't answer specific questions or advise you about child maintenance.</p> 
+            <p class="govuk-hint">If you are selected to take part, we will contact you in the next 3 weeks.</p>
+            <p class="govuk-hint">Your details will only be used to contact you for this research and will be deleted once the research
+              is complete.</p>
 
-        <div class="govuk-radios">
+       
+        </fieldset>
+        <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                     Apply to the government's Child Maintenance Service
-
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes"onclick="myFunction()">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Yes
                 </label>
-            </div>
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                     Make a private arrangement with the other parent
 
-                </label>
-            </div>
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-Not make a child maintenance arrangement
-                </label>
-            </div>
-            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                     Not sure
- </label>
+
             </div>
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="why-did-you-visit-8" name="why-did-you-visit" type="radio" value="Other" onclick="myFunction()">
-                <label class="govuk-label govuk-radios__label" for="why-did-you-visit-8">
-                    Other
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
                 </label>
             </div>
-            <div class="govuk-form-group" style="display:none" id="myDIV">
-                <label class="govuk-label" for="more-detail">
-                    Can you provide more detail?
-                </label>
-                <span id="more-detail-hint" class="govuk-hint">
-                    Do not include personal or financial information, like your National Insurance number or credit card details.
-                </span>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
-            </div>
-
-            <a href="q8" role="button" draggable="false" class="govuk-button">
-                Continue
-            </a>
-
         </div>
+        </div>
+    <div class="govuk-form-group" style="display:none" id ="myDIV">
+        <label class="govuk-label" for="width-20">
+            Name
+        </label>
+        
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+        <br>
+        <br>
+        <label class="govuk-label" for="width-20">
+            Email address
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+
+<a href="survey-end" role="button" draggable="false" class="govuk-button">
+    Send feedback
+</a>
+</div>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
         }
+    }
     </script>
-    {% endblock %}
+{% endblock %}
