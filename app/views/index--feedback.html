@@ -1,0 +1,62 @@
+{% extends "layout--feedback.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {{ 
+        govukPhaseBanner({
+            tag: {
+                text: "PROTOTYPE"
+            },
+            html: ''
+        }) 
+    }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="domestic-abuse">
+
+        {{ 
+            govukRadios({
+                idPrefix: "domestic-abuse",
+                name: "domestic-abuse",
+                fieldset: {
+                    legend: {
+                        text: "Have you and your child suffered, or are you at risk of suffering, any form of domestic abuse?",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--xl"
+                    }
+                },
+                hint: {
+                    html: "<p id='domestic-abuse-hint' class='govuk-hint'>Domestic abuse can be sexual, physical, financial, psychological or emotional. It can also include witnessing the abuse of a child.</p> <p><a href='Find out about the signs of domestic violence or abuse' target='_new'>Find out about the signs of domestic violence or abuse</a>"
+                },
+                items: [
+                    {
+                    value: "yes",
+                    text: "Yes",
+                    checked: true if data['domestic-abuse'] == "yes"
+                    },
+                    {
+                    value: "no",
+                    text: "No",
+                    checked: true if data['domestic-abuse'] == "no"
+                    }
+                ]
+        }) 
+    }}
+
+        {{ 
+            govukButton({
+                text: "Continue"
+            }) 
+        }}
+        </form>
+    </div>
+  </div>
+{% endblock %}
+
