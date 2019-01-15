@@ -4,10 +4,10 @@
 <a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">How many other children does the paying parent support?</h1>
+    <h1 class="govuk-heading-xl">How many other children live with the paying parent?</h1>
 
 
-    {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "Include any children living with them and any they already have child maintenance arrangements for." }, classes: "govuk-input--width-10",
+    {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "Do not include any children they already pay child maintenance for." }, classes: "govuk-input--width-10",
     id: "child-amount", name: "child-amount" }) }}
     <a href="check-your-answers" role="button" class="govuk-button">
       Continue
