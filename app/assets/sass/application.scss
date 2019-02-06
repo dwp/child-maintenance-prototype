@@ -9,6 +9,51 @@ $govuk-global-styles: true;
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+
+ .root-index .promo-image .promo-text-cta a .main-text {
+  
+    display: block;
+    margin-bottom: 15px;
+    padding: 1.5em .75em 2em;
+    color: #fff;
+    background: #005ea5;
+    text-align: center;
+    text-decoration: none;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1.25;
+    
+}
+.root-index .promo-image .promo-text-cta a .main-text {
+    font-size: 36px;
+    line-height: 1.1111111111;
+    text-decoration: underline;
+    
+}
+
+.survey-heading {
+  color: #ffffff;
+  background-color:#005ea5;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.11111;
+  display: block;
+  margin-top: 30;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+   text-decoration: underline;
+}
+
+
+
+
+
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 @import "components/header-file";
