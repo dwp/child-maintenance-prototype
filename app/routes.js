@@ -48,4 +48,10 @@ router.use('/v9', v9Routes)
 const v10Routes = require('./routes/v10');
 router.use('/v10', v10Routes)
 
+const v11Routes = require('./routes/v11');
+router.use('/v11', v11Routes)
+
+const v12Routes = require('./routes/v12');
+router.use('/v12', v12Routes)
+
 module.exports = router
