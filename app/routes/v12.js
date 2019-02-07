@@ -46,6 +46,23 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
     }
 })
 
+router.get('/receiving-children', (req, res) => {
+    res.render('v12/receiving-children')
+})
+
+router.post('/receiving-children', (req, res) => {
+    let receivingChildren = req.session.data['receiving-children']
+    if (receivingChildren === "1") {
+        res.redirect('child-name')
+    }
+    else if (receivingChildren === "2"){
+        res.redirect('2-child-name')
+    }
+    else {
+        res.redirect('3-child-name')
+    }
+})
+
 
 router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
     res.render('v10/habitually-resident.njk')
