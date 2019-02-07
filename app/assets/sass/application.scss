@@ -47,7 +47,24 @@ $govuk-global-styles: true;
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-   text-decoration: underline;
+   
+   
+}
+.feedback-link:hover {
+text-decoration: underline;
+ color: #ffffff;
+ cursor: pointer;
+}
+
+
+.govuk-link:visited, a:visited {
+  color: #4c2c92;
+}
+
+
+
+.govuk-link:active, a:active {
+  color: #2b8cc4;
 }
 
 

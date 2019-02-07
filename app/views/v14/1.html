@@ -1,0 +1,188 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your <a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Arrange child maintenance </h1>
+
+
+        <p>Child maintenance is support to help pay for your children's everyday living costs when you are separated from the other
+            parent.
+        </p>
+
+        <p>Studies show that children get the best outcomes when their parents are able to work together – this includes
+            working together to arrange child maintenance.</p>
+        <div class="govuk-inset-text">
+            Making an arrangement between yourselves might not be appropriate if you think the other parent poses a threat to you or
+            your children, or if you are
+            <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">a victim of domestic abuse</a>.
+
+
+
+        </div>
+        <p>
+            Both parents are legally responsible for the costs of raising their children, even if they don’t see them.
+        </p>
+
+        <p>Child maintenance is for children who are either:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>under 16</li>
+            <li>under 20 and in full-time training or education up to A level or equivalent</li>
+        </ul>
+
+        <p>Where the day-to-day care of children is shared equally between parents, one parent is not expected to pay child maintenance
+            to the other. The cost of raising the children is covered by both parents.</p>
+
+        <p>There are other situations
+            <a href="https://www.gov.uk/when-child-maintenance-payments-stop">when child maintenance payments can stop</a>.</p>
+
+        <h2 class="govuk-heading-m">Arranging child maintenance yourselves</h2>
+        <p>You can arrange child maintenance yourselves, if you can agree.</p>
+        <p>Your arrangement can include whatever works for both parents.</p>
+        <p>For example, you could agree to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>share care of the children</li>
+            <li>split the costs of specific items</li>
+        </ul>
+        <p>Or you could agree that one parent will pay:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>some of their income to the parent the children live with</li>
+            <li>for things like housing costs, uniforms, clothes, school trips, or after school clubs</li>
+            <li>larger lump sums at certain times in the children’s lives</li>
+        </ul>
+
+        <p>No one else is involved, and the arrangement can be flexible to your circumstances.
+        </p>
+
+
+
+        <div class="govuk-inset-text">
+            <a href="fba.html">Use the child maintenance calculator</a> to see what the Child Maintenance Service would calculate for you.</p>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Use the Child Maintenance Service </h2>
+        <p>If you cannot agree child maintenance yourselves, you can contact the Child Maintenance Service for help.
+        </p>
+
+        <p>The Child Maintenance Service can work out how much child maintenance should be paid and tell both parents.</p>
+
+        <p>There is a £20 fee for applying to the Child Maintenance Service, unless you are:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>under 19</li>
+            <li>a victim of domestic abuse</li>
+            <li>living in Northern Ireland</li>
+        </ul>
+
+        <p> The fee does not guarantee child maintenance payments will be made by the other parent.
+        </p>
+
+        <p>There are no charges if you work with the other parent to set up your own child maintenance arrangement.</p>
+
+        <div class="govuk-inset-text">
+            <a href="cms.html">Get help making or receiving child maintenance payments</a>.</p>
+        </div>
+
+
+
+<div class="feedback-banner--white feedback-banner--footer">
+    <div class="govuk-width-container govuk-width-container--blue">
+        <p class="govuk-body-s govuk-!-padding-2 govuk-!-padding-bottom-2 govuk-!-margin-bottom-0">
+            Help us improve this guide by
+            <a href="feedback">leaving your feedback</a>
+        </p>
+    </div>
+</div>
+</div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="gem-c-contextual-sidebar">
+
+      
+            <div class="gem-c-related-navigation">
+                <h2 id="related-nav-related_items-ed61ce7e" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
+                    Related content
+                </h2>
+
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ed61ce7e"
+                    data-module="gem-toggle">
+
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Calculate child maintenance</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">The cost of raising a child</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance discussion guide</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
+                                data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
+                                href="/child-benefit">Child maintenance arrangement tool</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+                <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-ed61ce7e" data-module="gem-toggle">
+
+                    <h3 id="related-nav-topics-ed61ce7e" data-track-count="sidebarRelatedItemSection" class="gem-c-related-navigation__sub-heading">
+                        Explore the topic
+                    </h3>
+
+                    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.1 Explore the topic"
+                                data-track-label="/browse/childcare-parenting/financial-help-children" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Financial help if you have children&quot;}"
+                                href="/browse/childcare-parenting/financial-help-children">Marriage, civil partnership and divorce</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.2 Explore the topic"
+                                data-track-label="/browse/benefits/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/benefits/child">Divorce, separation and legal issues</a>
+                        </li>
+                        <li class="gem-c-related-navigation__link">
+                            <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.3 Explore the topic"
+                                data-track-label="/browse/births-deaths-marriages/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
+                                href="/browse/births-deaths-marriages/child">Having a child, parenting and adoption</a>
+                        </li>
+
+                    </ul>
+                </nav>
+<hr>
+                <div class="promo-image" id="promo">
+                    <div class="promo-content">
+                        <h3 class="survey-heading">
+                           
+                                <a class="feedback-link">Tell us what you think</a>
+                            
+                        </h3>
+                        <p>Help us improve this service by <a href="feedback">giving your feedback</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endblock %}
