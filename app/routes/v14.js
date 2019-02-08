@@ -120,10 +120,10 @@ router.post('/receiving-children', (req, res) => {
         res.redirect('child-name')
     }
     else if (receivingChildren === "2") {
-        res.redirect('2-child-name')
+        res.redirect('child-name')
     }
     else {
-        res.redirect('3-child-name')
+        res.redirect('child-name')
     }
 })
 
@@ -135,13 +135,13 @@ router.get('/paying-children', (req, res) => {
 router.post('/paying-children', (req, res) => {
     let receivingChildren = req.session.data['paying-children']
     if (receivingChildren === "1") {
-        res.redirect('p-child-name')
+        res.redirect('child-name')
     }
     else if (receivingChildren === "2") {
-        res.redirect('p2-child-name')
+        res.redirect('child-name')
     }
     else {
-        res.redirect('p3-child-name')
+        res.redirect('child-name')
     }
 })
 
