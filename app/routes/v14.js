@@ -3,7 +3,7 @@ const router = express.Router()
 
 
 router.get('/paying-receiving', (req, res) => {
-    res.render('v10/paying-receiving')
+    res.render('v14/paying-receiving')
 })
 
 router.post('/paying-receiving', (req, res) => {
@@ -18,7 +18,7 @@ router.post('/paying-receiving', (req, res) => {
 
 
 router.get('/do-you-receive-benefits-r', (req, res) => {
-    res.render('v10/benefits-q-r')
+    res.render('v14/benefits-q-r')
 })
 
 router.post('/do-you-receive-benefits-r', (req, res) => {
@@ -33,7 +33,7 @@ router.post('/do-you-receive-benefits-r', (req, res) => {
 
 
 router.get('/do-you-receive-benefits-p', (req, res) => {
-    res.render('v10/benefits-q-p')
+    res.render('v14/benefits-q-p')
 })
 
 router.post('/do-you-receive-benefits-p', (req, res) => {
@@ -48,7 +48,7 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
 
 
 router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
-    res.render('v10/habitually-resident.njk')
+    res.render('v14/habitually-resident.njk')
 })
 
 router.post('/are-both-parents-habitually-resident-in-the-uk', function (req, res) {
@@ -82,7 +82,7 @@ router.post('/is-there-a-court-order-for-child-maintenance-in-place', (req, res)
 
 // child age
 router.get('/is-child-under-20', (req, res) => {
-    res.render('v10/child-age.njk')
+    res.render('v14/child-age.njk')
 })
 
 router.post('/is-child-under-20', (req, res) => {
