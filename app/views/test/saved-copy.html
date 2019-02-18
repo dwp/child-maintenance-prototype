@@ -1,0 +1,121 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+        <div class="govuk-panel govuk-panel--confirmation">
+            <div class="govuk-panel__body">
+                Your child maintenance
+                <br> calculation is
+                <br>
+                <strong>£40 per week</strong>
+                or
+                <strong>£173 per month</strong>
+
+            </div>
+        </div>
+
+
+
+        <p>For an arrangement between John and Jayne, for Maisie, the Child Maintenance Service would calculate an amount of
+            £40 per week or £173 per month.</p>
+
+        <p>There are many ways to arrange child maintenance between yourselves. You can use this calculation as a starting point
+            for making your own arrangement.
+        </p>
+
+        <p>The calculation is based on the following information provided 6 February 2019:</p>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption"></caption>
+            <br>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <br>
+                    <th class="govuk-table__header" scope="col">Questions</th>
+                    <th class="govuk-table__header" scope="col">Answers</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
+                    <td class="govuk-table__cell">1</td>
+
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How often do the children stay overnight with the paying parent?
+                    </th>
+                    <td class="govuk-table__cell">1 to 2 nights a week</td>
+
+
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Does the paying parent receive any government benefits or State Pension?</th>
+                    <td class="govuk-table__cell">No</td>
+
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">What is the total income of the paying parent?</th>
+                    <td class="govuk-table__cell">£433.89</td>
+
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Is this amount weekly, monthly or yearly?</th>
+                    <td class="govuk-table__cell">Weekly</td>
+
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How many other children live in the household of the parent paying child maintenance?</th>
+                    <td class="govuk-table__cell">1</td>
+
+
+                </tr>
+
+
+            </tbody>
+        </table>
+
+        <h2 class="govuk-heading-m">
+            Next steps</h2>
+
+        <p>You can now agree how you will share the costs of raising your children. Use this calculation as a starting point.</p>
+        <p>Your arrangement can include whatever works for both parents.</p>
+
+        <p>for example you could agree to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>share care of the children</li>
+            <li>split the cost of specific items</li>
+        </ul>
+
+        <p>
+            Or you could agree that one parent will pay:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+
+            <li>some of their income to the parent the children live with</li>
+            <li>for things like housing costs, uniform, clothes, school trips or after school clubs</li>
+
+        </ul>
+
+        <p>No one else is involved, and the arrangement can be flexible to your circumstances.
+        </p>
+
+
+    </div>
+</div>
+{% endblock%}

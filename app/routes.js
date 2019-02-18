@@ -59,4 +59,10 @@ router.use('/v13', v13Routes)
 
 const v14Routes = require('./routes/v14');
 router.use('/v14', v14Routes)
+
+
+const testRoutes = require('./routes/test');
+router.use('/test', testRoutes)
+
+
 module.exports = router
