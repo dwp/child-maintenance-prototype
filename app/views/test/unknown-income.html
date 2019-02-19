@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">If income information is not available</h1>
+
+       <p>A calculation for child maintenance can only be done with information about the
+    income of the parent who will be paying child maintenance.</p>
+       <p>A calculation for child maintenance can only be done with information about the
+    income of the parent who will be paying child maintenance. If this information is not available, you could use the <a href="">cost of
+    raising your child form (downloads a PDF)</a> to work out how much maintenance your child might need.</p>
+<p>When the parent who does not live with the child receives a benefit, the ‘Flat rate’ of £7 per week is applied.</p>
+<p>If you cannot agree child maintenance yourselves, you can <a href="">contact the Child Maintenance Service</a> for help.</p>
+
+    </div>
+</div>
+{% endblock %}

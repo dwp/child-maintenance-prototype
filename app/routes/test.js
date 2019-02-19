@@ -53,11 +53,24 @@ router.post('/do-you-receive-benefits-r', (req, res) => {
     if (receiveBenefits2 === "yes") {
         res.redirect('benefits-r')
     }
-    else {
-        res.redirect('wages-r')
+    else if (receiveBenefits2 ==="unknown") {
+        res.redirect('do-you-know-income')
     }
+    else res.redirect('do-you-know-income')
+})
+router.get('/do-you-know-income', (req, res) => {
+    res.render('test/do-you-know-income')
 })
 
+router.post('/do-you-know-income', (req, res) => {
+    let doYouKnowIncome = req.session.data['do-you-know-income']
+    if (doYouKnowIncome === "yes") {
+        res.redirect('wages-r')
+    }
+    else {
+        res.redirect('unknown-income')
+    }
+})
 
 router.get('/do-you-receive-benefits-p', (req, res) => {
     res.render('test/benefits-q-p')

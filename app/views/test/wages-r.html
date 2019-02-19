@@ -6,9 +6,17 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">What is the paying parent's total taxable income?
     </h1>
-    {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "This is their total income
-    from employment or self-employment, before tax and National Insurance, but after pension contributions." }, classes:
-    "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}
+    {% from "input/macro.njk" import govukInput %}
+     {{ govukInput({
+        label: { text: "" },
+         hint: { text: "This is their total income from employment or self-employment,
+        before tax and National Insurance, but after pension contributions." },
+     classes:
+    "govuk-input--width-10", 
+    id: "national-insurance-number", 
+    name: "national-insurance-number" 
+  }) 
+}}
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
