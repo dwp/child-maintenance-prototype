@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -63,9 +63,6 @@
         <p>If the day-to-day care of children is shared equally between parents, one parent is usually not expected to pay child
             maintenance to the other. The cost of raising the children is covered by both parents.
         </p>
-        <p>In some cases, the Child Maintenance Service will calculate a ‘Nil rate’ of maintenance to be paid, for example if the parent
-        who does not live with the child is a student, or is in prison. There are other situations <a href="https://www.gov.uk/when-child-maintenance-payments-stop">when child maintenance payments can stop</a>.</p>
-
        
 
         <h2 class="govuk-heading-m">If your private arrangement stops working</h2>
@@ -85,6 +82,10 @@
         </p>
 
         <p>The Child Maintenance Service can work out how much child maintenance should be paid and tell both parents.</p>
+                <p>In some cases, the Child Maintenance Service will calculate a ‘Nil rate’ of maintenance to be paid, for example if the parent
+                    who does not live with the child is a student, or is in prison. There are other situations
+                    <a href="https://www.gov.uk/when-child-maintenance-payments-stop">when child maintenance payments can stop</a>.</p>
+
 
         <p>There is a £20 fee for applying to the Child Maintenance Service, unless you are:</p>
 
@@ -109,7 +110,7 @@
             <div class="govuk-width-container govuk-width-container--blue">
                 <p class="govuk-body-s govuk-!-padding-2 govuk-!-padding-bottom-2 govuk-!-margin-bottom-0">
                     Help us improve this guide by
-                    <a href="feedback">leaving your feedback</a>
+                    <a href="q1">leaving your feedback</a>
                 </p>
             </div>
         </div>
@@ -195,7 +196,7 @@
 
                         </h3>
                         <p>Help us improve this service by
-                            <a href="feedback">giving your feedback</a>.</p>
+                            <a href="q1">giving your feedback</a>.</p>
                     </div>
                 </div>
             </div>

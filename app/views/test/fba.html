@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
@@ -10,13 +10,14 @@
         <h1 class="govuk-heading-xl">Calculate child maintenance</h1>
         <p>Use this calculator to work out child maintenance for your circumstances.
         </p>
-
         <p>The calculator uses the same basic rules as the Child Maintenance
         Service – a government scheme for parents who cannot make their
         own child maintenance arrangements.</p>
 
         <p>You can use the calculation as a starting point for making your own
           arrangement.</p>
+        <p>You will be able to download and share your calculation with the other parent.</p>
+
 
         <div class="govuk-inset-text">The receiving parent has main day-to-day care of the children. The paying parent does not have main day-to-day care.
         </div>
@@ -137,7 +138,7 @@
         
                 </h3>
                 <p>Help us improve this service by
-                    <a href="feedback">giving your feedback</a>.</p>
+                    <a href="q1">giving your feedback</a>.</p>
             </div>
         </div>
 

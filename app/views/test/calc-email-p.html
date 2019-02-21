@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
-<a href="survey-start" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
@@ -105,7 +105,7 @@
                 <h5 class="govuk-heading-m">Tell us what you think</h5>
 
                 <p>Please
-                    <a href="feedback">answer some questions</a> about your experience on this website. Your responses will help us make it
+                    <a href="q1">answer some questions</a> about your experience on this website. Your responses will help us make it
                     better.
                 </p>
 
@@ -183,7 +183,7 @@
 
                         </h3>
                         <p>Help us improve this service by
-                            <a href="feedback">giving your feedback</a>.</p>
+                            <a href="q1">giving your feedback</a>.</p>
                     </div>
                 </div>
 
