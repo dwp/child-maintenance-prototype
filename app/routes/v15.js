@@ -42,7 +42,7 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
         res.redirect('benefits-p')
     }
     else {
-        res.redirect('wages-p')
+        res.redirect('income-new-p')
     }
 })
 
@@ -145,17 +145,18 @@ router.post('/paying-children', (req, res) => {
     }
 })
 
-router.get('/does-pp-earn', (req, res) => {
-    res.render('v15/income-new')
+
+router.get('/do-you-earn', (req, res) => {
+    res.render('v15/income-new-p')
 })
 
-router.post('/does-pp-earn', function (req, res) {
+router.post('/do-you-earn', function (req, res) {
 
-    let doesPpEarn = req.session.data['does-pp-earn']
+    let doesPpEarn = req.session.data['do-you-earn']
     if (doesPpEarn === "no") {
-        res.redirect("nights-r")
+        res.redirect("nights-p")
     } else {
-        res.redirect('do-you-know-income')
+        res.redirect('wages-p')
     }
 })
 
