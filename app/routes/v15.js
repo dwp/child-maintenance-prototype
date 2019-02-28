@@ -135,13 +135,13 @@ router.get('/paying-children', (req, res) => {
 router.post('/paying-children', (req, res) => {
     let receivingChildren = req.session.data['paying-children']
     if (receivingChildren === "1") {
-        res.redirect('child-name-p')
+        res.redirect('benefits-q-p')
     }
     else if (receivingChildren === "2") {
-        res.redirect('child-name-p')
+        res.redirect('benefits-q-p')
     }
     else {
-        res.redirect('child-name-p')
+        res.redirect('benefits-q-p')
     }
 })
 
