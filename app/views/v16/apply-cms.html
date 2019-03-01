@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">You are eligible to apply to the Child Maintenance Service</h1>
+
+        <h2 class="govuk-heading-m">Before you apply
+        </h2>
+
+        <p>You’ll need to speak to Child Maintenance Options. They’ll talk with you about arrangement options. If you decide
+            to use the Child Maintenance Service, they’ll give you a reference number and explain how to apply.
+        </p>
+
+        <div class="govuk-inset-text">
+            <p>
+            </p>
+            <p>Telephone: 0800 953 0191</p>
+            <p>Monday to Friday, 8am to 8pm</p>
+            <p>Saturdays, 9am to 4pm</p>
+            <p>
+                <a href=".">Find out about call charges</a>
+            </p>
+        </div>
+<p>Tell us how we could <a href="q1">make this website better</a>.</p>
+    </div>
+</div>
+{% endblock %}
