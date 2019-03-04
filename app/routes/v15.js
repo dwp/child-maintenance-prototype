@@ -160,6 +160,20 @@ router.post('/do-you-earn', function (req, res) {
     }
 })
 
+router.get('/do-you-earn', (req, res) => {
+    res.render('v15/income-new')
+})
+
+router.post('/do-you-earn', function (req, res) {
+
+    let doesPpEarn = req.session.data['do-you-earn']
+    if (doesPpEarn === "no") {
+        res.redirect("nights-r")
+    } else {
+        res.redirect('wages-r')
+    }
+})
+
 router.post('/do-you-know-income', (req, res) => {
     let doYouKnowIncome = req.session.data['do-you-know-income']
     if (doYouKnowIncome === "yes") {
