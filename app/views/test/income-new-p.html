@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="do-you-earn">
+
+            {{ govukRadios({
+                idPrefix: "do-you-earn",
+                name: "do-you-earn",
+                fieldset: { legend: { text: "Do you earn an income?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes",
+                text: "Yes",
+                checked: true if data['do-you-earn'] == "yes" },
+                {
+                name: "no",
+                value: "no",
+                text: "No",
+                checked: true if data['do-you-earn'] == "no" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -42,6 +42,19 @@ router.post('/receiving-multiple', (req, res) => {
         res.redirect('receiving-children')
     }
 })
+router.get('/do-you-earn', (req, res) => {
+    res.render('v15/income-new-p')
+})
+
+router.post('/do-you-earn', function (req, res) {
+
+    let doesPpEarn = req.session.data['do-you-earn']
+    if (doesPpEarn === "no") {
+        res.redirect("nights-p")
+    } else {
+        res.redirect('wages-p')
+    }
+})
 
 
 router.get('/do-you-receive-benefits-r', (req, res) => {
