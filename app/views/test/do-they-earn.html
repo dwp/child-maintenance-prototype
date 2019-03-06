@@ -20,17 +20,17 @@
                 name:"yes",
                 value: "yes", 
                 text: "Yes",
-                checked: true if data['do-you-know-income'] == "yes" },
+                checked: true if data['do-they-earn'] == "yes" },
                 {
                 name: "no",
                 value: "no",
                 text: "No",
-                checked: true if data['do-you-know-income'] == "no" },
+                checked: true if data['do-they-earn'] == "no" },
                 {
                 name:"unknown",
                 value: "unknown", 
                 text: "I don't know",
-                checked: true if data['do-you-know-income'] == "unknown" }
+                checked: true if data['do-they-earn'] == "unknown" }
             ] }) }}
             {{
                 govukButton({ text: "Continue" }) }}

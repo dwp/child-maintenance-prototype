@@ -66,7 +66,7 @@ router.post('/do-they-earn', function (req, res) {
     if (doTheyEarn === "no") {
         res.redirect("nights-p")
     } else if (doTheyEarn === "yes"){
-        res.redirect("wages-r")
+        res.redirect("do-you-know-income")
     }
     else 
         res.redirect('unknown-income')
