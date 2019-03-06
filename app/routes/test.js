@@ -56,6 +56,22 @@ router.post('/do-you-earn', function (req, res) {
     }
 })
 
+router.get('/do-they-earn', (req, res) => {
+    res.render('test/do-they-earn')
+})
+
+router.post('/do-they-earn', function (req, res) {
+
+    let doTheyEarn = req.session.data['do-they-earn']
+    if (doTheyEarn === "no") {
+        res.redirect("nights-p")
+    } else if (doTheyEarn === "yes"){
+        res.redirect("wages-r")
+    }
+    else 
+        res.redirect('unknown-income')
+    }
+)
 
 router.get('/do-you-receive-benefits-r', (req, res) => {
     res.render('test/benefits-q-r')
@@ -67,9 +83,9 @@ router.post('/do-you-receive-benefits-r', (req, res) => {
         res.redirect('benefits-r')
     }
     else if (receiveBenefits2 ==="unknown") {
-        res.redirect('do-you-know-income')
+        res.redirect('do-they-earn')
     }
-    else res.redirect('do-you-know-income')
+    else res.redirect('do-they-earn')
 })
 router.get('/do-you-know-income', (req, res) => {
     res.render('test/do-you-know-income')
