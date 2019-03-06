@@ -168,6 +168,20 @@ router.post('/do-you-earn', function (req, res) {
 
     let doesPpEarn = req.session.data['do-you-earn']
     if (doesPpEarn === "no") {
+        res.redirect("nights-p")
+    } else {
+        res.redirect('wages-p')
+    }
+})
+
+router.get('/does-pp-earn', (req, res) => {
+    res.render('v15/income-new')
+})
+
+router.post('/does-pp-earn', function (req, res) {
+
+    let doesPpEarn = req.session.data['does-pp-earn']
+    if (doesPpEarn === "no") {
         res.redirect("nights-r")
     } else {
         res.redirect('wages-r')
