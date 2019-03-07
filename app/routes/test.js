@@ -83,7 +83,7 @@ router.post('/do-you-receive-benefits-r', (req, res) => {
         res.redirect('benefits-r')
     }
     else if (receiveBenefits2 ==="unknown") {
-        res.redirect('do-they-earn')
+        res.redirect('unknown-benefits')
     }
     else res.redirect('do-they-earn')
 })
