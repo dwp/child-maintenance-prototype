@@ -4,14 +4,13 @@
 <a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-                <form method="post" action="how-often">
 
 
 
          {{ govukRadios({
                 idPrefix: "how-often",
                 name: "how-often",
-                fieldset: { legend: { text: "How often do the children stay overnight with you?",
+                fieldset: { legend: { text: "How often does james stay overnight with you?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
             
@@ -41,18 +40,17 @@
                 name:"4",
                 value: "4", 
                 text: " More than 3 nights a week (175 or more a year)",
-                checked: true if data['how-often'] == "4" },
+                checked: true if data['how-often'] == "4" }
 
-                {
-                name: "different",
-                value: "different",
-                text: "The children stay different numbers of overnight",
-                checked: true if data['how-often'] == "different" }
+               
             ] }) }}
-            {{
-                govukButton({ text: "Continue" }) }}            </form>
-            </div>
             
+                          </form>
+          
+            <a href="other-children-p" role="button" draggable="false" class="govuk-button">
+                Continue
+            </a>
+
 
         </div>
     </div>

@@ -111,7 +111,7 @@ router.post('/do-you-receive-benefits-p', (req, res) => {
         res.redirect('benefits-p')
     }
     else {
-        res.redirect('wages-p')
+        res.redirect('income-new-p')
     }
 })
 
@@ -214,5 +214,19 @@ router.post('/paying-children', (req, res) => {
     }
 })
 
+router.get('/how-often', (req, res) => {
+    res.render('test/nights-p')
+})
+
+router.post('/how-often', (req, res) => {
+    let howOften = req.session.data['how-often']
+    if (howOften=== "different") {
+        res.redirect('child-name-p')
+    }
+  
+    else {
+        res.redirect('other-children-p')
+    }
+})
 
 module.exports = router
