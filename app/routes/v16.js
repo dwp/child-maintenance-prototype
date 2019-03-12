@@ -12,9 +12,11 @@ router.post('/paying-receiving', (req, res) => {
         res.redirect('paying-children')
     }
     else {
-        res.redirect('receiving-children')
+        res.redirect('receiving-multiple')
     }
 })
+
+
 
 
 router.get('/do-you-receive-benefits-r', (req, res) => {

@@ -4,26 +4,24 @@
 <a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="post" action="receiving-multiple">
+        <form method="post" action="paying-multiple">
 
             {{ govukRadios({
-                idPrefix: "receiving-multiple",
-                name: "receiving-multiple",
-                fieldset: { legend: { text: "Do you need more than one calculation?",
+                idPrefix: "paying-multiple",
+                name: "paying-multiple",
+                fieldset: { legend: { text: "Do you need a calculation for more than one child maintenance arrangement?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } }, 
-             hint: { text: " For example, if you have children from different relationships, or you will be receiving payments in one arrangement, and
-            making payments in another." },
             items: [ {
                 name:"yes",
                 value: "yes",
                 text: "Yes",
-                checked: true if data['receiving-multiple'] == "yes" },
+                checked: true if data['paying-multiple'] == "yes" },
                 {
                 name: "no",
                 value: "no",
                 text: "No",
-                checked: true if data['receiving-multiple'] == "no" }
+                checked: true if data['paying-multiple'] == "no" }
             ] }) }}
             {{
                 govukButton({ text: "Continue" }) }}
