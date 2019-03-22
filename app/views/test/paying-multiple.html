@@ -9,9 +9,11 @@
             {{ govukRadios({
                 idPrefix: "paying-multiple",
                 name: "paying-multiple",
-                fieldset: { legend: { text: "Do you need a calculation for more than one child maintenance arrangement?",
+                fieldset: { legend: { text: "Do you need more than one calculation?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } }, 
+             hint: { text: " For example, if you have children from different relationships, or you will be receiving payments in one
+            arrangement, and making payments in another." },
             items: [ {
                 name:"yes",
                 value: "yes",
