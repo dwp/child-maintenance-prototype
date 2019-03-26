@@ -66,6 +66,10 @@ router.use('/v15', v15Routes)
 const v16Routes = require('./routes/v16');
 router.use('/v16', v16Routes)
 
+const v17Routes = require('./routes/v17');
+router.use('/v17', v17Routes)
+
+
 const testRoutes = require('./routes/test');
 router.use('/test', testRoutes)
 

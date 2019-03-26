@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        Do you want to add the names of each parent and child to your calculation? </h1>
+                </legend>
+                <span id="national-insurance-number-hint" class="govuk-hint">
+                    You will be able to download a copy of your results to help you and the other parent make your own child maintenance arrangement.</span>
+                <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="info-1" name="info" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="info-1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="info-2" name="info" type="radio" value="no" onclick="myFunction()">
+                        <label class="govuk-label govuk-radios__label" for="info-2">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+    </div>
+</div>
+
+
+<a href="whose-names-p" role="button" draggable="false" class="govuk-button">
+    Continue
+</a>
+</div>
+</div>
+{% endblock %}

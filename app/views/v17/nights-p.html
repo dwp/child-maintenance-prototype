@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <form method="post" action="how-often">
+
+
+
+         {{ govukRadios({
+                idPrefix: "how-often",
+                name: "how-often",
+                fieldset: { legend: { text: "How often do the children stay overnight with you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            
+            items: [ 
+            {
+                name:"never",
+                value: "never", 
+                text: " Never",
+                checked: true if data['how-often'] == "never" },
+
+            {
+                name:"less-1",
+                value: "less-1", 
+                text: " Less than 1 night a week (less than 52 nights a year)",
+                checked: true if data['how-often'] == "less-1" },
+                  {
+                name:"2-3",
+                value: "2-3", 
+                text: "2 to 3 nights a week (104 to 155 a year)",
+                checked: true if data['how-often'] == "2-3" },
+                {
+                name:"3",
+                value: "3", 
+                text: "3 nights a week (156 to 174 a year)",
+                checked: true if data['how-often'] == "3" },
+                                {
+                name:"4",
+                value: "4", 
+                text: " More than 3 nights a week (175 or more a year)",
+                checked: true if data['how-often'] == "4" },
+
+                {
+                name: "different",
+                value: "different",
+                text: "The children stay different numbers of overnight",
+                checked: true if data['how-often'] == "different" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}            </form>
+            </div>
+            
+
+        </div>
+    </div>
+        {% endblock %}

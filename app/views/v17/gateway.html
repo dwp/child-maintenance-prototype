@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Create an account</h1>
+
+        
+
+        <p>To make an application, you'll need to create an account. This account allows you to check the status of an application and edit your details. 
+        </p>
+        <p>You'll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>an email address</li>
+            <li>requirement A</li>
+            <li>requirement B</li>
+
+        </ul>
+
+
+
+        <a href="account" role="button" draggable="false" class="govuk-button">
+            Continue
+        </a>
+
+
+        <p>Tell us how we could
+            <a href="q1">make this website better</a>.</p>
+    </div>
+
+   
+
+</div>
+
+
+
+{% endblock %}

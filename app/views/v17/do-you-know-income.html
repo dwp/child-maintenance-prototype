@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="do-you-know-income">
+
+            {{ govukRadios({
+                idPrefix: "do-you-know-income",
+                name: "do-you-know-income",
+                fieldset: { legend: { text: "Do you know the paying parent's income?",
+            isPageHeading: true,
+             label: { text: "" },
+             hint: { text: "This is their total income from employment or self-employment, before tax and National Insurance, but after
+            pension contributions." },
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes", 
+                text: "Yes",
+                checked: true if data['do-you-know-income'] == "yes" },
+                {
+                name: "no",
+                value: "no",
+                text: "No",
+                checked: true if data['do-you-know-income'] == "no" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}
