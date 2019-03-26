@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">If the paying parent receives an income</h1>
+
+<p>If the parent who does not live with the child receives an income over £100 per week, the Child Maintenance Service can make
+a calculation to take this into account.</p>  
+
+
+                <a href="" role="button" draggable="false" class="govuk-button">
+                    Continue
+                </a>
+
+
+</div>
+</div>
+{% endblock %}

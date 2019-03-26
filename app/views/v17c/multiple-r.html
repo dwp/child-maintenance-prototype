@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">If you need more than one calculation</h1>
+
+<p>Make a separate calculation for each child maintenance arrangement. You will be able to download your calculation and start
+a new one from the results page.</p>      
+<a href="receiving-children" role="button" class="govuk-button">
+  Continue
+</a>
+</div>
+</div>
+{% endblock %}

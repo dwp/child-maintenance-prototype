@@ -1,0 +1,121 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">We&#8217;re testing a new child maintenance website</h1>
+
+
+
+
+<p>Use this website to find out what child maintenance is and how it can be arranged. You will be able to calculate an amount
+of child maintenance you might pay or receive, access forms and guides that could help you and the other parent make your
+own arrangement.</p>            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        </span>
+                        <h1 class="govuk-fieldset__heading">
+                            Why are you visiting this website? <span id="waste-hint" class="govuk-hint"> Select all that apply. (Optional)</span>
+                        </h1>
+                                               
+
+                    </legend>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-1" name="why-did-you-visit" type="checkbox" value="about">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-10">
+                                To find out about child maintenance
+                    
+                            </label>
+                          </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="why-did-you-visit-1" name="why-did-you-visit" type="checkbox" value="about">
+                                    <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-11">
+                                         To get help to make a private child maintenance arrangement with the other parent
+                            
+                                    </label>
+                                  </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="why-did-you-visit-1" name="why-did-you-visit" type="checkbox" value="about">
+                                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-12">
+                                                 To use the child maintenance calculator
+                                    
+                                            </label>
+                   </div>
+                
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-1" name="why-did-you-visit" type="checkbox" value="about">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-13">
+                             To find out how much the Child Maintenance Service would expect me to pay or receive
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-2" name="why-did-you-visit" type="checkbox" value="private">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-2">
+                             I received a letter from the Child Maintenance Service
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-3" name="why-did-you-visit" type="checkbox" value="calculator">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-3">
+                             To find out about different types of child maintenance arrangement
+            
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-7" name="why-did-you-visit" type="checkbox" value="stopped">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-7">
+                                 To get help with a child maintenance arrangement that has stopped working
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-7" name="why-did-you-visit" type="checkbox" value="apply">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-7">
+                                To apply to the government’s Child Maintenance Service
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="why-did-you-visit-8" name="why-did-you-visit" type="checkbox" value="Other" onclick="myFunction()">
+                            <label class="govuk-label govuk-checkboxes__label" for="why-did-you-visit-8">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group" style="display:none" id="myDIV">
+                <label class="govuk-label" for="more-detail">
+                    Can you provide more detail?
+                </label>
+                <span id="more-detail-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card details.
+                </span>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+<a href="1" role="button" draggable="false" class="govuk-button govuk-button--start">
+    Continue to the new website
+</a>
+
+<p><a href="//">Use the current Child Maintenance Options website</a>.</p>
+
+<p><a href="">Child Maintenance Choices</a> can help you with your child
+     maintenance options if you are in Northern Ireland.</p>
+     <p>The new guide is not available in Welsh yet. The current website is available in <a href="">Welsh</a>.
+</p>
+<p>For live chat or email support you should use the current website.</p>
+</div>
+</div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+{% endblock %}
