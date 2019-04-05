@@ -2,9 +2,15 @@
 {% from "details/macro.njk" import govukDetails %}
 
 <div class="box-example box-example--most-recent govuk-!-padding-9">
-    
-    
+
+
     <h2 class="govuk-heading-l">Private Beta prototypes </h2>
+    {{ govukButton({
+       text: "V6.8",
+          href: "/v18/landing-page"
+      }) }}
+  <br>
+
   {{ govukButton({
      text: "V6.7 scenarios",
         href: "/v17/scenarios"
@@ -64,7 +70,7 @@
         href: "/v10/landing-page"
     }) }}
 <br>
- 
+
  {{ govukButton({
      text: "V6.3",
         href: "/v9/landing-page"
@@ -109,7 +115,7 @@
 
 
 
-  
+
 
   {{ govukButton({
      text: "V4",
@@ -160,7 +166,7 @@
         text: "Linear knockout question journey",
         href: "/alpha-prototype-1/index"
     }) }}
-    
+
 <br>
 
 
