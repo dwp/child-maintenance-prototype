@@ -7,4 +7,5 @@ create-release.sh
 CHANGELOG.md
 CONTRIBUTING.md
 public/
+.DS_STORE
 LICENCE.txt

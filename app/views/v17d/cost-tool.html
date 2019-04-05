@@ -9,7 +9,7 @@
 
 
 
-        <form method="post" action="child-age">
+        <form method="post" action="child-age"
 
 
 {{ govukRadios({
@@ -24,28 +24,28 @@
   },
   items: [
     {
-      name: "baby",  
+      name: "baby",
       value: "baby",
       text: "0-12 months",
       checked: true if data['child-age'] == "yes"
 
     },
     {
-      name: "toddler",  
+      name: "toddler",
       value: "toddler",
       text: "1-3 years",
       checked: true if data['child-age'] == "yes"
 
     },
     {
-      name: "child",  
+      name: "child",
       value: "child",
       text: "4-12 years",
       checked: true if data['child-age'] == "yes"
 
     },
     {
-      name: "teenager",  
+      name: "teenager",
       value: "teenager",
       text: "12-17 years",
       checked: true if data['child-age'] == "yes"
@@ -54,7 +54,7 @@
   ]
 }) }}
  {{
-                                 govukButton({ 
+                                 govukButton({
                                      text: "Continue"
             }) }}
 
