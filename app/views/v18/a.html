@@ -6,31 +6,27 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-        <form method="post" action="paying-children">
+        <form method="post" action="live-in-uk">
 
             {{ govukRadios({
-                idPrefix: "paying-children",
-                name: "paying-children",
-                fieldset: { legend: { text: "How many children will you be paying child maintenance for?",
+                idPrefix: "making-payments",
+                name: "making-payments",
+                fieldset: { legend: { text: "Will you be making or receiving payments for child maintenance?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
-            hint: { text: "Include children you need this child maintenance arrangement for. 'Children' means anyone under 16, or under 20 and in full-time training or education up to A level or equivalent." },
             items: [ {
-                value: "1",
-                text: "1",
-                checked: true if data['paying-children'] == "1" },
+                value: "making-payments",
+                text: "Making Payments",
+                checked: true if data['paying-children'] == "making-payments" },
                 {
-                value: "2",
-                text: "2",
-                checked: true if data['paying-children'] == "2" },
-                {
-                value: "3",
-                text: "3 or more",
-                checked: true if data['paying-children'] == "3" }
+                value: "receiving-payments",
+                text: "Receiving Payments",
+                checked: true if data['paying-children'] == "receiving-payments" }
+
             ] }) }}
              {{ govukButton({ text: "Continue" }) }}
         </form>
-       
+
         </a>
     </div>
 </div>
