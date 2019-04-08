@@ -16,6 +16,21 @@ router.post('/paying-receiving', (req, res) => {
     }
 })
 
+//benefits and state pension
+router.get('/benefits-state-pension', (req, res) => {
+    res.render('v18/benefits-state-pension')
+})
+
+router.post('/benefits-state-pension', (req, res) => {
+    let benefitsPension = req.session.data['benefits-pension']
+    if (payingReceiving === "Yes") {
+        res.redirect('benefits-p')
+    }
+    else {
+        res.redirect('any-income')
+    }
+})
+
 
 
 
