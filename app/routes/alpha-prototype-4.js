@@ -4,7 +4,7 @@ const router = express.Router()
 // questions
 
 // UK resident
-// If either parent isn't a habitual resident of the UK, this directs them to the FBA information. 
+// If either parent isn't a habitual resident of the UK, this directs them to the FBA information.
 router.get('/are-both-parents-habitually-resident-in-the-uk', (req, res) => {
     res.render('alpha-prototype-4/habitually-resident.njk')
 })
