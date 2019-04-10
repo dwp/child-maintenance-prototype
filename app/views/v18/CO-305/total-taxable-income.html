@@ -7,7 +7,12 @@
             <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
     <h1 class="govuk-heading-xl">What is your total taxable income?
+      <span id="event-name-hint" class="govuk-hint">
+                You can find this on your payslip or Self Assessment tax return.
+      </span>
     </h1>
+
+
     {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "" }, classes:
     "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}
 
@@ -41,7 +46,7 @@
       </fieldset>
     </div>
 
-    <a href="parent-share-first-reeceiving" role="button" class="govuk-button">
+    <a href="parent-share-first-receiving" role="button" class="govuk-button">
       Continue
     </a>
   </div>

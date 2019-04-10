@@ -8,8 +8,8 @@
 
         <!--<h1 class="govuk-heading-xl">Do any of these children ever stay overnight with you?</h1>-->
 
-        <form method="post" action="children-names-second-receiving-parent">
-                {{ govukRadios({
+        <form method="post" action="children-overnight-stay-placeholder">
+              <!--  {{ govukRadios({
                     idPrefix: "paying-multiple",
                     name: "paying-multiple",
                     fieldset: { legend: { text: "Do any of these children ever stay overnight with you?",
@@ -25,9 +25,27 @@
                     value: "no",
                     text: "No",
                     checked: true if data['paying-multiple'] == "no" }
-                ] }) }}
-                {{
-                    govukButton({ text: "Continue" }) }}
+                ] }) }} -->
+
+                {{ govukRadios({
+                      idPrefix: "children-overnight-stay-placeholder",
+                      name: "children-overnight-stay-placeholder",
+                      fieldset: {
+                        legend: {
+                          text: "Do any of these children ever stay overnight with you?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l" } },
+                    items: [ {
+                    value: "yes~/v18/CO-305/children-names-second-receiving-parent",
+                    text: "Yes" },
+                  {
+                    value: "no~/v18/CO-305/other-children",
+                    text: "No"
+                  }
+                ]
+              }) }}
+
+                {{ govukButton({ text: "Continue" }) }}
           </form>
           <!--  <a href="children-names-second-receiving-parent" role="button" class="govuk-button">
                 Continue

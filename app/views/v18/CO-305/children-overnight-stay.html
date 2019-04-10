@@ -8,27 +8,27 @@
 
         <!--<h1 class="govuk-heading-xl">Do any of these children ever stay overnight with you?</h1>-->
 
-        <form method="post" action="2-child-name">
+        <form method="post" action="children-overnight-stay">
 
             {{ govukRadios({
-                idPrefix: "paying-multiple",
-                name: "paying-multiple",
-                fieldset: { legend: { text: "Do any of these children ever stay overnight with you?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl" } },
-            items: [ {
-                name:"yes",
-                value: "yes",
-                text: "Yes",
-                checked: true if data['paying-multiple'] == "yes" },
-                {
-                name: "no",
-                value: "no",
-                text: "No",
-                checked: true if data['paying-multiple'] == "no" }
-            ] }) }}
-            {{
-                govukButton({ text: "Continue" }) }}
+                  idPrefix: "children-overnight-stay",
+                  name: "children-overnight-stay",
+                  fieldset: {
+                    legend: {
+                      text: "Do any of these children ever stay overnight with you?",
+                      isPageHeading: true,
+                      classes: "govuk-fieldset__legend--l" } },
+                items: [ {
+                value: "yes~/v18/CO-305/2-child-name",
+                text: "Yes" },
+              {
+                value: "no~/v18/CO-305/parent-share-second-receiving",
+                text: "No"
+              }
+            ]
+          }) }}
+
+            {{ govukButton({ text: "Continue" }) }}
         </form>
 
           <!--  <a href="2-child-name" role="button" class="govuk-button">
