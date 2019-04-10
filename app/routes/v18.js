@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const radioButtonRedirect = require('radio-button-redirect') //code relates to an alternative way to route radio buttons
+router.use(radioButtonRedirect)
 
 
 router.get('/paying-receiving', (req, res) => {
@@ -15,24 +17,6 @@ router.post('/paying-receiving', (req, res) => {
         res.redirect('receiving-multiple')
     }
 })
-
-//benefits and state pension
-router.get('/benefits-state-pension', (req, res) => {
-    res.render('v18/benefits-state-pension')
-})
-
-router.post('/benefits-state-pension', (req, res) => {
-    let benefitsPension = req.session.data['benefits-pension']
-    if (payingReceiving === "Yes") {
-        res.redirect('benefits-p')
-    }
-    else {
-        res.redirect('any-income')
-    }
-})
-
-
-
 
 router.get('/do-you-receive-benefits-r', (req, res) => {
     res.render('v14/benefits-q-r')
