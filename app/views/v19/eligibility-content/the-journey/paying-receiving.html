@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!--<form method="post" action="paying-receiving">
+
+          {{ govukRadios({
+                idPrefix: "paying-multiple",
+                name: "paying-multiple",
+                fieldset: { legend: { text: "Will you be making or receiving payments for child maintenance?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes",
+                text: "Making payments",
+                checked: true if data['paying-multiple'] == "yes" },
+                {
+                name: "no",
+                value: "no",
+                text: "Receiving payments",
+                checked: true if data['paying-multiple'] == "no" }
+            ] }) }}-->
+
+            <form method="post" action="paying-receivinghjgf">
+
+                  <!--The below radio buttons have been routed in an alternative way
+                       making the process of routing abit easier-->
+
+                {{ govukRadios({
+                      idPrefix: "paying-receiving-pay",
+                      name: "paying-receiving-pay",
+                      fieldset: {
+                        legend: {
+                          text: "Do you receive any benefits or State Pension?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l" } },
+                    items: [ {
+                    value: "yes~/v19/eligibility-content/the-journey/live-in-uk",
+                    text: "Yes" },
+                  {
+                    value: "no~/v18/CO-305/any-income",
+                    text: "No"
+                  }
+                ]
+              }) }}
+
+                {{ govukButton({ text: "Continue" }) }}
+            </form>
+    </div>
+</div>
+{% endblock %}

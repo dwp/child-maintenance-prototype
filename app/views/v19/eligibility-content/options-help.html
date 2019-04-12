@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Get support from Child Maintenance Options</h1>
+
+
+        <p>
+        </p>
+
+        <div class="govuk-inset-text">
+            <p>
+            </p>
+            <p>Telephone: 0800 953 0191</p>
+            <p>Monday to Friday, 8am to 8pm</p>
+            <p>Saturdays, 9am to 4pm</p>
+            <p>
+                <a href=".">Find out about call charges</a>
+            </p>
+        </div>
+<p>Take part in a <a href="q1">feedback survey</a> to help us make this website better. It should take less than 5 minutes to complete.</p>
+    </div>
+</div>
+{% endblock %}
