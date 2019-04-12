@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const radioButtonRedirect = require('radio-button-redirect')  //code relates to an alternative way to route radio buttons
+const radioButtonRedirect = require('radio-button-redirect') //code relates to an alternative way to route radio buttons
 router.use(radioButtonRedirect)
 
 
