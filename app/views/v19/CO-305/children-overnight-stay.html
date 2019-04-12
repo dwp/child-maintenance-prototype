@@ -2,29 +2,27 @@
 {% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
 {{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
 <a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-        <form method="post" action="benefits-state-pension">
+        <!--<h1 class="govuk-heading-xl">Do any of these children ever stay overnight with you?</h1>-->
 
-              <!--The below radio buttons have been routed in an alternative way
-                   making the process of routing abit easier-->
+        <form method="post" action="children-overnight-stay">
 
             {{ govukRadios({
-                  idPrefix: "benefits-state-pensions",
-                  name: "benefits-state-pensions",
+                  idPrefix: "children-overnight-stay",
+                  name: "children-overnight-stay",
                   fieldset: {
                     legend: {
-                      text: "Do you receive any benefits or State Pension?",
+                      text: "Do any of these children ever stay overnight with you?",
                       isPageHeading: true,
                       classes: "govuk-fieldset__legend--l" } },
                 items: [ {
-                value: "yes~/v18/CO-305/benefits-p",
+                value: "yes~/v18/CO-305/2-child-name",
                 text: "Yes" },
               {
-                value: "no~/v18/CO-305/any-income",
+                value: "no~/v18/CO-305/parent-share-second-receiving",
                 text: "No"
               }
             ]
@@ -32,6 +30,10 @@
 
             {{ govukButton({ text: "Continue" }) }}
         </form>
-    </div>
-</div>
-{% endblock %}
+
+          <!--  <a href="2-child-name" role="button" class="govuk-button">
+                Continue
+            </a>-->
+
+        </div>
+        {% endblock %}
