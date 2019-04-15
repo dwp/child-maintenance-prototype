@@ -29,11 +29,11 @@
                     {% from "table/macro.njk" import govukTable %}
 
                         {{ govukTable({
-                          caption: "",
+                          caption: "Receiving parent 1",
                           firstCellIsHeader: true,
                           head: [
                             {
-                              text: ""
+                              text: "Children"
                             },
                             {
                               text: "Week",
@@ -45,19 +45,6 @@
                             }
                           ],
                           rows: [
-                            [
-                              {
-                                text: "Receiving parent 1"
-                              },
-                              {
-                                text: "£AA",
-                                format: "numeric"
-                              },
-                              {
-                                text: "£BB",
-                                format: "numeric"
-                              }
-                            ],
                             [
                               {
                                 text: "ChildName1"
@@ -105,11 +92,11 @@
   {% from "table/macro.njk" import govukTable %}
 
       {{ govukTable({
-        caption: "",
+        caption: "Receiving parent 2",
         firstCellIsHeader: true,
         head: [
           {
-            text: ""
+            text: "Children"
           },
           {
             text: "Week",
@@ -121,19 +108,6 @@
           }
         ],
         rows: [
-          [
-            {
-              text: "Receiving parent 2"
-            },
-            {
-              text: "£AA",
-              format: "numeric"
-            },
-            {
-              text: "£BB",
-              format: "numeric"
-            }
-          ],
           [
             {
               text: "ChildName1"
