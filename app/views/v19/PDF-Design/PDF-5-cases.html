@@ -25,7 +25,7 @@
                     <p>Based on the information you provided, this is what the Child Maintenance Service would calculate as
                         an appropriate maintenance amount.
                     </p>
-<!-----------------------------2 cases scenario table 1---------------------------------------------------------->
+<!-----------------------------5 cases scenario table 1---------------------------------------------------------->
                     {% from "table/macro.njk" import govukTable %}
 
                         {{ govukTable({
@@ -100,7 +100,7 @@
                           ]
                         }) }}
 
-  <!--------------------------2 cases scenario table 2--------------------------------------------->
+  <!--------------------------5 cases scenario table 2--------------------------------------------->
 
   {% from "table/macro.njk" import govukTable %}
 
@@ -149,6 +149,33 @@
           ],
           [
             {
+              text: "ChildName2"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "ChildName3"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+
+          [
+            {
               text: "Total"
             },
             {
@@ -162,6 +189,220 @@
           ]
         ]
       }) }}
+
+      <!-------------------5 cases scenario table 3---------------------------->
+
+      {% from "table/macro.njk" import govukTable %}
+
+          {{ govukTable({
+            caption: "",
+            firstCellIsHeader: true,
+            head: [
+              {
+                text: ""
+              },
+              {
+                text: "Week",
+                format: "numeric"
+              },
+              {
+                text: "Month",
+                format: "numeric"
+              }
+            ],
+            rows: [
+              [
+                {
+                  text: "Receiving parent 3"
+                },
+                {
+                  text: "£AA",
+                  format: "numeric"
+                },
+                {
+                  text: "£BB",
+                  format: "numeric"
+                }
+              ],
+              [
+                {
+                  text: "ChildName1"
+                },
+                {
+                  text: "£A",
+                  format: "numeric"
+                },
+                {
+                  text: "£B",
+                  format: "numeric"
+                }
+              ],
+              [
+                {
+                  text: "ChildName2"
+                },
+                {
+                  text: "£C",
+                  format: "numeric"
+                },
+                {
+                  text: "£D",
+                  format: "numeric"
+                }
+              ],
+              [
+                {
+                  text: "Total"
+                },
+                {
+                  text: "£0",
+                  format: "numeric"
+                },
+                {
+                  text: "£0",
+                  format: "numeric"
+                }
+              ]
+            ]
+          }) }}
+
+          <!-----------------------5 cases scenario table 4--------------------------------------------------->
+          {% from "table/macro.njk" import govukTable %}
+
+              {{ govukTable({
+                caption: "",
+                firstCellIsHeader: true,
+                head: [
+                  {
+                    text: ""
+                  },
+                  {
+                    text: "Week",
+                    format: "numeric"
+                  },
+                  {
+                    text: "Month",
+                    format: "numeric"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "Receiving parent 4"
+                    },
+                    {
+                      text: "£AA",
+                      format: "numeric"
+                    },
+                    {
+                      text: "£BB",
+                      format: "numeric"
+                    }
+                  ],
+                  [
+                    {
+                      text: "ChildName1"
+                    },
+                    {
+                      text: "£C",
+                      format: "numeric"
+                    },
+                    {
+                      text: "£D",
+                      format: "numeric"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Total"
+                    },
+                    {
+                      text: "£0",
+                      format: "numeric"
+                    },
+                    {
+                      text: "£0",
+                      format: "numeric"
+                    }
+                  ]
+                ]
+              }) }}
+
+              <!---------------------5 cases scenario table 5----------------------------------->
+
+              {% from "table/macro.njk" import govukTable %}
+
+                  {{ govukTable({
+                    caption: "",
+                    firstCellIsHeader: true,
+                    head: [
+                      {
+                        text: ""
+                      },
+                      {
+                        text: "Week",
+                        format: "numeric"
+                      },
+                      {
+                        text: "Month",
+                        format: "numeric"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "Receiving parent 5"
+                        },
+                        {
+                          text: "£AA",
+                          format: "numeric"
+                        },
+                        {
+                          text: "£BB",
+                          format: "numeric"
+                        }
+                      ],
+                      [
+                        {
+                          text: "ChildName1"
+                        },
+                        {
+                          text: "£A",
+                          format: "numeric"
+                        },
+                        {
+                          text: "£B",
+                          format: "numeric"
+                        }
+                      ],
+                      [
+                        {
+                          text: "ChildName2"
+                        },
+                        {
+                          text: "£C",
+                          format: "numeric"
+                        },
+                        {
+                          text: "£D",
+                          format: "numeric"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Total"
+                        },
+                        {
+                          text: "£0",
+                          format: "numeric"
+                        },
+                        {
+                          text: "£0",
+                          format: "numeric"
+                        }
+                      ]
+                    ]
+                  }) }}
 
            <!--<p><a href="saved-copy">Download a copy of your answers and calculation (downloads a PDF)</a> to save or share with the other parent.</p>
 
