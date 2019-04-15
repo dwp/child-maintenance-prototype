@@ -199,7 +199,7 @@
             </nav>
             <hr>
 
-            <form>
+          <!--  <form>
                      {% from "radios/macro.njk" import govukRadios %}
 
                           {{ govukRadios({
@@ -235,33 +235,33 @@
                                 text: "Other"
                               }
                             ]
-                          }) }}
-<!--------------------------------------------------------------small radio buttons below-->
-                    {% from "radios/macro.njk" import govukRadios %}
+                          }) }}-->
+                          
+<!-------------------------small radio buttons below------------------------------------->
+{% from "radios/macro.njk" import govukRadios %}
 
-                        {{ govukRadios({
-                        classes: "govuk-radios--small",
-                        idPrefix: "changed-name",
-                        name: "changed-name",
-                        fieldset: {
-                        legend: {
-                        text: "Filter",
-                        isPageHeading: true,
-                        classes: "govuk-fieldset__legend--m"
-                              }
-                            },
-                              items: [
-                                {
-                                  value: "month",
-                                  text: "Monthly"
-                                },
-                                {
-                                  value: "year",
-                                  text: "Yearly"
-                                }
-                                      ]
-                    })
-                  }}
+      {{ govukRadios({
+            classes: "govuk-radios--small",
+            idPrefix: "changed-name",
+            name: "changed-name",
+            fieldset: {
+            legend: {
+            text: "Filter",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m"
+                    }
+                    },
+                    items: [
+                    {
+                      value: "month",
+                      text: "Monthly"
+                    },
+                    {
+                      value: "year",
+                      text: "Yearly"
+                    }
+                          ]
+                }) }}
         </div>
 
 </div>
