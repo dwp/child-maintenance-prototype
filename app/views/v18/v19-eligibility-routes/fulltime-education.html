@@ -8,14 +8,21 @@
 
                 <form method="post" action="fulltime-education">
 
-                      <!--The below radio buttons have been routed in an alternative way
-                           making the process of routing abit easier-->
+                  <h1 class="govuk-heading-xl">Are the children in full time approved education?</h1>
+
+                    <p>Education must be full-time (more than an average of 12 hours a week supervised or course-related work experiance)
+                        and can include: A levels or similar, for example, Pre U, International Baccalaureate, Scottish Highers, NVQs and
+                        other vocational qualifications up to level 3 home education, if started before your child turned 16.</p>
+
+                          <p>Traineeships in England courses are not approved if paid for by an employer or 'advanced', for example a
+                          unibversity degree or BTEC Higher National Certificate.</p>
+
                     {{ govukRadios({
                           idPrefix: "full-education",
                           name: "full-education ",
                           fieldset: {
                             legend: {
-                              text: "Are the children in full time approved education?",
+                              text: "",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {

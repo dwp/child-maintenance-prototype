@@ -7,15 +7,24 @@
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
                 <form method="post" action="organisations">
+                  
+                           <h1 class="govuk-heading-xl">Do you work abroad for any of these organisations?</h1>
 
-                      <!--The below radio buttons have been routed in an alternative way
-                           making the process of routing abit easier-->
+                           <ul class="govuk-list govuk-list--bullet">
+                                   <li>The civil service</li>
+                                   <li>Her Majesty's Diplomatic Service</li>
+                                   <li>The armed forces</li>
+                                   <li>A company that is based and registered in the UK</li>
+                                   <li>A local authority</li>
+                                   <li>The NHS</li>
+                           </ul>
+
                     {{ govukRadios({
                           idPrefix: "work-for-organisations",
                           name: "work-for-organisations",
                           fieldset: {
                             legend: {
-                              text: "Do you work abroad for any of these organisations?",
+                              text: "",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
@@ -29,6 +38,8 @@
                   }) }}
 
                     {{ govukButton({ text: "Continue" }) }}
+
+
                 </form>
     </div>
 </div>
