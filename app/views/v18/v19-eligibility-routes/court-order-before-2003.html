@@ -6,23 +6,23 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-                <form method="post" action="live-in-uk">
+                <form method="post" action="court-order-before-2003">
 
                       <!--The below radio buttons have been routed in an alternative way
                            making the process of routing abit easier-->
                     {{ govukRadios({
-                          idPrefix: "live-uk",
-                          name: "live-uk",
+                          idPrefix: "court-before-2003",
+                          name: "court-before-2003",
                           fieldset: {
                             legend: {
-                              text: "Do you usually live in the UK?",
+                              text: "Was the order put in place before 3 March 2003?",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
-                        value: "yes~/v18/v19-eligibility-routes/other-parent",
+                        value: "yes~/v18/v19-eligibility-routes/placeholder-7",
                         text: "Yes" },
                       {
-                        value: "no~/v18/v19-eligibility-routes/allowed-in-uk",
+                        value: "no~/#/",
                         text: "No"
                       }
                     ]

@@ -6,23 +6,23 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-                <form method="post" action="live-in-uk">
+                <form method="post" action="children-live-with">
 
                       <!--The below radio buttons have been routed in an alternative way
                            making the process of routing abit easier-->
                     {{ govukRadios({
-                          idPrefix: "live-uk",
-                          name: "live-uk",
+                          idPrefix: "children-live",
+                          name: "children-live",
                           fieldset: {
                             legend: {
-                              text: "Do you usually live in the UK?",
+                              text: "Do the children live with [you/the other parent] most of the time?",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
-                        value: "yes~/v18/v19-eligibility-routes/other-parent",
+                        value: "yes~/v18/v19-eligibility-routes/children-under-16",
                         text: "Yes" },
                       {
-                        value: "no~/v18/v19-eligibility-routes/allowed-in-uk",
+                        value: "no~/v18/v19-eligibility-routes/children-living",
                         text: "No"
                       }
                     ]
