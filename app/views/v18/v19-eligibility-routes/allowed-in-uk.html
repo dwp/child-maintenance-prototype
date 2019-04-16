@@ -6,23 +6,23 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-                <form method="post" action="live-in-uk">
+                <form method="post" action="allowed-in-the-uk">
 
                       <!--The below radio buttons have been routed in an alternative way
                            making the process of routing abit easier-->
                     {{ govukRadios({
-                          idPrefix: "live-uk",
-                          name: "live-uk",
+                          idPrefix: "allow-uk",
+                          name: "allow-uk",
                           fieldset: {
                             legend: {
-                              text: "Do you usually live in the UK?",
+                              text: "Are you allowed to live in the UK?",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
-                        value: "yes~/v18/v19-eligibility-routes/other-parent",
+                        value: "yes~/#",
                         text: "Yes" },
                       {
-                        value: "no~/v18/v19-eligibility-routes/allowed-in-uk",
+                        value: "no~/v18/v19-eligibility-routes/organisations",
                         text: "No"
                       }
                     ]

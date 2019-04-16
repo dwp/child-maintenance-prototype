@@ -6,30 +6,41 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-                <form method="post" action="live-in-uk">
+                <form method="post" action="organisations-2">
 
                       <!--The below radio buttons have been routed in an alternative way
                            making the process of routing abit easier-->
                     {{ govukRadios({
-                          idPrefix: "live-uk",
-                          name: "live-uk",
+                          idPrefix: "org-part-two",
+                          name: "org-part-two",
                           fieldset: {
                             legend: {
-                              text: "Do you usually live in the UK?",
+                              text: "Does the other parent work abroad for any of these organisations?",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
-                        value: "yes~/v18/v19-eligibility-routes/other-parent",
+                        value: "yes~/#",
                         text: "Yes" },
                       {
-                        value: "no~/v18/v19-eligibility-routes/allowed-in-uk",
+                        value: "no~/v18/v19-eligibility-routes/placeholder-2",
                         text: "No"
                       }
                     ]
                   }) }}
 
-                    {{ govukButton({ text: "Continue" }) }}
-                </form>
+             {{ govukButton({ text: "Continue" }) }}
+
+             <ul class="govuk-list govuk-list--bullet">
+                  <li>The civil service</li>
+                  <li>Her Majesties Diplomatic Service</li>
+                  <li>The armed forces</li>
+                  <li>A company that is registered and based in the UK</li>
+                  <li>A local authority</li>
+                  <li>The NHS</li>
+                </ul>
+        </form>
+
+        </a>
     </div>
 </div>
 {% endblock %}
