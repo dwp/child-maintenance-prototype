@@ -31,6 +31,7 @@
                         {{ govukTable({
                           caption: "Receiving parent 1",
                           firstCellIsHeader: true,
+                          classes: "",
                           head: [
                             {
                               text: "Children"
@@ -73,15 +74,18 @@
                             ],
                             [
                               {
-                                text: "Total"
+                                text: "Total",
+                                rowspan: "4"
                               },
                               {
                                 text: "£00",
-                                format: "numeric"
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
                               },
                               {
                                 text: "£00",
-                                format: "numeric"
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
                               }
                             ]
                           ]
