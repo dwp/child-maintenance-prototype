@@ -8,14 +8,22 @@
 
                 <form method="post" action="organisations-2">
 
-                      <!--The below radio buttons have been routed in an alternative way
-                           making the process of routing abit easier-->
+                  <h1 class="govuk-heading-xl">Does the other parent work abroad for any of these organisations?</h1>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                          <li>The civil service</li>
+                          <li>Her Majesty's Diplomatic Service</li>
+                          <li>The armed forces</li>
+                          <li>A company that is based and registered in the UK</li>
+                          <li>A local authority</li>
+                          <li>The NHS</li>
+                  </ul>
                     {{ govukRadios({
                           idPrefix: "org-part-two",
                           name: "org-part-two",
                           fieldset: {
                             legend: {
-                              text: "Does the other parent work abroad for any of these organisations?",
+                              text: "",
                               isPageHeading: true,
                               classes: "govuk-fieldset__legend--xl" } },
                         items: [ {
@@ -29,18 +37,7 @@
                   }) }}
 
              {{ govukButton({ text: "Continue" }) }}
-
-             <ul class="govuk-list govuk-list--bullet">
-                  <li>The civil service</li>
-                  <li>Her Majesties Diplomatic Service</li>
-                  <li>The armed forces</li>
-                  <li>A company that is registered and based in the UK</li>
-                  <li>A local authority</li>
-                  <li>The NHS</li>
-                </ul>
         </form>
-
-        </a>
     </div>
 </div>
 {% endblock %}
