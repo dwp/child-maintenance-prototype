@@ -1,0 +1,234 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+        <h1 class="govuk-heading-xl">Check your answers</h1>
+
+        {% from "table/macro.njk" import govukTable %}
+
+              {{ govukTable({
+                caption: "About your income",
+                captionClasses: "govuk-heading-m",
+                firstCellIsHeader: true,
+                head: [
+                  {
+                    text: "Questions"
+                  },
+                  {
+                    text: "Answers"
+                  },
+                  {
+                    text: "Edit"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "Will you be paying or receiving child maintenance payments?"
+                    },
+                    {
+                      text: "Paying"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Will you be making payments to more than one
+                              other parent?"
+                    },
+                    {
+                      text: "Yes"
+                    }
+                  ],
+                  [
+                    {
+                      text: "How many people will you be paying child
+                                maintenance to?"
+                    },
+                    {
+                      text: "2"
+                    }
+                  ]
+                ]
+              }) }}
+<!------------------table 2------------------------------------------------------------------------------>
+
+            {% from "table/macro.njk" import govukTable %}
+
+                  {{ govukTable({
+                    caption: "Income and benefits",
+                    captionClasses: "govuk-heading-m",
+                    firstCellIsHeader: true,
+                    head: [
+                      {
+                        text: "Questions"
+                      },
+                      {
+                        text: "Answers"
+                      },
+                      {
+                        text: "Edit"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "Do you receive any benefits or State Pension?"
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Which of these benefits or State Pension do
+                                    you receive? "
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Do you receive any income?"
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "What is your total taxable income?"
+                        },
+                        {
+                          text: "£4,282.20"
+                        }
+                      ]
+                    ]
+                  }) }}
+
+  <!----------------------table 3------------------------------------------------------------------->
+
+          <!--  {% from "table/macro.njk" import govukTable %}
+
+                  {{ govukTable({
+                    caption: "First receiving parent",
+                    captionClasses: "govuk-heading-m",
+                    firstCellIsHeader: true,
+                    head: [
+                      {
+                        text: "Questions"
+                      },
+                      {
+                        text: "Answers"
+                      },
+                      {
+                        text: "Edit"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "Do you receive any benefits or State Pension?"
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Which of these benefits or State Pension do
+                                    you receive? "
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Do you receive any income?"
+                        },
+                        {
+                          text: "£109.80 per week"
+                        }
+                      ],
+                      [
+                        {
+                          text: "What is your total taxable income?"
+                        },
+                        {
+                          text: "£4,282.20"
+                        }
+                      ]
+                    ]
+                  }) }}-->
+
+  <!-----------------------------table 4------------------------------------------------------->
+
+            <!--  {% from "table/macro.njk" import govukTable %}
+
+                    {{ govukTable({
+                      caption: "Second receiving parent",
+                      captionClasses: "govuk-heading-m",
+                      firstCellIsHeader: true,
+                      head: [
+                        {
+                          text: "Questions"
+                        },
+                        {
+                          text: "Answers"
+                        },
+                        {
+                          text: "Edit"
+                        }
+                      ],
+                      rows: [
+                        [
+                          {
+                            text: "Do you receive any benefits or State Pension?"
+                          },
+                          {
+                            text: "£109.80 per week"
+                          }
+                        ],
+                        [
+                          {
+                            text: "Which of these benefits or State Pension do
+                                      you receive? "
+                          },
+                          {
+                            text: "£109.80 per week"
+                          }
+                        ],
+                        [
+                          {
+                            text: "Do you receive any income?"
+                          },
+                          {
+                            text: "£109.80 per week"
+                          }
+                        ],
+                        [
+                          {
+                            text: "What is your total taxable income?"
+                          },
+                          {
+                            text: "£4,282.20"
+                          }
+                        ]
+                      ]
+                    }) }}  -->
+
+        <a href="personalise" role="button" draggable="false" class="govuk-button">
+            Continue
+        </a>
+
+    </div>
+</div>
+{% endblock%}
