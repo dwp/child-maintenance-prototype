@@ -29,11 +29,12 @@
                     {% from "table/macro.njk" import govukTable %}
 
                         {{ govukTable({
+                          captionClasses: "govuk-heading-l",
                           caption: "Receiving parent 1",
                           firstCellIsHeader: true,
                           head: [
                             {
-                              text: "Children"
+                              text: ""
                             },
                             {
                               text: "Week",
@@ -94,11 +95,12 @@
   {% from "table/macro.njk" import govukTable %}
 
       {{ govukTable({
+        captionClasses: "govuk-heading-l",
         caption: "Receiving parent 2",
         firstCellIsHeader: true,
         head: [
           {
-            text: "Children"
+            text: ""
           },
           {
             text: "Week",
