@@ -330,6 +330,39 @@
                     ]
                   }) }}
 
+                  {% from "table/macro.njk" import govukTable %}
+
+                        {{ govukTable({
+                        caption: "Other persons children",
+                          captionClasses: "govuk-heading-m",
+                          firstCellIsHeader: true,
+                          head: [
+                            {
+                              text: "Questions"
+                            },
+                            {
+                              text: "Answers"
+                            },
+                            {
+                              text: "Edit"
+                            }
+                          ],
+                          rows: [
+                            [
+                              {
+                                text: "How many children live with you most of the time?"
+                              },
+                              {
+                                text: "2 children"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ]
+                          ]
+                        }) }}
+
         <a href="#" role="button" draggable="false" class="govuk-button">
             Continue
         </a>
