@@ -14,6 +14,138 @@
         {% from "table/macro.njk" import govukTable %}
 
               {{ govukTable({
+                caption: "About your arrangement",
+                captionClasses: "govuk-heading-m",
+                firstCellIsHeader: true,
+                head: [
+                  {
+                    text: "Questions"
+                  },
+                  {
+                    text: "Answers"
+                  },
+                  {
+                    text: "Edit"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "Will you be paying or receiving child maintenance payments?"
+                    },
+                    {
+                      text: "Paying"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Will you be making payments to more than one
+                              other parent?"
+                    },
+                    {
+                      text: "Yes"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link govuk-link--no-visited-state"
+                    }
+                  ],
+                  [
+                    {
+                      text: "How many people will you be paying child
+                                maintenance to?"
+                    },
+                    {
+                      text: "2 receiving parents"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link govuk-link--no-visited-state"
+                    }
+                  ]
+                ]
+              }) }}
+<!------------------table 2------------------------------------------------------------------------------>
+
+            {% from "table/macro.njk" import govukTable %}
+
+                  {{ govukTable({
+                    caption: "Benefits and income",
+                    captionClasses: "govuk-heading-m",
+                    firstCellIsHeader: true,
+                    head: [
+                      {
+                        text: "Questions"
+                      },
+                      {
+                        text: "Answers"
+                      },
+                      {
+                        text: "Edit"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "Do you receive any benefits or State Pension?"
+                        },
+                        {
+                          text: "Yes"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Which of these benefits or State Pension do
+                                    you receive? "
+                        },
+                        {
+                          text: "Income Support"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Do you receive any income?"
+                        },
+                        {
+                          text: "Yes"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "What is your total taxable income?"
+                        },
+                        {
+                          text: "£20,282.20 per year"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ]
+                    ]
+                  }) }}
+
+        <!-------------------children/parent information---------------------------------------------->
+
+        {% from "table/macro.njk" import govukTable %}
+
+              {{ govukTable({
                 caption: "First receiving parent",
                 captionClasses: "govuk-heading-m",
                 firstCellIsHeader: true,
@@ -197,6 +329,39 @@
                       ]
                     ]
                   }) }}
+
+                  {% from "table/macro.njk" import govukTable %}
+
+                        {{ govukTable({
+                        caption: "Other persons children",
+                          captionClasses: "govuk-heading-m",
+                          firstCellIsHeader: true,
+                          head: [
+                            {
+                              text: "Questions"
+                            },
+                            {
+                              text: "Answers"
+                            },
+                            {
+                              text: "Edit"
+                            }
+                          ],
+                          rows: [
+                            [
+                              {
+                                text: "How many children live with you most of the time?"
+                              },
+                              {
+                                text: "2 children"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ]
+                          ]
+                        }) }}
 
         <a href="#" role="button" draggable="false" class="govuk-button">
             Continue

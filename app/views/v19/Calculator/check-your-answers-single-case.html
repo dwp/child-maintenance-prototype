@@ -14,7 +14,7 @@
         {% from "table/macro.njk" import govukTable %}
 
               {{ govukTable({
-                caption: "About your income",
+                caption: "About your arrangement",
                 captionClasses: "govuk-heading-m",
                 firstCellIsHeader: true,
                 head: [
@@ -74,7 +74,7 @@
             {% from "table/macro.njk" import govukTable %}
 
                   {{ govukTable({
-                    caption: "Income and benefits",
+                    caption: "Benefits and income",
                     captionClasses: "govuk-heading-m",
                     firstCellIsHeader: true,
                     head: [
@@ -141,9 +141,90 @@
                     ]
                   }) }}
 
-        <a href="check-your-answers-page-2" role="button" draggable="false" class="govuk-button">
-            Continue
-        </a>
+                  {% from "table/macro.njk" import govukTable %}
+
+                        {{ govukTable({
+                        caption: "About your children",
+                          captionClasses: "govuk-heading-m",
+                          firstCellIsHeader: true,
+                          head: [
+                            {
+                              text: "Questions"
+                            },
+                            {
+                              text: "Answers"
+                            },
+                            {
+                              text: "Edit"
+                            }
+                          ],
+                          rows: [
+                            [
+                              {
+                                text: "How many of your children live with the first receiving parent most of the time?"
+                              },
+                              {
+                                text: "2 children"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "Do any of these children ever stay overnight with you?"
+                              },
+                              {
+                                text: "Yes"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "What are the names of your children who live with the first receiving parent most of the time?"
+                              },
+                              {
+                                text: "[ChildName1] [ChildName2]"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "How often does [ChildName1] stay overnight with you?"
+                              },
+                              {
+                                text: "1 to 2 nights a week (52 to 103 a year)"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "How often does [ChildName2] stay overnight with you?"
+                              },
+                              {
+                                text: "1 to 2 nights a week (52 to 103 a year)"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ]
+                          ]
+                        }) }}
+
+                  <a href="#" role="button" draggable="false" class="govuk-button">
+                      Continue
+                  </a>
 
     </div>
 </div>
