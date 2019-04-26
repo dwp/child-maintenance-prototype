@@ -8,7 +8,8 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
-                
+
+
                 <div class="govuk-panel govuk-panel--confirmation">
                     <div class="govuk-panel__body">
                         Your child maintenance
@@ -20,308 +21,195 @@
 
                     </div>
                 </div>
+
                 <div>
+                    <p>Based on the information you provided on 18 April 2019, this is what the Child Maintenance Service would calculate as
+                        an appropriate maintenance amount.
+                    </p>
+<!-----------------------------2 cases scenario table 1---------------------------------------------------------->
+                    {% from "table/macro.njk" import govukTable %}
 
-                  {% from "table/macro.njk" import govukTable %}
-
-                      {{ govukTable({
-                        caption: "",
-                        firstCellIsHeader: true,
-                        head: [
-                          {
-                            text: ""
-                          },
-                          {
-                            text: "Week",
-                            format: "numeric"
-                          },
-                          {
-                            text: "Month",
-                            format: "numeric"
-                          }
-                        ],
-                        rows: [
-                          [
+                        {{ govukTable({
+                          captionClasses: "govuk-heading-l",
+                          caption: "Receiving parent 1",
+                          firstCellIsHeader: true,
+                          head: [
                             {
-                              text: "Receiving parent 1"
+                              text: ""
                             },
                             {
-                              text: "£AA",
+                              text: "Week",
                               format: "numeric"
                             },
                             {
-                              text: "£BB",
+                              text: "Month",
                               format: "numeric"
                             }
                           ],
-                          [
-                            {
-                              text: "ChildName1"
-                            },
-                            {
-                              text: "£A",
-                              format: "numeric"
-                            },
-                            {
-                              text: "£B",
-                              format: "numeric"
-                            }
-                          ],
-                          [
-                            {
-                              text: "ChildName2"
-                            },
-                            {
-                              text: "£C",
-                              format: "numeric"
-                            },
-                            {
-                              text: "£D",
-                              format: "numeric"
-                            }
-                          ],
-                          [
-                            {
-                              text: "Total"
-                            },
-                            {
-                              text: "£0",
-                              format: "numeric"
-                            },
-                            {
-                              text: "£0",
-                              format: "numeric"
-                            }
-                          ]
-                        ]
-                      }) }}
-
-                      <!-- receiving parent 2 table-->
-
-                      {% from "table/macro.njk" import govukTable %}
-
-                          {{ govukTable({
-                            caption: "",
-                            firstCellIsHeader: true,
-                            head: [
+                          rows: [
+                            [
                               {
-                                text: ""
+                                text: "ChildName1"
                               },
                               {
-                                text: "Week",
+                                text: "£A",
                                 format: "numeric"
                               },
                               {
-                                text: "Month",
+                                text: "£B",
                                 format: "numeric"
                               }
                             ],
-                            rows: [
-                              [
-                                {
-                                  text: "Receiving parent 2"
-                                },
-                                {
-                                  text: "£XX",
-                                  format: "numeric"
-                                },
-                                {
-                                  text: "£XX",
-                                  format: "numeric"
-                                }
-                              ],
-                              [
-                                {
-                                  text: "ChildName3"
-                                },
-                                {
-                                  text: "£X",
-                                  format: "numeric"
-                                },
-                                {
-                                  text: "£Y",
-                                  format: "numeric"
-                                }
-                              ],
-                              [
-                                {
-                                  text: "ChildName4"
-                                },
-                                {
-                                  text: "£X",
-                                  format: "numeric"
-                                },
-                                {
-                                  text: "£Y",
-                                  format: "numeric"
-                                }
-                              ],
-                              [
-                                {
-                                  text: "ChildName5"
-                                },
-                                {
-                                  text: "£Y",
-                                  format: "numeric"
-                                },
-                                {
-                                  text: "£Y",
-                                  format: "numeric"
-                                }
-                              ],
-                              [
-                                {
-                                  text: "Total"
-                                },
-                                {
-                                  text: "£0",
-                                  format: "numeric"
-                                },
-                                {
-                                  text: "£0",
-                                  format: "numeric"
-                                }
-                              ]
-                            ]
-                          }) }}
-
-              <!--  <h5 class="govuk-heading-m">Tell us what you think</h5>
-
-                <p>Please
-                    <a href="q1">answer some questions</a> about your experience on this website. Your responses will help us make it
-                    better.
-                </p>-->
-
-            </div>
-</div>
-
-<div class="govuk-grid-column-one-third">
-    <div class="gem-c-contextual-sidebar">
-
-        <div class="promo-image" id="promo">
-            <div class="promo-content">
-                <h3 class="survey-heading">
-
-                    <div class="feedback-link" a href="feedback">Tell us what you think</div>
-
-                </h3>
-                <p>Help us improve this service by
-                    <a href="q1">giving your feedback</a>.</p>
-            </div>
-        </div>
-
-        <div class="gem-c-related-navigation">
-            <h2 id="related-nav-related_items-ed61ce7e" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
-                Related content
-            </h2>
-
-
-
-
-            <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ed61ce7e"
-                data-module="gem-toggle">
-
-
-                <ul class="gem-c-related-navigation__link-list" data-module="track-click">
-
-
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
-                            data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
-                            href="#">Calculate child maintenance</a>
-                    </li>
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
-                            data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
-                            href="#">The cost of raising a child</a>
-                    </li>
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
-                            data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
-                            href="#">Child maintenance discussion guide</a>
-                    </li>
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked"
-                            data-track-action="1.1 Related content" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}"
-                            href="#">Child maintenance arrangement tool</a>
-                    </li>
-                </ul>
-            </nav>
-
-
-
-            <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-ed61ce7e" data-module="gem-toggle">
-
-                <h3 id="related-nav-topics-ed61ce7e" data-track-count="sidebarRelatedItemSection" class="gem-c-related-navigation__sub-heading">
-                    Explore the topic
-                </h3>
-
-                <ul class="gem-c-related-navigation__link-list" data-module="track-click">
-
-
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.1 Explore the topic"
-                            data-track-label="/browse/childcare-parenting/financial-help-children" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Financial help if you have children&quot;}"
-                            href="#">Marriage, civil partnership and divorce</a>
-                    </li>
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.2 Explore the topic"
-                            data-track-label="/browse/benefits/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
-                            href="#">Divorce, separation and legal issues</a>
-                    </li>
-                    <li class="gem-c-related-navigation__link">
-                        <a class="gem-c-related-navigation__section-link" data-track-category="relatedLinkClicked" data-track-action="2.3 Explore the topic"
-                            data-track-label="/browse/births-deaths-marriages/child" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}"
-                            href="#">Having a child, parenting and adoption</a>
-                    </li>
-
-                </ul>
-            </nav>
-            <hr>
-            <!--<form>
-                      {% from "radios/macro.njk" import govukRadios %}
-
-                          {{ govukRadios({
-                            idPrefix: "where-do-you-live",
-                            name: "where-do-you-live",
-                            fieldset: {
-                              legend: {
-                                text: "What will you do next?",
-                                isPageHeading: true,
-                                classes: "govuk-fieldset__legend--s"
+                            [
+                              {
+                                text: "ChildName2"
+                              },
+                              {
+                                text: "£C",
+                                format: "numeric"
+                              },
+                              {
+                                text: "£D",
+                                format: "numeric"
                               }
-                            },
-                            items: [
+                            ],
+                            [
                               {
-                                value: "",
-                                text: "Apply for the governments Child Maintenance Service"
+                                text: "Total"
                               },
                               {
-                                value: "",
-                                text: "Make a private arrangement with the other parent"
+                                text: "£0",
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
                               },
                               {
-                                value: "",
-                                text: "Not make a child maintenance arrangement"
-                              },
-                              {
-                                value: "",
-                                text: "Not sure"
-                              },
-                              {
-                                value: "",
-                                text: "Other"
+                                text: "£0",
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
                               }
                             ]
-                          }) }}
+                          ]
+                        }) }}
 
-                    </form>-->
+  <!--------------------------2 cases scenario table 2--------------------------------------------->
 
+  {% from "table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        captionClasses: "govuk-heading-l",
+        caption: "Receiving parent 2",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: ""
+          },
+          {
+            text: "Week",
+            format: "numeric"
+          },
+          {
+            text: "Month",
+            format: "numeric"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "ChildName3"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "ChildName4"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "ChildName5"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "Total"
+            },
+            {
+              text: "£0",
+              format: "numeric",
+              classes: "govuk-!-font-weight-bold"
+            },
+            {
+              text: "£0",
+              format: "numeric",
+              classes: "govuk-!-font-weight-bold"
+            }
+          ]
+        ]
+      }) }}
+
+           <!--<p><a href="saved-copy">Download a copy of your answers and calculation (downloads a PDF)</a> to save or share with the other parent.</p>
+
+                    <p>If you need to you can
+                        <a href="your-name-1">make another calculation</a>.</p>-->
+
+                </div>
+
+
+                <h2 class="govuk-heading-m">Next steps</h2>
+
+                <p>You can now agree how you will share the costs of raising your children. Use this calculation as a starting
+                    point.
+                </p>
+                <p>Your arrangement can include whatever works for both parents.</p>
+
+                <p>For example you could agree to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>share care of the children</li>
+                    <li>split the cost of specific items</li>
+                    </ul>
+                      <p>Or you could agree that one parent will pay:</p>
+                                    <ul class="govuk-list govuk-list--bullet">
+
+                    <li>some of their income to the parent the children live with</li>
+                    <li>for things like housing costs, uniform, clothes, school trips or after school clubs</li>
+
+                </ul>
+
+                <p>No one else is involved, and the arrangement can be flexible to your circumstances.
+                </p>
+
+                <p>Some parents find it useful to
+                    <a href="https://www.cmoptions.org/en/toolbox/maintenance-form.asp" target="_blank">write down their arrangement (opens in a new window or tab)</a> so they have something to refer back
+                    to.
+                </p>
+
+
+
+            </div>
         </div>
-
-    </div>
-
-
 </div>
 
 
