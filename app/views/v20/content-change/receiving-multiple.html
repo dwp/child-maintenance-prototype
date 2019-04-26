@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="receiving-multiple">
+
+          {{ govukRadios({
+                      idPrefix: "receiving-multiple",
+                      name: "receiving-multiple",
+                      fieldset: {
+                        legend: {
+                          text: "Do you need more than one calculation?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--xl" } },
+                          hint: { text: " For example, if you have children from different relationships, or you will be receiving payments in one arrangement, and
+                                  making payments in another." },
+                    items: [ {
+                    value: "yes~/v19/benefits-q-r",
+                    text: "Yes",
+                    conditional: { html: "<p>Make a seperate calculation for each child maintenance arrangement. You will
+                                            be able to download your calculation and start a new one from the results page.</p>"}
+                  },
+                  {
+                    value: "#",
+                    text: "No"
+                  }
+                ]
+              }) }}
+
+                <!--{{ govukButton({ text: "Continue" }) }}-->
+
+                <a href="/v19/benefits-q-r" role="button" class="govuk-button">
+                    Continue
+                </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

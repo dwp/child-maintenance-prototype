@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="box-example box-example--most-recent govuk-!-padding-9">
+
+
+    <h2 class="govuk-heading-l">Index</h2>
+  {{ govukButton({
+     text: "Define who pays child maintenance",
+        href: "/v19/content-change/1"
+    }) }}
+<br>
+  {{ govukButton({
+     text: "Multi calc",
+        href: "/v19/content-change/receiving-multiple"
+    }) }}
+<br>
+
+  <!--{{ govukButton({
+     text: "Placeholder",
+        href: "#"
+    }) }}
+<br>-->
+
+</div>
+</div>
+{% endblock %}
