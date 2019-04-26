@@ -7,7 +7,7 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 <!-----------------------------answers table---------------------------------------------------------->
-<h1 class="govuk-heading-xl">Check your answers</h1>
+<h1 class="govuk-heading-xl">Your answers</h1>
 
 <p>The calculation is based on the following information provided 23 April 2019:</p>
 
@@ -23,9 +23,6 @@
           },
           {
             text: "Answers"
-          },
-          {
-            text: "Edit"
           }
         ],
         rows: [
@@ -35,10 +32,6 @@
             },
             {
               text: "Paying"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ],
           [
@@ -48,10 +41,6 @@
             },
             {
               text: "Yes"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link govuk-link--no-visited-state"
             }
           ],
           [
@@ -61,10 +50,6 @@
             },
             {
               text: "2 receiving parents"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link govuk-link--no-visited-state"
             }
           ]
         ]
@@ -83,9 +68,6 @@
               },
               {
                 text: "Answers"
-              },
-              {
-                text: "Edit"
               }
             ],
             rows: [
@@ -95,10 +77,6 @@
                 },
                 {
                   text: "Yes"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link govuk-link--no-visited-state"
                 }
               ],
               [
@@ -108,10 +86,6 @@
                 },
                 {
                   text: "Income Support"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link govuk-link--no-visited-state"
                 }
               ],
               [
@@ -120,10 +94,6 @@
                 },
                 {
                   text: "Yes"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link govuk-link--no-visited-state"
                 }
               ],
               [
@@ -132,10 +102,6 @@
                 },
                 {
                   text: "£20,282.20 per year"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link govuk-link--no-visited-state"
                 }
               ]
             ]
@@ -155,9 +121,6 @@
           },
           {
             text: "Answers"
-          },
-          {
-            text: "Edit"
           }
         ],
         rows: [
@@ -167,10 +130,6 @@
             },
             {
               text: "2 children"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ],
           [
@@ -179,10 +138,6 @@
             },
             {
               text: "Yes"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ],
           [
@@ -191,10 +146,6 @@
             },
             {
               text: "[ChildName1] [ChildName2]"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ],
           [
@@ -203,10 +154,6 @@
             },
             {
               text: "1 to 2 nights a week (52 to 103 a year)"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ],
           [
@@ -215,10 +162,6 @@
             },
             {
               text: "1 to 2 nights a week (52 to 103 a year)"
-            },
-            {
-              text: "Change",
-              classes: "govuk-link"
             }
           ]
         ]
@@ -237,9 +180,6 @@
               },
               {
                 text: "Answers"
-              },
-              {
-                text: "Edit"
               }
             ],
             rows: [
@@ -249,10 +189,6 @@
                 },
                 {
                   text: "3 children"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -261,10 +197,6 @@
                 },
                 {
                   text: "Yes"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -273,10 +205,6 @@
                 },
                 {
                   text: "[ChildName3] [ChildName4] [ChildName5]"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -285,10 +213,6 @@
                 },
                 {
                   text: "1 to 2 nights a week (52 to 103 a year)"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -297,10 +221,6 @@
                 },
                 {
                   text: "1 to 2 nights a week (52 to 103 a year)"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -309,10 +229,6 @@
                 },
                 {
                   text: "1 to 2 nights a week (52 to 103 a year)"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ],
               [
@@ -321,10 +237,6 @@
                 },
                 {
                   text: "2 children"
-                },
-                {
-                  text: "Change",
-                  classes: "govuk-link"
                 }
               ]
             ]
@@ -333,7 +245,7 @@
           {% from "table/macro.njk" import govukTable %}
 
                 {{ govukTable({
-                caption: "Other persons children",
+                caption: "Other parents children",
                   captionClasses: "govuk-heading-m",
                   firstCellIsHeader: true,
                   head: [
@@ -342,9 +254,6 @@
                     },
                     {
                       text: "Answers"
-                    },
-                    {
-                      text: "Edit"
                     }
                   ],
                   rows: [
@@ -354,10 +263,6 @@
                       },
                       {
                         text: "2 children"
-                      },
-                      {
-                        text: "Change",
-                        classes: "govuk-link"
                       }
                     ]
                   ]
