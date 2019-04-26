@@ -1,0 +1,77 @@
+ {% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+Take part in research
+            </h1>
+            <br>
+            <h2 class="govuk-heading-l">Can a researcher contact you about your experiences with this website and child maintenance?
+</h2>
+        </legend>
+         
+            <p class="govuk-hint">Researchers can't answer specific questions or advise you about child maintenance.</p> 
+            <p class="govuk-hint">If you are selected to take part, we will contact you in the next 3 weeks.</p>
+            <p class="govuk-hint">Your details will only be used to contact you for this research and will be deleted once the research
+              is complete.</p>
+
+       
+        </fieldset>
+        <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes"onclick="myFunction()">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                    Yes
+                </label>
+
+
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                </label>
+            </div>
+        </div>
+        </div>
+    <div class="govuk-form-group" style="display:none" id ="myDIV">
+        <label class="govuk-label" for="width-20">
+            Name
+        </label>
+        
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+        <br>
+        <br>
+        <label class="govuk-label" for="width-20">
+            Phone number
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+    </div>
+
+<a href="survey-end" role="button" draggable="false" class="govuk-button">
+    Send feedback
+</a>
+</div>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
+{% endblock %}

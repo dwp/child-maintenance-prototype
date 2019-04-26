@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        What is your child's name? </h1>
+                </legend>
+
+
+
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="more-detail">
+                        Name
+                    </label>
+                    <span id="more-detail-hint" class="govuk-hint">
+Include all of the children's names for this arrangement                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+                <br>
+                <a href="benefits-q-r" role="button" draggable="false" class="govuk-button">
+                    Continue
+                </a>
+        </div>
+    </div>
+    {% endblock %}
