@@ -1,0 +1,216 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <div class="govuk-panel__body">
+                        Your child maintenance
+                        <br> calculation is
+                        <br>
+                        <strong> £40 a week</strong>
+                        or
+                        <strong>£173 a month</strong>
+
+                    </div>
+                </div>
+
+                <div>
+                    <p>Based on the information you provided on 18 April 2019, this is what the Child Maintenance Service would calculate as
+                        an appropriate maintenance amount.
+                    </p>
+<!-----------------------------2 cases scenario table 1---------------------------------------------------------->
+                    {% from "table/macro.njk" import govukTable %}
+
+                        {{ govukTable({
+                          captionClasses: "govuk-heading-l",
+                          caption: "Receiving parent 1",
+                          firstCellIsHeader: true,
+                          head: [
+                            {
+                              text: ""
+                            },
+                            {
+                              text: "Week",
+                              format: "numeric"
+                            },
+                            {
+                              text: "Month",
+                              format: "numeric"
+                            }
+                          ],
+                          rows: [
+                            [
+                              {
+                                text: "ChildName1"
+                              },
+                              {
+                                text: "£A",
+                                format: "numeric"
+                              },
+                              {
+                                text: "£B",
+                                format: "numeric"
+                              }
+                            ],
+                            [
+                              {
+                                text: "ChildName2"
+                              },
+                              {
+                                text: "£C",
+                                format: "numeric"
+                              },
+                              {
+                                text: "£D",
+                                format: "numeric"
+                              }
+                            ],
+                            [
+                              {
+                                text: "Total"
+                              },
+                              {
+                                text: "£0",
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
+                              },
+                              {
+                                text: "£0",
+                                format: "numeric",
+                                classes: "govuk-!-font-weight-bold"
+                              }
+                            ]
+                          ]
+                        }) }}
+
+  <!--------------------------2 cases scenario table 2--------------------------------------------->
+
+  {% from "table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        captionClasses: "govuk-heading-l",
+        caption: "Receiving parent 2",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: ""
+          },
+          {
+            text: "Week",
+            format: "numeric"
+          },
+          {
+            text: "Month",
+            format: "numeric"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "ChildName3"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "ChildName4"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "ChildName5"
+            },
+            {
+              text: "£A",
+              format: "numeric"
+            },
+            {
+              text: "£B",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "Total"
+            },
+            {
+              text: "£0",
+              format: "numeric",
+              classes: "govuk-!-font-weight-bold"
+            },
+            {
+              text: "£0",
+              format: "numeric",
+              classes: "govuk-!-font-weight-bold"
+            }
+          ]
+        ]
+      }) }}
+
+           <!--<p><a href="saved-copy">Download a copy of your answers and calculation (downloads a PDF)</a> to save or share with the other parent.</p>
+
+                    <p>If you need to you can
+                        <a href="your-name-1">make another calculation</a>.</p>-->
+
+                </div>
+
+
+                <h2 class="govuk-heading-m">Next steps</h2>
+
+                <p>You can now agree how you will share the costs of raising your children. Use this calculation as a starting
+                    point.
+                </p>
+                <p>Your arrangement can include whatever works for both parents.</p>
+
+                <p>For example you could agree to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>share care of the children</li>
+                    <li>split the cost of specific items</li>
+                    </ul>
+                      <p>Or you could agree that one parent will pay:</p>
+                                    <ul class="govuk-list govuk-list--bullet">
+
+                    <li>some of their income to the parent the children live with</li>
+                    <li>for things like housing costs, uniform, clothes, school trips or after school clubs</li>
+
+                </ul>
+
+                <p>No one else is involved, and the arrangement can be flexible to your circumstances.
+                </p>
+
+                <p>Some parents find it useful to
+                    <a href="https://www.cmoptions.org/en/toolbox/maintenance-form.asp" target="_blank">write down their arrangement (opens in a new window or tab)</a> so they have something to refer back
+                    to.
+                </p>
+
+
+
+            </div>
+        </div>
+</div>
+
+
+{% endblock %}
