@@ -5,9 +5,9 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
-        <form method="post" action="paying-multiple-parents">
+        <form method="post" action="payment-to-one-or-more-parents">
 
-            {{ govukRadios({
+            <!--{{ govukRadios({
                 idPrefix: "paying-multiple-parents",
                 name: "paying-multiple-parents",
                 fieldset: { legend: { text: "Will you be making payments to more than one other parent?",
@@ -25,7 +25,29 @@
                 checked: true if data['paying-multiple-parents'] == "no" }
             ] }) }}
             {{
-                govukButton({ text: "Continue" }) }}
+                govukButton({ text: "Continue" }) }}-->
+
+
+
+                              {{ govukRadios({
+                                    idPrefix: "paying-multiple",
+                                    name: "paying-multiple",
+                                    fieldset: {
+                                      legend: {
+                                        text: "Will you be making payments to more than one other parent?",
+                                        isPageHeading: true,
+                                        classes: "govuk-fieldset__legend--xl" } },
+                                  items: [ {
+                                  value: "yes~/v20/live-prototype/single/paying-multiple-parents",
+                                  text: "Yes" },
+                                {
+                                    value: "no~/v20/live-prototype/single/#",
+                                    text: "No"
+                                  }
+                                ]
+                              }) }}
+
+                                {{ govukButton({ text: "Continue" }) }}
         </form>
     </div>
 </div>
