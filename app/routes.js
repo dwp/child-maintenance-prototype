@@ -88,7 +88,7 @@ const v19Routes = require('./routes/v19');
 router.use('/v19', v19Routes)
 
 const v20Routes = require('./routes/v20');
-router.use('/v20', v20Routes)
+router.use('/v20/live-prototype/single', v20Routes)
 
 const testRoutes = require('./routes/test');
 router.use('/test', testRoutes)

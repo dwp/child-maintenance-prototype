@@ -3,7 +3,6 @@ const router = express.Router()
 
 router.get('/paying-receiving', (req, res) => {
     res.render('test/paying-receiving')
-    console.log("it works")
 })
 
 router.post('/paying-receiving', (req, res) => {
