@@ -7,104 +7,222 @@
     <div class="govuk-grid-column-two-thirds">
         <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-
-
         <h1 class="govuk-heading-xl">Check your answers</h1>
-        <table class="govuk-table">
-            <caption class="govuk-table__caption"></caption>
-            <br>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                    <br>
-                    <th class="govuk-table__header" scope="col">Questions</th>
-                    <th class="govuk-table__header" scope="col">Answers</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
 
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">What is your name?</th>
-                    <td class="govuk-table__cell">Jayne</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
+        {% from "table/macro.njk" import govukTable %}
 
-                </tr>
+              {{ govukTable({
+                caption: "About your arrangement",
+                captionClasses: "govuk-heading-m",
+                firstCellIsHeader: true,
+                head: [
+                  {
+                    text: "Questions"
+                  },
+                  {
+                    text: "Answers"
+                  },
+                  {
+                    text: "Edit"
+                  }
+                ],
+                rows: [
+                  [
+                    {
+                      text: "Will you be paying or receiving child maintenance payments?"
+                    },
+                    {
+                      text: "Paying"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link"
+                    }
+                  ],
+                  [
+                    {
+                      text: "Will you be making payments to more than one
+                              other parent?"
+                    },
+                    {
+                      text: "Yes"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link govuk-link--no-visited-state"
+                    }
+                  ],
+                  [
+                    {
+                      text: "How many people will you be paying child
+                                maintenance to?"
+                    },
+                    {
+                      text: "2 receiving parents"
+                    },
+                    {
+                      text: "Change",
+                      classes: "govuk-link govuk-link--no-visited-state"
+                    }
+                  ]
+                ]
+              }) }}
+<!------------------table 2------------------------------------------------------------------------------>
 
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">What is the other parent's name?</th>
-                    <td class="govuk-table__cell">John</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
+            {% from "table/macro.njk" import govukTable %}
 
-                </tr>
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
-                    <td class="govuk-table__cell">1</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-                </tr>
+                  {{ govukTable({
+                    caption: "Benefits and income",
+                    captionClasses: "govuk-heading-m",
+                    firstCellIsHeader: true,
+                    head: [
+                      {
+                        text: "Questions"
+                      },
+                      {
+                        text: "Answers"
+                      },
+                      {
+                        text: "Edit"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "Do you receive any benefits or State Pension?"
+                        },
+                        {
+                          text: "Yes"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Which of these benefits or State Pension do
+                                    you receive? "
+                        },
+                        {
+                          text: "Income Support"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Do you receive any income?"
+                        },
+                        {
+                          text: "Yes"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ],
+                      [
+                        {
+                          text: "What is your total taxable income?"
+                        },
+                        {
+                          text: "£20,282.20 per year"
+                        },
+                        {
+                          text: "Change",
+                          classes: "govuk-link govuk-link--no-visited-state"
+                        }
+                      ]
+                    ]
+                  }) }}
 
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">What is the child's name?</th>
-                    <td class="govuk-table__cell">Maisie</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
+                  {% from "table/macro.njk" import govukTable %}
 
-                </tr>
+                        {{ govukTable({
+                        caption: "About your children",
+                          captionClasses: "govuk-heading-m",
+                          firstCellIsHeader: true,
+                          head: [
+                            {
+                              text: "Questions"
+                            },
+                            {
+                              text: "Answers"
+                            },
+                            {
+                              text: "Edit"
+                            }
+                          ],
+                          rows: [
+                            [
+                              {
+                                text: "How many of your children live with the first receiving parent most of the time?"
+                              },
+                              {
+                                text: "2 children"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "Do any of these children ever stay overnight with you?"
+                              },
+                              {
+                                text: "Yes"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "What are the names of your children who live with the first receiving parent most of the time?"
+                              },
+                              {
+                                text: "[ChildName1] [ChildName2]"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "How often does [ChildName1] stay overnight with you?"
+                              },
+                              {
+                                text: "1 to 2 nights a week (52 to 103 a year)"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ],
+                            [
+                              {
+                                text: "How often does [ChildName2] stay overnight with you?"
+                              },
+                              {
+                                text: "1 to 2 nights a week (52 to 103 a year)"
+                              },
+                              {
+                                text: "Change",
+                                classes: "govuk-link"
+                              }
+                            ]
+                          ]
+                        }) }}
 
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">How often do the children stay overnight with the paying parent?
-                    </th>
-                    <td class="govuk-table__cell">1 to 2 nights a week</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-
-                </tr>
-
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">Does the paying parent receive any government benefits or State Pension?</th>
-                    <td class="govuk-table__cell">No</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-
-                </tr>
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">What is the total income of the paying parent?</th>
-                    <td class="govuk-table__cell">£433.89</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-
-                </tr>
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">Is this amount weekly, monthly or yearly?</th>
-                    <td class="govuk-table__cell">Weekly</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-
-                </tr>
-                <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">How many other children live in the household of the parent paying child maintenance?</th>
-                    <td class="govuk-table__cell">1</td>
-                    <td class="govuk-table__cell">
-                        <a href="">Change</a>
-                    </td>
-
-                </tr>
-
-            </tbody>
-        </table>
-
-        <a href="personalise" role="button" draggable="false" class="govuk-button">
-            Continue
-        </a>
+                  <a href="personalise" role="button" draggable="false" class="govuk-button">
+                      Continue
+                  </a>
 
     </div>
 </div>

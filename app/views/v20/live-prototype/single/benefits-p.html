@@ -6,14 +6,14 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
-        <form method="post" action="recieving">
+        <form method="post" action="any-income">
 
 
             {% from "checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
+  idPrefix: "receiving-benefits",
+  name: "receiving-benefits",
   fieldset: {
     legend: {
       text: "Which of these benefits or State Pension do you receive?",
@@ -42,8 +42,9 @@
       text: "Incapacity Benefit"
   },
     {
-      value: "carcasses",
-      text: "Income Support"
+      value: "incomeSupport",
+      text: "Income Support",
+      checked: true if data['receiving-benefits'] == "incomeSupport"
   },
     {
       value: "farm",
@@ -108,10 +109,12 @@
     ]
 }) }}
 
+     {{ govukButton({ text: "Continue" }) }}
 
-<a href="any-income" role="button" class="govuk-button">
+
+<!--<a href="any-income" role="button" class="govuk-button">
   Continue
-</a>
+</a>-->
 
 </form>
 </div>

@@ -7,22 +7,16 @@
       <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
         <form method="post" action="benefits-state-pension">
 
-          <h1 class="govuk-heading-xl">How many people will you be paying child maintenance to?
-                <span id="event-name-hint" class="govuk-hint">
-                          We call these people ‘receiving parents’
-                </span>
-          </h1>
+          <!--{% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "" }, classes:
+          "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}-->
 
-          {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "" }, classes:
-          "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}
-
-            <!--{{ govukRadios({
+            {{ govukRadios({
                 idPrefix: "paying-children",
                 name: "paying-children",
                 fieldset: { legend: { text: "How many people will you be paying child maintenance to?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
-            hint: { text: "" },
+            hint: { text: "We call these people ‘receiving parents’" },
             items: [ {
                 value: "1",
                 text: "1",
@@ -35,7 +29,7 @@
                 value: "3",
                 text: "3 or more",
                 checked: true if data['paying-children'] == "3" }
-            ] }) }}-->
+            ] }) }}
              {{ govukButton({ text: "Continue" }) }}
         </form>
 
