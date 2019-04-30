@@ -8,35 +8,36 @@
 
         <!--<h1 class="govuk-heading-xl">How many children live with you most of the time?</h1>-->
 
-        <h1 class="govuk-heading-xl">How many children live with you most of the time?</h1>
+        <!--<h1 class="govuk-heading-xl">How many children live with you most of the time?</h1>
 
         {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "" }, classes:
-        "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}
+        "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}-->
 
-                  <form method="post" action="check-your-answers">
+            <form method="post" action="check-your-answers">
 
-                      <!--{{ govukRadios({
-                          idPrefix: "paying-children",
-                          name: "paying-children",
-                          fieldset: { legend: { text: "",
-                      isPageHeading: true,
-                      classes: "govuk-fieldset__legend--xl" } },
-                      hint: { text: "" },
-                      items: [ {
-                          value: "1",
-                          text: "1",
-                          checked: true if data['paying-children'] == "1" },
-                          {
-                          value: "2",
-                          text: "2",
-                          checked: true if data['paying-children'] == "2" },
-                          {
-                          value: "3",
-                          text: "3 or more",
-                          checked: true if data['paying-children'] == "3" }
-                      ] }) }}-->
-                       {{ govukButton({ text: "Continue" }) }}
-                  </form>
+                {{ govukRadios({
+                    idPrefix: "paying-children",
+                    name: "paying-children",
+                    fieldset: { legend: { text: "How many children live with you most of the time?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl" } },
+                hint: { text: "How many children live with you" },
+                items: [ {
+                    value: "1",
+                    text: "1",
+                    checked: true if data['paying-children'] == "1" },
+                    {
+                    value: "2",
+                    text: "2",
+                    checked: true if data['paying-children'] == "2" },
+                    {
+                    value: "3",
+                    text: "3 or more",
+                    checked: true if data['paying-children'] == "3" }
+                ] }) }}
+
+                 {{ govukButton({ text: "Continue" }) }}
+            </form>
 
 
 

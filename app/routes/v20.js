@@ -32,4 +32,16 @@ router.post('/paying-multiple-parents', (req, res) => {
     }
 })
 
+/////////////////////////////////////////////////checkbox routes for benefits-p
+router.post('/benefits-p', (req, res) => {
+    let receivingBenefits = req.session.data['recieving-benefits']
+    if (receivingBenefits === "incomeSupport") {
+        res.redirect('paying-multiple-parents')
+    }
+    else {
+        res.redirect('')
+    }
+})
+
+
 module.exports = router
