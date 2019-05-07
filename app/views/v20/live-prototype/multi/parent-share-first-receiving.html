@@ -13,33 +13,10 @@
         {% from "input/macro.njk" import govukInput %} {{ govukInput({ label: { text: "" }, hint: { text: "" }, classes:
         "govuk-input--width-10", id: "national-insurance-number", name: "national-insurance-number" }) }}
 
-                <form method="post" action="children-overnight-stay">
-
-                    <!--{{ govukRadios({
-                        idPrefix: "paying-children",
-                        name: "paying-children",
-                        fieldset: { legend: { text: "",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--xl" } },
-                    hint: { text: "" },
-                    items: [ {
-                        value: "1",
-                        text: "1",
-                        checked: true if data['paying-children'] == "1" },
-                        {
-                        value: "2",
-                        text: "2",
-                        checked: true if data['paying-children'] == "2" },
-                        {
-                        value: "3",
-                        text: "3 or more",
-                        checked: true if data['paying-children'] == "3" }
-                    ] }) }}-->
-                     {{ govukButton({ text: "Continue" }) }}
-                </form>
-            <!--<a href="children-overnight-stay" role="button" class="govuk-button">
+               
+           <a href="2-child-name" role="button" class="govuk-button">
                 Continue
-            </a>-->
+            </a>
 
         </div>
         {% endblock %}

@@ -18,11 +18,15 @@
                       {{ govukRadios({
                           idPrefix: "paying-children",
                           name: "paying-children",
-                          fieldset: { legend: { text: "How many children live with you most of the time?",
+                          fieldset: { legend: { text: "How many other children live with you?",
                       isPageHeading: true,
                       classes: "govuk-fieldset__legend--xl" } },
-                      hint: { text: "How many children live with you" },
+                      hint: { text: "Do not include any children you already pay child maintenance for." },
                       items: [ {
+                          value: "0",
+                          text: "None",
+                          checked: true if data['paying-children'] == "0" },
+                          {
                           value: "1",
                           text: "1",
                           checked: true if data['paying-children'] == "1" },
