@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+              <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">How many children do you have other child maintenance arrangements for?</h1>
+
+
+        {% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: ""
+  },
+  hint: {
+    text: ""
+  },
+  classes: "govuk-input--width-10",
+  id: "child-amount",
+  name: "child-amount"
+}) }}
+<a href="check-your-answers-p" role="button" class="govuk-button">
+  Continue
+</a>
+</div>
+</div>
+{% endblock %}

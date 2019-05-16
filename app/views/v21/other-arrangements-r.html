@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                         Does the other parent have a child maintenance arrangement in place for any other children?
+                    </h1>
+                </legend>
+                <span id="changed-name-hint" class="govuk-hint">
+                    This could be a private or statutory arrangement.
+                </span>
+                <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <a href="other-arrangements-2-r" role="button" class="govuk-button">
+            Continue
+        </a>
+    </div>
+</div>
+{% endblock %}
