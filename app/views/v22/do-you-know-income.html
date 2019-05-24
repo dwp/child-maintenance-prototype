@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="total-taxable-income">
+
+            {{ govukRadios({
+                idPrefix: "paying-multiple",
+                name: "paying-multiple",
+                fieldset: { legend: { text: "Does the paying parent  receive any income?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes~/v22/wages-r",
+                text: "Yes",
+                checked: true if data['paying-multiple'] == "yes" },
+                {
+                name: "no",
+                value: "no~/v22/no-calculation",
+                text: "No",
+                checked: true if data['paying-multiple'] == "no" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

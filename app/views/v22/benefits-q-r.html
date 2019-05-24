@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="do-you-receive-benefits-r">
+
+            {{ govukRadios({
+                idPrefix: "do-you-receive-benefits-r",
+                name: "do-you-receive-benefits-r",
+                fieldset: { legend: { text: "Does the paying parent get any benefits or State Pension?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes~/v22/benefits-r",
+                text: "Yes",
+                checked: true if data['do-you-receive-benefits-r'] == "yes" },
+                {
+                name: "no",
+                value: "no~/v22/any-income-r",
+                text: "No",
+                checked: true if data['do-you-receive-benefits-r'] == "no" },
+                {
+                name: "unknown",
+                value: "unknown~/v22/benefit-unknown",
+                text: "I don't know",
+                checked: true if data['do-you-receive-benefits-r'] == "unknown" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

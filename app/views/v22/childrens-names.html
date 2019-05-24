@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        What are your children's names? </h1>
+                </legend>
+            </fieldset>
+
+
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="event-name">
+                    Child's name
+                </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="event-name">
+                    Child's name
+                </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+        </div>
+        <a href="child-one" role="button" draggable="false" class="govuk-button">
+            Continue
+        </a>
+    </div>
+</div>
+{% endblock %}

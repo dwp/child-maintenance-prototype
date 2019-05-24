@@ -1,0 +1,124 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+        <h1 class="govuk-heading-xl">Check your answers</h1>
+        <table class="govuk-table">
+            <caption class="govuk-table__caption"></caption>
+            <br>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <br>
+                    <th class="govuk-table__header" scope="col">Questions</th>
+                    <th class="govuk-table__header" scope="col">Answers</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+
+               
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How many children will you be paying child maintenance for?</th>
+                    <td class="govuk-table__cell">2</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">What are your children's names?</th>
+                    <td class="govuk-table__cell">John</td>
+                    <td class="govuk-table__cell">Jayne</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How often does John stay overnight with you?
+                    </th>
+                    <td class="govuk-table__cell">1 to 2 nights a week</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How often does Jayne stay overnight with you?
+                    </th>
+                    <td class="govuk-table__cell">1 to 2 nights a week</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+                
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Do you receive any government benefits or State Pension?</th>
+                    <td class="govuk-table__cell">No</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">What is your total taxable income?</th>
+                    <td class="govuk-table__cell">£433.89</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Is this amount weekly, monthly or yearly?</th>
+                    <td class="govuk-table__cell">Weekly</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">How many other children live with you?</th>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+
+                </tr>
+
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Do you have a child maintenance arrangement in place for any other children?</th>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">
+                            <a href="">Change</a>
+                        </td>
+                    
+                    </tr>
+                    
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">How many children do you have other child maintenance arrangements for?</th>
+                        <td class="govuk-table__cell">1</td>
+                        <td class="govuk-table__cell">
+                            <a href="">Change</a>
+                        </td>
+                    
+                    </tr>
+            </tbody>
+        </table>
+
+        <a href="calc-email-p" role="button" draggable="false" class="govuk-button">
+            Continue
+        </a>
+
+    </div>
+</div>
+{% endblock%}

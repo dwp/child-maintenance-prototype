@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">A calculation cannot be made
+
+        </h1>
+
+        <p>To make a calculation we need to know the income of the parent who will be paying child maintenance.
+
+        </p>
+        <p>If you don’t know the income of the paying parent, the<a href=""> cost of raising your child guide (downloads a PDF)</a> may help you to
+        work out how much maintenance your child might need.
+</p>
+<p>If you cannot agree child maintenance between yourselves, the <a href="">Child Maintenance Service can help</a>.
+</p>
+       
+    </div>
+</div>
+{% endblock %}
