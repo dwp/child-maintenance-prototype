@@ -18,11 +18,11 @@
                   text: "Select one option."
                 },
             items: [ {
-                value: "yes",
+                value: "yes~/v24/ineligible",
                 text: "Yes",
                 checked: true if data['paying-children'] == "yes" },
                 {
-                value: "no",
+                value: "no~/v24/eligible",
                 text: "No",
                 checked: true if data['paying-children'] == "no" }
 
@@ -30,15 +30,6 @@
              {{ govukButton({ text: "Continue" }) }}
         </form>
 
-        Education must be a full-time (more than average of 12 hours a week supervised study or course-related work experience) and can include:
-
-        A-Levels or similar, for example Pre-U, International Baccalaureate
-Scottish Highers
-NVQs and other vocational qualifications up to level 3
-Home education, if started before your child turned 16
-Traineeships in England
-Courses are not approved if paid for by an employer or ‘advanced’, for example a university degree or
-BTEC Higher National Certificate.
 
     </div>
 </div>

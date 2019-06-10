@@ -6,31 +6,54 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
-        <form method="post" action="live-in-uk">
+        <!--<form method="post" action="live-in-uk">
 
             {{ govukRadios({
                 idPrefix: "lives-in-uk",
                 name: "lives-in-uk",
-                fieldset: { legend: { text: "Is there a court order or consent order for child maintenance in place?",
+                fieldset: { legend: { text: "Do you usually live in the UK?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
-            hint: {
-                text: "This is known as 'minute of agreement' in Scotland."
-                  },
             items: [ {
-                value: "yes~/v24/court-order-stuff",
+                value: "yes",
                 text: "Yes",
                 checked: true if data['paying-children'] == "yes" },
                 {
-                value: "no~/v24/eligible",
+                value: "no",
                 text: "No",
                 checked: true if data['paying-children'] == "no" }
 
             ] }) }}
              {{ govukButton({ text: "Continue" }) }}
-        </form>
+        </form>-->
 
-        </a>
+
+
+
+        <form method="post" action="live-in-uk">
+
+              <!--The below radio buttons have been routed in an alternative way
+                   making the process of routing abit easier-->
+            {{ govukRadios({
+                  idPrefix: "lives-uk",
+                  name: "lives-uk",
+                  fieldset: {
+                    legend: {
+                      text: "Do you usually live in the UK?",
+                      isPageHeading: true,
+                      classes: "govuk-fieldset__legend--xl" } },
+                items: [ {
+                value: "yes~/v24/other-parent",
+                text: "Yes" },
+              {
+                value: "receive~/v24/allowed-in-uk-other",
+                text: "No"
+              }
+            ]
+          }) }}
+
+            {{ govukButton({ text: "Continue" }) }}
+        </form>
     </div>
 </div>
 {% endblock %}

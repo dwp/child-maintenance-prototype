@@ -6,37 +6,40 @@
     <div class="govuk-grid-column-two-thirds">
                 <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 
+
+                <h1 class="govuk-heading-xl">Does the other parent work abroad for any of these organisations?</h1>
+               
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>The civil service</li>
+                        <li>Her Majesties Diplomatic Service</li>
+                        <li>The armed forces</li>
+                        <li>A company that is registered and based in the UK</li>
+                        <li>A local authority</li>
+                        <li>The NHS</li>
+                    </ul>
+                    <span class="govuk-hint">Select one option</span>
         <form method="post" action="live-in-uk">
 
             {{ govukRadios({
                 idPrefix: "lives-in-uk",
                 name: "lives-in-uk",
-                fieldset: { legend: { text: "Does the other parent work aboard for any of these organisations?",
+                fieldset: { legend: { text: "",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
-            hint: {
-                  text: "Select one option."
-                },
+          
             items: [ {
-                value: "yes",
+                value: "yes~/v24/other-parent-2",
                 text: "Yes",
                 checked: true if data['paying-children'] == "yes" },
                 {
-                value: "no",
+                value: "no~/v24/ineligible",
                 text: "No",
                 checked: true if data['paying-children'] == "no" }
 
             ] }) }}
              {{ govukButton({ text: "Continue" }) }}
 
-             <ul class="govuk-list govuk-list--bullet">
-                  <li>The civil service</li>
-                  <li>Her Majesties Diplomatic Service</li>
-                  <li>The armed forces</li>
-                  <li>A company that is registered and based in the UK</li>
-                  <li>A local authority</li>
-                  <li>The NHS</li>
-                </ul>
+           
         </form>
 
         </a>
