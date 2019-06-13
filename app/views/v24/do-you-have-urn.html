@@ -16,15 +16,17 @@
                   name: "pay-receive",
                   fieldset: {
                     legend: {
-                      text: "Will you be making or receiving payments for child maintenance?",
+                      text: "Do you have a unique reference number?",
                       isPageHeading: true,
                       classes: "govuk-fieldset__legend--xl" } },
+                      hint: {
+                  text: "You will have received a unique reference number via email if you have already checked your eligibility."},
                 items: [ {
-                value: "pay~/v24/live-in-uk-m",
-                text: "Making payments" },
+                value: "yes~/v24/urn",
+                text: "Yes" },
               {
-                value: "receive~/v24/live-in-uk-p",
-                text: "Receiving payments"
+                value: "no~/v24/live-in-uk-m",
+                text: "No"
               }
             ]
           }) }}
