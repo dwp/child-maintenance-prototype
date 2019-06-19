@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+
+
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        How many children do you want to be covered by this arrangement?
+                    </h1>
+                </legend>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-many-children-1" name="how-many-children" type="radio" value="1" {{ checked(
+                            "how-many-children-1", "yes") }}>
+                        <label class="govuk-label govuk-radios__label" for="how-many-children-1">
+                            1
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-many-children-2" name="how-many-children" type="radio" value="2" {{ checked(
+                            "how-many-children-2", "yes") }}>
+                        <label class="govuk-label govuk-radios__label" for="how-many-children-2">
+                            2
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-many-children-3" name="how-many-children" type="radio" value="3" {{ checked(
+                            "how-many-children-3", "yes") }}>
+                        <label class="govuk-label govuk-radios__label" for="how-many-children-3">
+                            3
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="how-many-children-4" name="how-many-children" type="radio" value="4" {{ checked(
+                            "how-many-children-4", "yes") }}>
+                        <label class="govuk-label govuk-radios__label" for="how-many-children-4">
+                            4
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+
+        <a href="first-childs-name" role="button" class="govuk-button">
+            Continue
+        </a>
+
+
+
+
+
+
+
+
+        {% endblock %}

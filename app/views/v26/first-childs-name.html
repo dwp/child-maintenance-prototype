@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">What are your children's names?</h1>
+
+
+
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                Child's name
+            </label>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" value="John">
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+                Child's name
+            </label>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" value="Sarah">
+        </div>
+
+    <details class="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+                Why do we need this?
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+            Liz work your magic 
+        </div>
+    </details>
+        <a href="john-under-16" role="button" class="govuk-button">
+            Continue
+        </a>
+
+
+
+
+
+
+
+
+        {% endblock %}
