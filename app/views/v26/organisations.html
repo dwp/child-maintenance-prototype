@@ -17,7 +17,6 @@
                         <li>A local authority</li>
                         <li>The NHS</li>
                     </ul>
-                    <span class="govuk-hint">Select one option</span>
         <form method="post" action="live-in-uk">
 
             {{ govukRadios({
@@ -28,11 +27,11 @@
             classes: "govuk-fieldset__legend--xl" } },
           
             items: [ {
-                value: "yes~/v25/other-parent",
+                value: "yes~/v26/other-parent",
                 text: "Yes",
                 checked: true if data['paying-children'] == "yes" },
                 {
-                value: "no~/v25/ineligible",
+                value: "no~/v26/ineligible",
                 text: "No",
                 checked: true if data['paying-children'] == "no" }
 

@@ -11,15 +11,15 @@
             {{ govukRadios({
                 idPrefix: "lives-in-uk",
                 name: "lives-in-uk",
-                fieldset: { legend: { text: "Is the other parent allowed to live in the UK?",
+                fieldset: { legend: { text: "Are the children temporarily living away from home, either in hospital or at boarding school?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl" } },
             items: [ {
-                value: "yes~/v26/other-parent-2",
+                value: "yes~/v26/children-under-16",
                 text: "Yes",
                 checked: true if data['paying-children'] == "yes" },
                 {
-                value: "no~/v26/organisations-2",
+                value: "no~/v26/ineligible",
                 text: "No",
                 checked: true if data['paying-children'] == "no" }
 
