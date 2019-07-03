@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">You are eligible to apply to the Child Maintenance Service for John</h1>
+
+<p>John must be under 16 years old, or under 20 years old and in full time approved education to be eligible to apply to the child maintenance service.</p>
+<details class="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            What is full time approved education?
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+         Education must be a full-time (more than average of 12 hours a week supervised study or course-related work experience)
+        and can include: A-Levels or similar, for example Pre-U, International Baccalaureate Scottish Highers NVQs and other vocational
+        qualifications up to level 3 Home education, if started before your child turned 16 Traineeships in England Courses are not
+        approved if paid for by an employer or ‘advanced’, for example a university degree or BTEC Higher National Certificate.
+
+    </div>
+</details>
+        <p>You can now check the eligibility to apply for your other children </p>
+
+
+        <a href="sarah-child-benefit" role="button" class="govuk-button">
+            Continue
+        </a>
+
+
+
+
+
+
+
+
+        {% endblock %}

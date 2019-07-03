@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/alpha-prototype-4" %} {% block pageTitle %} {{ serviceName }} {% endblock %} {% block beforeContent%}
+{{ govukPhaseBanner({ tag: { text: "BETA" }, html: 'This is a new service – your
+<a href="q1" target="_blank">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">You are not eligible to apply to the Child Maintenance Service for John</h1>
+
+<p>You can't apply to the Child Maintenance Service for a child with a court order that has been in place for less than 12 months. </p>
+        <p>You can continue to check the eligibility to apply for your other children </p>
+
+
+        <a href="sarah-child-benefit" role="button" class="govuk-button">
+            Continue
+        </a>
+
+
+
+
+
+
+
+
+        {% endblock %}
