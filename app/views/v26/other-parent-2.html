@@ -8,25 +8,42 @@
 
         <form method="post" action="live-in-uk">
 
-            {{ govukRadios({
-                idPrefix: "lives-in-uk",
-                name: "lives-in-uk",
-                fieldset: { legend: { text: "Do the children live with you, the other parent, a legal guardian or grandparents most of the time?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl" } },
-            items: [ {
-                value: "yes~/v26/how-many-children",
-                text: "Yes",
-                checked: true if data['paying-children'] == "yes" },
-                {
-                value: "no~/v26/children-living-away",
-                text: "No",
-                checked: true if data['paying-children'] == "no" }
+<form method="post" action="live-in-uk">
 
-            ] }) }}
-             {{ govukButton({ text: "Continue" }) }}
-        </form>
+        {% from "radios/macro.njk" import govukRadios %}
 
+{{ govukRadios({
+  idPrefix: "where-do-they-live",
+  name: "where-do-they-live",
+  fieldset: {
+    legend: {
+      text: "Who do the children live with most of the time?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "parent~/v26/how-many-children",
+      text: "A parent"
+    },
+    {
+      value: "parent~/v26/how-many-children",
+      text: "A guardian"
+    },
+    {
+      value: "parent~/v26/how-many-children",
+      text: "A grandparent"
+    },
+    {
+      value: "other~/v26/children-living-away",
+      text: "Other"
+    }
+  ]
+}) }}
+
+     {{ govukButton({ text: "Continue" }) }}
+    </form>
         </a>
     </div>
 </div>
